@@ -1,1 +1,1 @@
-This is my portfolio site. Feel free to check it and hire me ! :)
+This is my portfolio site. Feel free to check it out and hire me ! :)
