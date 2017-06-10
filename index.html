@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Rock+Salt|Alegreya|Architects+Daughter|Comfortaa|Courgette|Kaushan+Script|Satisfy|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
@@ -14,9 +15,19 @@
         <span>M</span>
       </div>
       <div class="menu">
-        <span class=""></span>
-        <span class=""></span>
-        <span class=""></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="overlay">
+        <nav>
+          <ul>
+            <li href="#intro">Intro</li>
+            <li href="#aboutMe">O mnie</li>
+            <li href="#portfolio">Portfolio</li>
+            <li href="#contact">Kontakt</li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="wrapper">
@@ -57,19 +68,26 @@
         </div>
       </div>
       <div id="portfolio" class="portfolio">
-        <h2>Portfolio:</h2>
-        <a href="https://www.absolutefreedom.com">
-          <img src="img/absoluteFreedom.jpg" target="_blank">
-        </a>
+        <h2 class="clearfix">Portfolio:</h2>
+          <div class="clearfix">
+            <h3>artofgraf.com</h3>
+            <h3>Jest to strona tematyczna, wykonana na zlecenie.</h3>
+            <p>Co wyróżnia tą stronę - to fakt, iż umyślnie nie używałem w niej jQuery. Wszystkie skrypty napisane są w czystym JavaScript</p>
+            <a href="http://www.artofgraf.com" target="_blank">
+              <div>Zobacz</div>
+            </a>
+          </div>
         <h2>Github profile:</h2>
-        <a href="https://github.com/szamon">
-          <img src="img/git.png" target="_blank">
-          <p>github.com/szamon</p>
-        </a>
+        <div>
+          <a href="https://github.com/szamon">
+            <img src="img/git.png" target="_blank">
+            <p>github.com/szamon</p>
+          </a>
+        </div>
         <div class="scrollText">
           <a href="#contact">
             <p>przewiń w dół</p>
-            <img src="img/arrowDownBlack.png" alt="scroll down arrow">
+            <img src="img/arrowDownWhite.png" alt="scroll down arrow">
           </a>
         </div>
       </div>
@@ -101,7 +119,7 @@
           </a>
         </div>
       </div>
-      <footer class="clearfix">
+      <footer>
         <p>&copy; Szymon Majewski possibleSollutions</p>
       </footer>
     </div>

@@ -50,11 +50,12 @@ a{
 }
 
 .wrapper{
+	position: relative;
 	height: 100%;
 	width: 100%;
 	font-family: $font-stack;
 	background: black;
-
+	z-index: 1;
 }
 
 .logo{
@@ -66,12 +67,14 @@ a{
 	font-family: $font-stack;
 	font-size: 2em;
 	color: white;
+	z-index: 9999;
 
 		span:nth-of-type(1){
 			position: absolute;
 			top: 0;
 			left: 0;
 		}
+
 		span:nth-of-type(2){
 			position: absolute;
 			top: 3px;
@@ -85,7 +88,7 @@ a{
 	right: 1rem;
 	height: 24px;
 	width: 40px;
-	z-index: 999;
+	z-index: 9999;
 	cursor: pointer;
 	transition: 1s;
 
@@ -100,9 +103,11 @@ a{
 		border: 1px solid white;
 		transition: 0.3s ease;
 	}
+
 	span:nth-of-type(2){
 		top: 10px;
 	}
+
 	span:nth-of-type(3){
 		top: 20px;
 	}
@@ -120,7 +125,64 @@ a{
 	}
 }
 
+.overlay{
+	position: fixed;
+	top: -100%;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 999;
+	opacity: 0;
+	transition: 0.3s ease;
+
+	nav ul{
+		margin-top: 30vh;
+
+		li{
+			margin: 15px auto;
+			height: 30px;
+			font-family: $font-stack;
+			font-size: 2em;
+			text-align: center;
+			color: white;
+			cursor: pointer;
+			opacity: 0;
+			transition: 0.3s ease 0.3s;
+		}
+
+		li:nth-of-type(2){
+			transition-delay: 0.35s;
+		}
+
+		li:nth-of-type(3){
+			transition-delay: 0.4s;
+		}
+
+		li:nth-of-type(4){
+			transition-delay: 0.45s;
+		}
+
+		li:nth-of-type(5){
+			transition-delay: 0.5s;
+		}
+	}
+}
+
+.overlayOpen{
+	top: 0;
+	opacity: 1;
+
+	nav ul{
+
+		li{	
+			opacity: 1;
+		}
+	}
+}
+
 .intro{
+	position: relative;
 	padding-top: 28vh;
 	padding-bottom: 1px;
 	//background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgb(40, 58, 89) 3%);
@@ -129,8 +191,7 @@ a{
 	width: 100%;
 	color: white;
 	text-align: center;
-	box-shadow: inset 0px -55px 70px -70px black;
-
+	box-shadow: inset 0px -40px 70px -70px white;
 
 	.myPhoto{
 		margin: 0 auto 5px;
@@ -138,6 +199,7 @@ a{
 		width: 100px;
 		background: url("../img/sa.jpg") no-repeat center/cover;
 		border-radius: 50%;
+		z-index: 9999;
 	}
 
 	> p:nth-of-type(1){
@@ -156,7 +218,7 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(20px, 0, 0, white, scrollText);
+		@include scrollText(5px, 0, 0, white, scrollText);
 	}
 
 }
@@ -177,13 +239,15 @@ a{
 	}
 
 	> h4{
+		display: inline-block;
+		width: 100%;
 		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	> p{
 		margin: 15px 6px 0 6px;
 		text-align: justify;
-
 	}
 
 	.skills{
@@ -213,7 +277,7 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(20px, 0, 0, white, scrollText);
+		@include scrollText(5px, 0, 0, white, scrollText);
 		}
 	}
 
@@ -221,57 +285,84 @@ a{
 	min-height:100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: rgb(216, 212, 184);
-	font-family: $font-stack7;
+	background: rgb(76, 83, 94);
+	font-family: $font-stack;
 	position: relative;
-	color: black;
+	color: white;
 	text-align: center;
 	box-shadow: inset 0px -55px 70px -70px black;
 
-
 	h2:nth-of-type(1){
+		display: inline-block;
+		width: 100%;
 		margin-top: 10vh;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
+		font-weight: 100;
 	}
 
-	> a:nth-of-type(1){
+	> div:nth-of-type(1){
+		margin: 15px auto;
+		width: 80%;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
 		
-		> img{
-			margin-top: 25px;
-			max-width: 80%;
-			border: solid 1px white;
-			border-radius: 50%;
+		h3:nth-of-type(1){
+			margin: 15px 0;
+		}
+
+		h3:nth-of-type(2){
+			font-family: $font-stack7;
+			margin: 10px 0;
+		}
+
+		p{
+			font-family: $font-stack7;
+			margin: 8px 0;
+		}
+
+		div{
+			margin: 15px auto;
+			height: 30px;
+			width: 50px;
+			color: white;
+			text-align: center;
+			line-height: 30px;
+			border: 1px solid white;
+			border-radius: 15%;
+
+
 		}
 	}
 	
 	h2:nth-of-type(2){
-		margin-top: 30px;
+		margin-top: 40px;
 		margin-bottom: 15px;
+		font-weight: 100;
 	}
 	
-	> a:nth-of-type(2){
-		display: block;
+	> div:nth-of-type(2){
+		width: 200px;
+		margin: 25px auto;
+		overflow: hidden;
 
-		> img{
-			display: inline-block;
-			float: left;
-			max-width: 30%;
-			margin-top: 25px;
-			margin-left: 30px;
-		}
+		a{
+			> img{
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 30%;
+			}
 
-		> p{
-			display: inline-block;
-			float: left;
-			margin-top: 55px;
-			margin-left: 15px;
-			color: black;
+			> p{
+				display: inline-block;
+				vertical-align: middle;
+				color: white;
+				font-weight: 100;
+			}
 		}
 	}
-	
 
 	.scrollText{
-		@include scrollText(20px, 0, 0, black, scrollText);
+		@include scrollText(5px, 0, 0, white, scrollText);
 	}
 }
 
@@ -285,6 +376,7 @@ a{
 	font-family: $font-stack7;
 	color: white;
 	text-align: center;
+	box-shadow: inset 0px -55px 70px -70px white;
 
 	h2{
 		font-family: $font-stack;
@@ -330,7 +422,6 @@ a{
 		height: 25px;
 		margin: 30px auto 0 auto;
 
-
 			img{
 				display: inline-block;
 				float: left;
@@ -357,12 +448,48 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(20px, 0, 0, white, scrollTextRev);
+		@include scrollText(5px, 0, 0, white, scrollTextRev);
 	}
 }
 
 footer{
-	margin: 0;
+	background: white;
+}
+
+@media screen and (min-width:768px){
+	.intro{
+		
+		width: 80%;
+		margin: 0 auto;
+
+		.myPhoto{
+			display: inline-block;
+			border: 1px solid red;
+			}
+
+			> p:nth-of-type(1){
+				display: inline-block;
+				width: 400px;
+				border: 1px solid red;
+			}
+
+			> p:nth-of-type(2){
+				display: inline-block;
+				width: 400px;
+				border: 1px solid red;
+			}
+
+			> p:nth-of-type(3){
+				display: inline-block;
+				width: 400px;
+				border: 1px solid red;
+			}
+
+			.scrollText{
+				@include scrollText(5px, 0, 0, white, scrollText);
+			}
+
+	}
 }
 
 
@@ -398,6 +525,7 @@ Animations
     opacity: 0;
   }
 }
+
 
 /*************************
 Clearfix
