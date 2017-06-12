@@ -1,0 +1,129 @@
+$font-stack: "Bangers", helvetica;
+$font-stack2: 'Varela Round', sans-serif;
+$font-stack3: 'Alegreya', serif;
+$font-stack4: 'Architects Daughter', cursive;
+$font-stack5: 'Comfortaa', cursive;
+$font-stack6: 'Satisfy', cursive;
+$font-stack7: 'Kaushan Script', cursive;
+$font-stack8: 'Courgette', cursive;
+
+@media screen and (min-width:768px){
+	.intro{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 40vh;
+
+		.myPhoto{
+			margin: 0 0 0 calc(50% - 160px);
+			}
+			.myNameTitle{
+			> p:nth-of-type(1){
+				margin: 20px 0 0 5px;
+			
+			}
+
+			> p:nth-of-type(2){
+				margin-left: 5px;
+			}
+
+			> p:nth-of-type(3){
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.aboutMe{
+	
+		> h2:nth-of-type(1){
+			margin-top: 12vh;
+		}
+
+		> h4{
+			
+		}
+		div:nth-of-type(1){
+			display: flex;
+
+			> p{
+				margin: 30px 12px 0 12px;
+			}
+		}
+
+		.skills{
+			margin-top: 40px;
+			margin-bottom: auto;
+
+			h2{
+				margin-bottom: 15px;
+			}
+
+			img{
+				margin: 28px 5px 15px 5px;
+				max-height: 80px;
+				max-width: 80px;
+			}
+
+			img:hover{
+				// max-height: 65px;
+				// max-width: 65px;
+				// transform: rotateY(45deg);
+				border: solid 1px white;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.portfolio{
+
+		h2:nth-of-type(1){
+			margin-top: 12vh;
+		}
+
+		div:nth-of-type(1){
+			width: 60%;
+			
+			h3:nth-of-type(1){
+			}
+
+			h3:nth-of-type(2){
+				
+			}
+
+			p{
+				
+			}
+
+			div{
+				margin: 18px auto;
+			}
+
+		}
+		
+		h2:nth-of-type(2){
+			margin-top: 40px;
+			margin-bottom: 15px;
+			font-weight: 100;
+		}
+		
+		div:nth-of-type(2){
+			width: 200px;
+			margin: 25px auto;
+			overflow: hidden;
+
+			a{
+				img{
+					display: inline-block;
+					vertical-align: middle;
+					max-width: 30%;
+				}
+
+				p{
+					display: inline-block;
+					vertical-align: middle;
+					color: white;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+}

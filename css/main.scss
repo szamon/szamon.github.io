@@ -202,19 +202,22 @@ a{
 		z-index: 9999;
 	}
 
-	> p:nth-of-type(1){
-		font-size: 2em;
-	}
+	.myNameTitle{
 
-	> p:nth-of-type(2){
-		font-size: 1em;
-	}
+		> p:nth-of-type(1){
+			font-size: 2em;
+		}
 
-	> p:nth-of-type(3){
-		margin: 3px auto 0;
-		height: 1px;
-		width: 46%;
-		background: white;
+		> p:nth-of-type(2){
+			font-size: 1em;
+		}
+
+		> p:nth-of-type(3){
+			margin: 3px auto 0;
+			height: 1px;
+			width: 200px;
+			background: white;
+		}
 	}
 
 	.scrollText{
@@ -233,34 +236,30 @@ a{
 	color: white;
 	text-align: center;
 	box-shadow: inset 0px -50px 70px -70px white;
-
+	
 	> h2:nth-of-type(1){
 		margin-top: 10vh;
 	}
 
-	> h4{
-		display: inline-block;
-		width: 100%;
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
+	div:nth-of-type(1){
+		margin-top: 20px;
 
-	> p{
-		margin: 15px 6px 0 6px;
-		text-align: justify;
+		> p{
+			margin: 15px 6px 0 6px;
+			text-align: justify;
+		}
 	}
 
 	.skills{
 		margin-top: 30px;
-		margin-bottom: 115px;
-		clear: both;
+		margin-bottom: 100px;
 
 		h2{
 			margin-bottom: 15px;
 		}
 
 		img{
-			margin: 10px 5px 15px 5px;
+			margin: 15px 5px 15px 5px;
 			max-height: 60px;
 			max-width: 60px;
 			transition: 0.3s ease;
@@ -300,7 +299,7 @@ a{
 		font-weight: 100;
 	}
 
-	> div:nth-of-type(1){
+	div:nth-of-type(1){
 		margin: 15px auto;
 		width: 80%;
 		border-top: 1px solid white;
@@ -329,8 +328,11 @@ a{
 			line-height: 30px;
 			border: 1px solid white;
 			border-radius: 15%;
+		}
 
-
+		div:hover{
+			background: white;
+			color: rgb(76, 83, 94);
 		}
 	}
 	
@@ -340,19 +342,19 @@ a{
 		font-weight: 100;
 	}
 	
-	> div:nth-of-type(2){
+	div:nth-of-type(2){
 		width: 200px;
 		margin: 25px auto;
 		overflow: hidden;
 
 		a{
-			> img{
+			img{
 				display: inline-block;
 				vertical-align: middle;
 				max-width: 30%;
 			}
 
-			> p{
+			p{
 				display: inline-block;
 				vertical-align: middle;
 				color: white;
@@ -455,43 +457,6 @@ a{
 footer{
 	background: white;
 }
-
-@media screen and (min-width:768px){
-	.intro{
-		
-		width: 80%;
-		margin: 0 auto;
-
-		.myPhoto{
-			display: inline-block;
-			border: 1px solid red;
-			}
-
-			> p:nth-of-type(1){
-				display: inline-block;
-				width: 400px;
-				border: 1px solid red;
-			}
-
-			> p:nth-of-type(2){
-				display: inline-block;
-				width: 400px;
-				border: 1px solid red;
-			}
-
-			> p:nth-of-type(3){
-				display: inline-block;
-				width: 400px;
-				border: 1px solid red;
-			}
-
-			.scrollText{
-				@include scrollText(5px, 0, 0, white, scrollText);
-			}
-
-	}
-}
-
 
 /*************************
 Animations

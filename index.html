@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Rock+Salt|Alegreya|Architects+Daughter|Comfortaa|Courgette|Kaushan+Script|Satisfy|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mainMq.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -33,9 +34,11 @@
     <div class="wrapper">
       <div id="intro" class="intro">
         <div class="myPhoto"></div>
-        <p class="">Szymon Majewski</p>
-        <p class="">Junior Front End Developer</p>
-        <p class="introUnderline"></p>
+        <div class="myNameTitle">
+          <p class="">Szymon Majewski</p>
+          <p class="">Junior Front End Developer</p>
+          <p class="introUnderline"></p>
+        </div>
         <div class="scrollText">
           <a href="#aboutMe">
             <p>przewiń w dół</p>
@@ -45,10 +48,12 @@
       </div>
       <div id="aboutMe" class="aboutMe">
         <h2>Dlaczego Front End?</h2>
-        <p>Po paroletniej przygodzie z koroporacjami na pozycji analityka, doszedłem do wniosku, że nie chcę już mieć do czynienia z Excelem :)
-        A tak na poważnie - podczas ostatniej pracy miałem do czynienia głównie z SQL`em i VBA. Dzięki temu odkryłem, że kodzenie to jest "to".</p>
-        <p>W międzyczasie zapoznawałem się z podstawami Front Endu przerabiając kurs Front End Development na teamtreehouse.com, zrozumiałem, że tworzenie stron internetowych sprawia mi frajdę, a JavaScript to jest ten język, który chcę zgłębić.</p>
-        <p>Dlatego poszukuję pierwszej pracy lub stażu na stanowisku Junior Front End Developera. Gwarantuję, że w zamian za możliwość nauki i rozwoju, zrewanżuję się pełnym zaangażowaniem podczas pracy.</p>
+        <div>
+          <p>Po paroletniej przygodzie z koroporacjami na pozycji analityka, doszedłem do wniosku, że nie chcę już mieć do czynienia z Excelem :)
+          A tak na poważnie - podczas ostatniej pracy miałem do czynienia głównie z SQL`em i VBA. Dzięki temu odkryłem, że kodzenie to jest "to".</p>
+          <p>W międzyczasie zapoznawałem się z podstawami Front Endu przerabiając kurs Front End Development na teamtreehouse.com, zrozumiałem, że tworzenie stron internetowych sprawia mi frajdę, a JavaScript to jest ten język, który chcę zgłębić.</p>
+          <p>Dlatego poszukuję pierwszej pracy lub stażu na stanowisku Junior Front End Developera. Gwarantuję, że w zamian za możliwość nauki i rozwoju, zrewanżuję się pełnym zaangażowaniem podczas pracy.</p>
+        </div>
         <div class="skills">
           <h2>Moje umiejętności:</h2>
           <img src="img/html5.png" alt="HTML5 icon">
@@ -68,8 +73,8 @@
         </div>
       </div>
       <div id="portfolio" class="portfolio">
-        <h2 class="clearfix">Portfolio:</h2>
-          <div class="clearfix">
+        <h2>Portfolio:</h2>
+          <div>
             <h3>artofgraf.com</h3>
             <h3>Jest to strona tematyczna, wykonana na zlecenie.</h3>
             <p>Co wyróżnia tą stronę - to fakt, iż umyślnie nie używałem w niej jQuery. Wszystkie skrypty napisane są w czystym JavaScript</p>
