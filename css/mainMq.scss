@@ -100,29 +100,326 @@ $font-stack8: 'Courgette', cursive;
 		}
 		
 		h2:nth-of-type(2){
-			margin-top: 40px;
-			margin-bottom: 15px;
-			font-weight: 100;
+		
 		}
 		
 		div:nth-of-type(2){
-			width: 200px;
-			margin: 25px auto;
-			overflow: hidden;
-
+			margin-top: 40px;
 			a{
 				img{
-					display: inline-block;
-					vertical-align: middle;
-					max-width: 30%;
+					
 				}
 
 				p{
-					display: inline-block;
-					vertical-align: middle;
-					color: white;
-					font-weight: 100;
+					
 				}
+			}
+		}
+	}
+
+	.contact{
+		padding-top: 12vh;
+		
+		
+		h2{
+			
+		}
+
+		.form{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-start;
+			height: 260px;
+			width: 600px;
+			margin: 30px auto 0 auto;
+			
+			label:nth-of-type(1), label:nth-of-type(2){
+				width: 50%;
+				margin: 0;
+			}
+
+			input{
+				height: 25px;
+				width: calc(50% - 20px);
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			textarea{
+				height: 150px;
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			label:nth-of-type(3), textarea{
+				width: 100%;
+			}
+
+			label:nth-of-type(1){
+				order: 1;
+			}
+
+			label:nth-of-type(2){
+				order: 2;
+			}
+
+			input:nth-of-type(1){
+				order: 3;
+			}
+
+			input:nth-of-type(2){
+				order: 4;
+			}
+
+			label:nth-of-type(3){
+				margin-top: 35px;
+				order: 5;
+			}
+
+			textarea{
+				order: 6;
+			}
+		}
+		
+		.phoneEmail{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 40px;
+			
+			.phone, .email{
+				display: flex;
+				align-items: center;
+				margin: 0 60px;
+
+					img{
+						float: none;
+						max-width: 45px;
+					}
+
+					p{
+
+						float: none;
+						margin: 0 0 0 5px;
+					}
+				}
+
+			.phone{
+				width: auto;
+			}
+
+			.email{
+				width: auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width:992px){
+	.intro{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 40vh;
+
+		.myPhoto{
+			margin: 0 0 0 calc(50% - 160px);
+			}
+			.myNameTitle{
+			> p:nth-of-type(1){
+				margin: 20px 0 0 5px;
+			
+			}
+
+			> p:nth-of-type(2){
+				margin-left: 5px;
+			}
+
+			> p:nth-of-type(3){
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.aboutMe{
+	
+		> h2:nth-of-type(1){
+			margin-top: 12vh;
+		}
+
+		> h4{
+			
+		}
+		div:nth-of-type(1){
+			display: flex;
+
+			> p{
+				margin: 30px 12px 0 12px;
+			}
+		}
+
+		.skills{
+			margin-top: 40px;
+			margin-bottom: auto;
+
+			h2{
+				margin-bottom: 15px;
+			}
+
+			img{
+				margin: 28px 5px 15px 5px;
+				max-height: 80px;
+				max-width: 80px;
+			}
+
+			img:hover{
+				// max-height: 65px;
+				// max-width: 65px;
+				// transform: rotateY(45deg);
+				border: solid 1px white;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.portfolio{
+
+		h2:nth-of-type(1){
+			margin-top: 12vh;
+		}
+
+		div:nth-of-type(1){
+			width: 60%;
+			
+			h3:nth-of-type(1){
+			}
+
+			h3:nth-of-type(2){
+				
+			}
+
+			p{
+				
+			}
+
+			div{
+				margin: 18px auto;
+			}
+
+		}
+		
+		h2:nth-of-type(2){
+		
+		}
+		
+		div:nth-of-type(2){
+			margin-top: 40px;
+			a{
+				img{
+					
+				}
+
+				p{
+					
+				}
+			}
+		}
+	}
+
+	.contact{
+		padding-top: 12vh;
+		
+		
+		h2{
+			
+		}
+
+		.form{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-start;
+			height: 260px;
+			width: 600px;
+			margin: 30px auto 0 auto;
+			
+			label:nth-of-type(1), label:nth-of-type(2){
+				width: 50%;
+				margin: 0;
+			}
+
+			input{
+				height: 25px;
+				width: calc(50% - 20px);
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			textarea{
+				height: 150px;
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			label:nth-of-type(3), textarea{
+				width: 100%;
+			}
+
+			label:nth-of-type(1){
+				order: 1;
+			}
+
+			label:nth-of-type(2){
+				order: 2;
+			}
+
+			input:nth-of-type(1){
+				order: 3;
+			}
+
+			input:nth-of-type(2){
+				order: 4;
+			}
+
+			label:nth-of-type(3){
+				margin-top: 35px;
+				order: 5;
+			}
+
+			textarea{
+				order: 6;
+			}
+		}
+		
+		.phoneEmail{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 40px;
+			
+			.phone, .email{
+				display: flex;
+				align-items: center;
+				margin: 0 60px;
+
+					img{
+						float: none;
+						max-width: 45px;
+					}
+
+					p{
+
+						float: none;
+						margin: 0 0 0 5px;
+					}
+				}
+
+			.phone{
+				width: auto;
+			}
+
+			.email{
+				width: auto;
 			}
 		}
 	}
