@@ -53,13 +53,13 @@ a{
 	position: relative;
 	height: 100%;
 	width: 100%;
+	background: url("../img/spacewalker.jpg") fixed center no-repeat/cover;
 	font-family: $font-stack;
-	background: black;
 	z-index: 1;
 }
 
 .logo{
-	position: absolute;
+	position: fixed;
 	top: 1rem;
 	left: 1rem;
 	height: 24px;
@@ -183,12 +183,12 @@ a{
 
 .intro{
 	position: relative;
-	padding-top: 28vh;
-	padding-bottom: 1px;
 	//background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgb(40, 58, 89) 3%);
-	background: rgb(40, 58, 89);
 	height: 100vh;
 	width: 100%;
+	padding-top: 28vh;
+	padding-bottom: 1px;
+	background-color: rgba(40, 58, 89, 0.9);
 	color: white;
 	text-align: center;
 	box-shadow: inset 0px -40px 70px -70px white;
@@ -230,7 +230,7 @@ a{
 	min-height: 100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: rgb(168, 37, 37);
+	background: rgba(168, 37, 37, 0.95);
 	font-family: $font-stack7;
 	position: relative;
 	color: white;
@@ -238,7 +238,7 @@ a{
 	box-shadow: inset 0px -50px 70px -70px white;
 	
 	> h2:nth-of-type(1){
-		margin-top: 10vh;
+		margin-top: 15vh;
 	}
 
 	div:nth-of-type(1){
@@ -250,41 +250,53 @@ a{
 		}
 	}
 
-	.skills{
-		margin-top: 30px;
+	.scrollText{
+		@include scrollText(5px, 0, 0, white, scrollText);
+	}
+}
+	
+.skills{
+	position: relative;
+	min-height: 100vh;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background: rgba(168, 37, 37, 0.99);
+	font-family: $font-stack7;
+	color: white;
+	text-align: center;
+	box-shadow: inset 0px -50px 70px -70px white;
+
+	h2{
+		margin-top: 15vh;
 		margin-bottom: 100px;
+	}
 
-		h2{
-			margin-bottom: 15px;
-		}
+	>img{
+		margin: 15px 5px 15px 5px;
+		max-height: 60px;
+		max-width: 60px;
+		transition: 0.3s ease;
+		overflow: hidden;
+	}
 
-		img{
-			margin: 15px 5px 15px 5px;
-			max-height: 60px;
-			max-width: 60px;
-			transition: 0.3s ease;
-			overflow: hidden;
-		}
-
-		img:hover{
-			// max-height: 65px;
-			// max-width: 65px;
-			// transform: rotateY(45deg);
-			border: solid 1px white;
-			border-radius: 50%;
-		}
+	>img:hover{
+		// max-height: 65px;
+		// max-width: 65px;
+		// transform: rotateY(45deg);
+		border: solid 1px white;
+		border-radius: 50%;
 	}
 
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollText);
-		}
 	}
+}
 
 .portfolio{
-	min-height:100vh;
+	min-height: 100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: rgb(76, 83, 94);
+	background: rgba(76, 83, 94, 0.9);
 	font-family: $font-stack;
 	position: relative;
 	color: white;
@@ -374,7 +386,7 @@ a{
 	width: 100%;
 	padding-top: 10vh;
 	padding-bottom: 25px;
-	background-color: rgb(40, 58, 89);
+	background-color: rgba(40, 58, 89, 0.99);
 	font-family: $font-stack7;
 	color: white;
 	text-align: center;

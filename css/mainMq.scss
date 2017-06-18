@@ -50,7 +50,7 @@ $font-stack8: 'Courgette', cursive;
 		}
 
 		.skills{
-			margin-top: 40px;
+			margin-top: 55px;
 			margin-bottom: auto;
 
 			h2{
@@ -58,7 +58,7 @@ $font-stack8: 'Courgette', cursive;
 			}
 
 			img{
-				margin: 28px 5px 15px 5px;
+				margin: 20px 5px 15px 5px;
 				max-height: 80px;
 				max-width: 80px;
 			}
@@ -75,12 +75,8 @@ $font-stack8: 'Courgette', cursive;
 
 	.portfolio{
 
-		h2:nth-of-type(1){
-			margin-top: 12vh;
-		}
-
 		div:nth-of-type(1){
-			width: 60%;
+			width: 380px;
 			
 			h3:nth-of-type(1){
 			}
@@ -217,114 +213,20 @@ $font-stack8: 'Courgette', cursive;
 }
 
 @media screen and (min-width:992px){
-	.intro{
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: 40vh;
-
-		.myPhoto{
-			margin: 0 0 0 calc(50% - 160px);
-			}
-			.myNameTitle{
-			> p:nth-of-type(1){
-				margin: 20px 0 0 5px;
-			
-			}
-
-			> p:nth-of-type(2){
-				margin-left: 5px;
-			}
-
-			> p:nth-of-type(3){
-				margin-left: 5px;
-			}
-		}
-	}
-
+	
 	.aboutMe{
 	
-		> h2:nth-of-type(1){
-			margin-top: 12vh;
-		}
-
-		> h4{
-			
-		}
 		div:nth-of-type(1){
-			display: flex;
-
-			> p{
-				margin: 30px 12px 0 12px;
-			}
+			margin: 0 auto;
+			width: 70%;
 		}
 
 		.skills{
-			margin-top: 40px;
-			margin-bottom: auto;
-
-			h2{
-				margin-bottom: 15px;
-			}
-
-			img{
-				margin: 28px 5px 15px 5px;
-				max-height: 80px;
-				max-width: 80px;
-			}
-
-			img:hover{
-				// max-height: 65px;
-				// max-width: 65px;
-				// transform: rotateY(45deg);
-				border: solid 1px white;
-				border-radius: 50%;
-			}
+			margin-top: 80px;
 		}
+
 	}
 
-	.portfolio{
-
-		h2:nth-of-type(1){
-			margin-top: 12vh;
-		}
-
-		div:nth-of-type(1){
-			width: 60%;
-			
-			h3:nth-of-type(1){
-			}
-
-			h3:nth-of-type(2){
-				
-			}
-
-			p{
-				
-			}
-
-			div{
-				margin: 18px auto;
-			}
-
-		}
-		
-		h2:nth-of-type(2){
-		
-		}
-		
-		div:nth-of-type(2){
-			margin-top: 40px;
-			a{
-				img{
-					
-				}
-
-				p{
-					
-				}
-			}
-		}
-	}
 
 	.contact{
 		padding-top: 12vh;
