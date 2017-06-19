@@ -258,33 +258,105 @@ a{
 .skills{
 	position: relative;
 	min-height: 100vh;
+	width: 100%;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: rgba(168, 37, 37, 0.99);
+	background: rgba(76, 83, 94, 0.9);
 	font-family: $font-stack7;
 	color: white;
 	text-align: center;
 	box-shadow: inset 0px -50px 70px -70px white;
+	overflow: hidden;
 
 	h2{
 		margin-top: 15vh;
 		margin-bottom: 100px;
 	}
 
-	>img{
-		margin: 15px 5px 15px 5px;
-		max-height: 60px;
-		max-width: 60px;
-		transition: 0.3s ease;
-		overflow: hidden;
-	}
+	.slider{
+		position: relative;
+		height: 230px;
 
-	>img:hover{
-		// max-height: 65px;
-		// max-width: 65px;
-		// transform: rotateY(45deg);
-		border: solid 1px white;
-		border-radius: 50%;
+		.arrowLeft{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 160px;
+			padding-left: calc(50% - 160px);
+			background: rgb(66, 72, 81);
+			z-index: 9999;
+			border-right: 1px solid white;
+			border-top-right-radius: 15%;
+			border-bottom-right-radius: 15%;
+
+				img{
+					max-width: 40px;
+					transform: rotate(90deg);
+					margin-top: 60px;
+				}
+			}
+
+		.arrowRight{
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 160px;
+			padding-right: calc(50% - 160px);
+			background: rgb(66, 72, 81);
+			z-index: 9999;
+			border-left: 1px solid white;
+			border-top-left-radius: 15%;
+			border-bottom-left-radius: 15%;
+
+				img{
+					max-width: 40px;
+					transform: rotate(-90deg);
+					margin-top: 60px;
+				}
+			}
+
+		.slides{
+			position: absolute;
+			top: 0;
+			left: calc(50% - 120px);
+			height: 160px;
+			width: 1920px;
+			overflow: hidden;
+
+			img{
+				float: left;
+				margin: 0 40px;
+				max-height: 160px;
+				max-width: 160px;
+				transition: 0.3s ease;
+			}
+
+			img:hover{
+				// max-height: 65px;
+				// max-width: 65px;
+				// transform: rotateY(45deg);
+				border: solid 1px white;
+				border-radius: 50%;
+			}
+		}
+
+		.progressBar{
+			position: absolute;
+			bottom: 0;
+			left: calc(50% - 135px);
+			height: 30px;
+
+			img{
+				max-width: 30px;
+				height: 30px;
+				transition: 0.3s;
+			}
+
+			.active{
+				border-radius: 30%;
+				box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+			}
+		}
 	}
 
 	.scrollText{
@@ -296,7 +368,7 @@ a{
 	min-height: 100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	background: rgba(76, 83, 94, 0.9);
+	background: rgba(168, 37, 37, 0.99);
 	font-family: $font-stack;
 	position: relative;
 	color: white;
