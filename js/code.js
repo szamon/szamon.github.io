@@ -23,23 +23,26 @@ $(document).ready(function(){
 });
 
 function slideStart(){
+	var slidesLength = $(".slides img").length;
 	var slides = $(".slides");
 	var counter = 1;
 	var interval = setInterval(function(){
 		var slider = function(){
 			slides.animate({"margin-left":"-=240px"}, 1000, function(){
-				if(counter < slides.length){
+				if(counter < slidesLength-1){
 				counter +=1;
 				console.log("okrążenie="+counter);
 				$(".progressBar img:nth-of-type("+counter+")").addClass("active");
 				$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
 			}else{
 				counter = 1;
-				$(".progressBar img:nth-of-type("+slides.length+")").removeClass("active");
+				slides.css("margin-left", "0px");
+				$(".progressBar img:nth-of-type("+counter+")").addClass("active");
+				$(".progressBar img:nth-of-type("+(slidesLength-1)+")").removeClass("active");
 			}
 			});}
 			slider();
-	}, 3000);
+	}, 1000);
 }
 
 
