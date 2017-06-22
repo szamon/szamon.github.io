@@ -13,26 +13,26 @@ Mixins
 *************************/
 
 @mixin scrollText($bottom, $left, $right, $color, $animationName){
-		position: absolute;
-		bottom: $bottom;
-		left: $left;
-		right: $right;
-		height: 60px;
-		font-family: $font-stack;
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+	height: 60px;
+	font-family: $font-stack;
 
-		p{
-			font-size: 1em;
-			color: $color;
-		}
+	p{
+		font-size: 1em;
+		color: $color;
+	}
 
-		img{
-			height: 40px;
-			width: 50px;
-			animation-name: $animationName;
-			animation-duration: 2s;
-  			animation-iteration-count: infinite;
-  			animation-direction: normal;
-		}
+	img{
+		height: 40px;
+		width: 50px;
+		animation-name: $animationName;
+		animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+	}
 }
 
 /*************************
@@ -186,7 +186,7 @@ a{
 	//background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgb(40, 58, 89) 3%);
 	height: 100vh;
 	width: 100%;
-	padding-top: 28vh;
+	padding-top: 30vh;
 	padding-bottom: 1px;
 	background-color: rgba(40, 58, 89, 0.9);
 	color: white;
@@ -221,7 +221,7 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(5px, 0, 0, white, scrollText);
+		@include scrollText(0px, 0, 0, white, scrollText);
 	}
 
 }
@@ -238,20 +238,41 @@ a{
 	box-shadow: inset 0px -50px 70px -70px white;
 	
 	> h2:nth-of-type(1){
-		margin-top: 15vh;
+		width: 290px;
+		margin: 15vh auto 0 auto;
+		font-size: 2em;
+		padding-bottom: 3px;
+		border-bottom: 1.5px solid white;
+		border-bottom-left-radius: 15%;
+		border-bottom-right-radius: 15%;
+		
 	}
 
 	div:nth-of-type(1){
-		margin-top: 20px;
 
-		> p{
-			margin: 15px 6px 0 6px;
+		p{
+			margin: 25px 6px 0 6px;
+			font-size: 1.1em;
 			text-align: justify;
+		}
+
+		p:nth-of-type(1){
+			// padding-top: 5px;
+			// border-top: 1px solid white;
+			// border-top-left-radius: 5%;
+			// border-top-right-radius: 5%;
+		}
+
+		p:nth-of-type(3){
+			// padding-bottom: 5px;
+			// border-bottom: 1px solid white;
+			// border-bottom-left-radius: 5%;
+			// border-bottom-right-radius: 5%;
 		}
 	}
 
 	.scrollText{
-		@include scrollText(5px, 0, 0, white, scrollText);
+		@include scrollText(0px, 0, 0, white, scrollText);
 	}
 }
 	
@@ -269,15 +290,16 @@ a{
 	overflow: hidden;
 
 	h2{
-		margin-top: 15vh;
-		margin-bottom: 100px;
+		margin-top: 17vh;
+		margin-bottom: 90px;
+		font-size: 2em;
 	}
 
 	.slider{
 		position: relative;
 		height: 230px;
 
-		.arrowLeft{
+		.prevArrow{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -288,6 +310,7 @@ a{
 			border-right: 1px solid white;
 			border-top-right-radius: 15%;
 			border-bottom-right-radius: 15%;
+			cursor: pointer;
 
 				img{
 					max-width: 40px;
@@ -296,7 +319,7 @@ a{
 				}
 			}
 
-		.arrowRight{
+		.nextArrow{
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -307,6 +330,7 @@ a{
 			border-left: 1px solid white;
 			border-top-left-radius: 15%;
 			border-bottom-left-radius: 15%;
+			cursor: pointer;
 
 				img{
 					max-width: 40px;
@@ -318,9 +342,10 @@ a{
 		.slides{
 			position: absolute;
 			top: 0;
+			margin-left: -240px;
 			left: calc(50% - 120px);
 			height: 160px;
-			width: 2200px;
+			width: 2440px;
 			overflow: hidden;
 
 			img{
@@ -350,6 +375,11 @@ a{
 				max-width: 30px;
 				height: 30px;
 				transition: 0.3s;
+			}
+
+			img:hover{
+				border-radius: 30%;
+				box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
 			}
 
 			.active{
@@ -456,8 +486,7 @@ a{
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	padding-top: 10vh;
-	padding-bottom: 25px;
+	padding-top: 13vh;
 	background-color: rgba(40, 58, 89, 0.99);
 	font-family: $font-stack7;
 	color: white;

@@ -23,29 +23,75 @@ $(document).ready(function(){
 });
 
 function slideStart(){
+	var previousSlide = $(".arrowLeft");
+	var nextSlide = $(".arrowRight");
+	var slideChanger = $(".slideChanger");
 	var slidesLength = $(".slides img").length;
+	var slidesImg = $(".slides img");
+	var progressBarImg = $(".progressBar img");
 	var slides = $(".slides");
-	var counter = 1;
-	var interval = setInterval(function(){
-		var slider = function(){
-			slides.animate({"margin-left":"-=240px"}, 1000, function(){
-				if(counter < slidesLength-1){
-				counter +=1;
-				console.log("okrążenie="+counter);
-				$(".progressBar img:nth-of-type("+counter+")").addClass("active");
+	var counter = 2;
+	var sliderStart = function(speed){
+			var slidePosition = counter*(-240);
+			slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
+				if(counter < slidesLength - 1){
+				$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
 				$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
-			}else{
-				counter = 1;
-				slides.css("margin-left", "0px");
-				$(".progressBar img:nth-of-type("+counter+")").addClass("active");
-				$(".progressBar img:nth-of-type("+(slidesLength-1)+")").removeClass("active");
-			}
-			});}
-			slider();
-	}, 1000);
+				$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
+				counter += 1;
+				console.log("dodałem 1 do licznika, licznik: "+counter);
+					if(counter < 2){
+						$(".progressBar img:nth-of-type(1)").removeClass("active");
+						$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
+						counter=slidesLength-1;
+						$(slides).css("margin-left", "-1920px");
+					}
+				}else{
+				counter = 2;
+				console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
+				$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
+				$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
+				$(slides).css("margin-left", "-240px");
+				}
+			});
+		}
+	var interval = function(){
+		console.log("zaczynam procedurę interval, licznik: "+counter);
+		sliderStart(1000);
+	}
+	var intervalStart = setInterval(interval, 2000);
+
+	var slideChange = function(){
+		$(slideChanger).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
+		$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); console.log("leave")});
+		$(progressBarImg).each(function(e){
+			$(this).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
+			$(this).mouseleave(function(){intervalStart = setInterval(interval, 2000); console.log("leave")});
+			$(this).click(function(){
+				clearInterval(interval);
+				counter = e+1;
+				$(progressBarImg).each(function(){$(this).removeClass("active");});
+				console.log("Licznik zmienił się na: "+(e+1));
+				console.log("zmiana slajdu");
+				sliderStart(100);	
+				});
+		});
+		slideChanger.click(function(evt){
+			evt.preventDefault();
+			clearInterval(interval);
+			counter += parseInt($(this).attr("href"));
+			console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
+			console.log("zmiana slajdu");
+			sliderStart(100);	
+		});
+	};
+	slideChange();
 }
-
-
 
 slideStart();
 
+$.fn.dupa = function(){
+	return console.log("mega chujnia");
+}
+
+dupa();
