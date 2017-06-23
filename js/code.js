@@ -25,6 +25,7 @@ $(document).ready(function(){
 //SKILLS CAROUSEL
 
 function slideStart(){
+	var windowWidth = $(window).width();
 	var previousSlide = $(".arrowLeft");
 	var nextSlide = $(".arrowRight");
 	var slideChanger = $(".slideChanger");
@@ -34,7 +35,13 @@ function slideStart(){
 	var slides = $(".slides");
 	var counter = 2;
 	var sliderStart = function(speed){
-			var slidePosition = counter*(-240);
+			var negativeMargin = -240;
+			var slidePosition = counter*negativeMargin;
+			if (windowWidth >= 768){
+				console.log("windowWidth");
+				slidePosition = counter*(-300);
+				negativeMargin = -300;
+			}
 			slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
 				if(counter < slidesLength - 1){
 				$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
@@ -53,7 +60,7 @@ function slideStart(){
 				// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
 				$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
 				$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
-				$(slides).css("margin-left", "-240px");
+				$(slides).css("margin-left", negativeMargin+"px");
 				}
 			});
 		}

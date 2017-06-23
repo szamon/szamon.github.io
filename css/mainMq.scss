@@ -14,12 +14,11 @@ $font-stack8: 'Courgette', cursive;
 		padding-top: 40vh;
 
 		.myPhoto{
-			margin: 0 0 0 calc(50% - 160px);
+			margin: 0 70px 0 calc(50% - 195px);
 			}
 			.myNameTitle{
 			> p:nth-of-type(1){
 				margin: 20px 0 0 5px;
-			
 			}
 
 			> p:nth-of-type(2){
@@ -33,44 +32,60 @@ $font-stack8: 'Courgette', cursive;
 	}
 
 	.aboutMe{
-	
-		> h2:nth-of-type(1){
-			margin-top: 12vh;
-		}
 
-		> h4{
+	.questionMarkComeIn{
+		
+	}
+
+	@keyframes questionSlideIn{
+		50%{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 150px);
+			left: calc(100% - 320px);
+			transform: rotate(0);
+			opacity: 1;
+		}
+		to{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 150px);
+			left: calc(100% - 320px);
+			transform: rotate(0);
+			opacity: 1;
+		}
+	}
+	
+	> h2:nth-of-type(1){
+		float: left;
+		width: 290px;
+		margin: 11vh auto 0 100px;
+
+	}
+
+
+
+	div:nth-of-type(1){
+		float: left;
+		clear:left;
+		width: 350px;
+		margin-left: 70px;
+		p{
 			
 		}
-		div:nth-of-type(1){
-			display: flex;
 
-			> p{
-				margin: 30px 12px 0 12px;
-			}
+		p:nth-of-type(1){
+			
 		}
 
-		.skills{
-			margin-top: 55px;
-			margin-bottom: auto;
-
-			h2{
-				margin-bottom: 15px;
-			}
-
-			img{
-				margin: 20px 5px 15px 5px;
-				max-height: 80px;
-				max-width: 80px;
-			}
-
-			img:hover{
-				// max-height: 65px;
-				// max-width: 65px;
-				// transform: rotateY(45deg);
-				border: solid 1px white;
-				border-radius: 50%;
-			}
+		p:nth-of-type(3){
+			
 		}
+	}
+
+	.paragraphComeIn{
+		
+	}
 	}
 
 	.portfolio{
@@ -113,9 +128,97 @@ $font-stack8: 'Courgette', cursive;
 		}
 	}
 
+	.skills{
+
+		h2{
+			margin-top: 12vh;
+			margin-bottom: 50px;
+		}
+
+		.slider{
+			height: 300px;
+
+			.prevArrow{
+				height: 240px;
+				padding-left: calc(50% - 190px);
+				box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				border-right: 1px solid white;
+				border-top-right-radius: 40%;
+				border-bottom-right-radius: 40%;
+				background: rgb(220, 223, 229);
+
+					img{
+						margin-top: 100px;
+					}
+				}
+
+			.nextArrow{
+				height: 240px;
+				padding-right: calc(50% - 190px);
+				box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				border-right: 1px solid white;
+				border-top-left-radius: 40%;
+				border-bottom-left-radius: 40%;
+				background: rgb(234, 236, 239);
+
+					img{
+						margin-top: 100px;
+					}
+				}
+
+			.slides{
+				position: absolute;
+				top: 0;
+				margin-left: -300px;
+				left: calc(50% - 150px);
+				height: 250px;
+				width: 3000px;
+				overflow: hidden;
+
+				img{
+					float: left;
+					margin: 25px 50px;
+					height: 250px;
+					max-height: 200px;
+					max-width: 200px;
+					transition: 0.3s ease;
+				}
+
+				img:hover{
+					// max-height: 65px;
+					// max-width: 65px;
+					// transform: rotateY(45deg);
+					border: solid 1px white;
+					border-radius: 50%;
+				}
+			}
+
+			.progressBar{
+				position: absolute;
+				bottom: 0;
+				left: calc(50% - 135px);
+				height: 30px;
+
+				img{
+					max-width: 30px;
+					height: 30px;
+					transition: 0.3s;
+				}
+
+				img:hover{
+					border-radius: 30%;
+					box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+				}
+
+				.active{
+					border-radius: 30%;
+					box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+				}
+			}
+		}
+	}
 	.contact{
 		padding-top: 12vh;
-		
 		
 		h2{
 			
@@ -212,117 +315,117 @@ $font-stack8: 'Courgette', cursive;
 	}
 }
 
-@media screen and (min-width:992px){
+// @media screen and (min-width:992px){
 	
-	.aboutMe{
+// 	.aboutMe{
 	
-		div:nth-of-type(1){
-			margin: 0 auto;
-			width: 70%;
-		}
+// 		div:nth-of-type(1){
+// 			margin: 0 auto;
+// 			width: 70%;
+// 		}
 
-		.skills{
-			margin-top: 80px;
-		}
+// 		.skills{
+// 			margin-top: 80px;
+// 		}
 
-	}
+// 	}
 
 
-	.contact{
-		padding-top: 12vh;
+// 	.contact{
+// 		padding-top: 12vh;
 		
 		
-		h2{
+// 		h2{
 			
-		}
+// 		}
 
-		.form{
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: flex-start;
-			height: 260px;
-			width: 600px;
-			margin: 30px auto 0 auto;
+// 		.form{
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 			flex-direction: row;
+// 			justify-content: flex-start;
+// 			height: 260px;
+// 			width: 600px;
+// 			margin: 30px auto 0 auto;
 			
-			label:nth-of-type(1), label:nth-of-type(2){
-				width: 50%;
-				margin: 0;
-			}
+// 			label:nth-of-type(1), label:nth-of-type(2){
+// 				width: 50%;
+// 				margin: 0;
+// 			}
 
-			input{
-				height: 25px;
-				width: calc(50% - 20px);
-				margin: 0 10px;
-				line-height: 25px;
-			}
+// 			input{
+// 				height: 25px;
+// 				width: calc(50% - 20px);
+// 				margin: 0 10px;
+// 				line-height: 25px;
+// 			}
 
-			textarea{
-				height: 150px;
-				margin: 0 10px;
-				line-height: 25px;
-			}
+// 			textarea{
+// 				height: 150px;
+// 				margin: 0 10px;
+// 				line-height: 25px;
+// 			}
 
-			label:nth-of-type(3), textarea{
-				width: 100%;
-			}
+// 			label:nth-of-type(3), textarea{
+// 				width: 100%;
+// 			}
 
-			label:nth-of-type(1){
-				order: 1;
-			}
+// 			label:nth-of-type(1){
+// 				order: 1;
+// 			}
 
-			label:nth-of-type(2){
-				order: 2;
-			}
+// 			label:nth-of-type(2){
+// 				order: 2;
+// 			}
 
-			input:nth-of-type(1){
-				order: 3;
-			}
+// 			input:nth-of-type(1){
+// 				order: 3;
+// 			}
 
-			input:nth-of-type(2){
-				order: 4;
-			}
+// 			input:nth-of-type(2){
+// 				order: 4;
+// 			}
 
-			label:nth-of-type(3){
-				margin-top: 35px;
-				order: 5;
-			}
+// 			label:nth-of-type(3){
+// 				margin-top: 35px;
+// 				order: 5;
+// 			}
 
-			textarea{
-				order: 6;
-			}
-		}
+// 			textarea{
+// 				order: 6;
+// 			}
+// 		}
 		
-		.phoneEmail{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-top: 40px;
+// 		.phoneEmail{
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: center;
+// 			margin-top: 40px;
 			
-			.phone, .email{
-				display: flex;
-				align-items: center;
-				margin: 0 60px;
+// 			.phone, .email{
+// 				display: flex;
+// 				align-items: center;
+// 				margin: 0 60px;
 
-					img{
-						float: none;
-						max-width: 45px;
-					}
+// 					img{
+// 						float: none;
+// 						max-width: 45px;
+// 					}
 
-					p{
+// 					p{
 
-						float: none;
-						margin: 0 0 0 5px;
-					}
-				}
+// 						float: none;
+// 						margin: 0 0 0 5px;
+// 					}
+// 				}
 
-			.phone{
-				width: auto;
-			}
+// 			.phone{
+// 				width: auto;
+// 			}
 
-			.email{
-				width: auto;
-			}
-		}
-	}
-}
+// 			.email{
+// 				width: auto;
+// 			}
+// 		}
+// 	}
+// }

@@ -221,7 +221,7 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(0px, 0, 0, white, scrollText);
+		@include scrollText(5px, 0, 0, white, scrollText);
 	}
 
 }
@@ -237,10 +237,6 @@ a{
 	text-align: center;
 	box-shadow: inset 0px -50px 70px -70px white;
 	z-index: 99;
-
-	>img{
-		
-	}
 
 	.questionMarkComeIn{
 		position: absolute;
@@ -325,7 +321,7 @@ a{
 	}
 
 	.scrollText{
-		@include scrollText(0px, 0, 0, white, scrollText);
+		@include scrollText(5px, 0, 0, white, scrollText);
 	}
 }
 	
