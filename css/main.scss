@@ -236,16 +236,63 @@ a{
 	color: white;
 	text-align: center;
 	box-shadow: inset 0px -50px 70px -70px white;
+	z-index: 99;
+
+	>img{
+		
+	}
+
+	.questionMarkComeIn{
+		position: absolute;
+		height: 0;
+		width: 0;
+		top: 0;
+		left: 0;
+		transform: rotate(-225deg);
+		opacity: 1;
+		animation: questionSlideIn 2s ease;
+		animation-fill-mode:forwards;
+	}
+
+	@keyframes questionSlideIn{
+		50%{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 150px);
+			left: calc(50% - 150px);
+			transform: rotate(0);
+			opacity: 1;
+		}
+		to{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 150px);
+			left: calc(50% - 150px);
+			transform: rotate(0);
+			opacity: 0.15;
+		}
+	}
 	
 	> h2:nth-of-type(1){
 		width: 290px;
-		margin: 15vh auto 0 auto;
+		margin: 13vh auto 0 auto;
 		font-size: 2em;
 		padding-bottom: 3px;
 		border-bottom: 1.5px solid white;
 		border-bottom-left-radius: 15%;
 		border-bottom-right-radius: 15%;
-		
+	}
+
+	.headingComeIn{
+		transform: translate(-200%,-50px);
+		animation: textSlideIn 1s ease 0.5s;
+		animation-fill-mode:forwards;
+	}
+
+	@keyframes textSlideIn{
+		to{
+			transform: translate(0, 0);
+		}
 	}
 
 	div:nth-of-type(1){
@@ -269,6 +316,12 @@ a{
 			// border-bottom-left-radius: 5%;
 			// border-bottom-right-radius: 5%;
 		}
+	}
+
+	.paragraphComeIn{
+		transform: translate(-200%,-50px);
+		animation: textSlideIn 1s ease 1s;
+		animation-fill-mode:forwards;
 	}
 
 	.scrollText{

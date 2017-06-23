@@ -22,6 +22,8 @@ $(document).ready(function(){
 		});
 });
 
+//SKILLS CAROUSEL
+
 function slideStart(){
 	var previousSlide = $(".arrowLeft");
 	var nextSlide = $(".arrowRight");
@@ -39,7 +41,7 @@ function slideStart(){
 				$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
 				$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
 				counter += 1;
-				console.log("dodałem 1 do licznika, licznik: "+counter);
+				// console.log("dodałem 1 do licznika, licznik: "+counter);
 					if(counter < 2){
 						$(".progressBar img:nth-of-type(1)").removeClass("active");
 						$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
@@ -48,7 +50,7 @@ function slideStart(){
 					}
 				}else{
 				counter = 2;
-				console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
+				// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
 				$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
 				$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
 				$(slides).css("margin-left", "-240px");
@@ -56,7 +58,7 @@ function slideStart(){
 			});
 		}
 	var interval = function(){
-		console.log("zaczynam procedurę interval, licznik: "+counter);
+		// console.log("zaczynam procedurę interval, licznik: "+counter);
 		sliderStart(1000);
 	}
 	var intervalStart = setInterval(interval, 2000);
@@ -71,8 +73,8 @@ function slideStart(){
 				clearInterval(interval);
 				counter = e+1;
 				$(progressBarImg).each(function(){$(this).removeClass("active");});
-				console.log("Licznik zmienił się na: "+(e+1));
-				console.log("zmiana slajdu");
+				// console.log("Licznik zmienił się na: "+(e+1));
+				// console.log("zmiana slajdu");
 				sliderStart(100);	
 				});
 		});
@@ -80,8 +82,8 @@ function slideStart(){
 			evt.preventDefault();
 			clearInterval(interval);
 			counter += parseInt($(this).attr("href"));
-			console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
-			console.log("zmiana slajdu");
+			// console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
+			// console.log("zmiana slajdu");
 			sliderStart(100);	
 		});
 	};
@@ -90,8 +92,45 @@ function slideStart(){
 
 slideStart();
 
-$.fn.dupa = function(){
-	return console.log("mega chujnia");
-}
+//SLIDE IN
+(function($) {
+	$.fn.visible = function(partial) {
+	    
+	      var $t            = $(this),
+	          $w            = $(window),
+	          viewTop       = $w.scrollTop(),
+	          viewBottom    = viewTop + $w.height(),
+	          _top          = $t.offset().top,
+	          _bottom       = _top + $t.height(),
+	          compareTop    = partial === true ? _bottom : _top,
+	          compareBottom = partial === true ? _top : _bottom;
+	    
+	    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-dupa();
+	  };
+	    
+})(jQuery);
+
+var module = $(".aboutMe >img, .aboutMe h2, .aboutMe div:nth-of-type(1)");
+
+
+$(window).scroll(function(event) {
+  
+  module.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+    	if(i===0){
+    		el.addClass("questionMarkComeIn");
+    		console.log("pierwszy widoczny");
+    	}else if(i===1){
+    		el.addClass("headingComeIn");
+    		console.log("drugi widoczny");
+    	}else if(i===2){
+    		el.addClass("paragraphComeIn");
+    		console.log("trzeci widoczny");
+    	}
+   		console.log(i, el);
+   	} 
+  });
+  
+});
