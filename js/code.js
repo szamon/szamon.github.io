@@ -118,7 +118,7 @@ slideStart();
 	    
 })(jQuery);
 
-var module = $(".aboutMe >img, .aboutMe h2, .aboutMe div:nth-of-type(1)");
+var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
 
 
 $(window).scroll(function(event) {
@@ -130,11 +130,14 @@ $(window).scroll(function(event) {
     		el.addClass("questionMarkComeIn");
     		console.log("pierwszy widoczny");
     	}else if(i===1){
-    		el.addClass("headingComeIn");
+    		el.addClass("lampBlinkStart");
     		console.log("drugi widoczny");
     	}else if(i===2){
-    		el.addClass("paragraphComeIn");
+    		el.addClass("headingComeIn");
     		console.log("trzeci widoczny");
+    	}else if(i===3){
+    		el.addClass("paragraphComeIn");
+    		console.log("czwarty widoczny");
     	}
    		console.log(i, el);
    	} 

@@ -1,0 +1,108 @@
+$font-stack: "Bangers", helvetica;
+$font-stack2: 'Varela Round', sans-serif;
+$font-stack3: 'Alegreya', serif;
+$font-stack4: 'Architects Daughter', cursive;
+$font-stack5: 'Comfortaa', cursive;
+$font-stack6: 'Satisfy', cursive;
+$font-stack7: 'Kaushan Script', cursive;
+$font-stack8: 'Courgette', cursive;
+
+@media screen and (min-width:992px){
+	.aboutMe{
+
+		.questionMarkComeIn{
+			animation: questionSlideIn 6s ease 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes questionSlideIn{
+			20%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				transform: rotate(0);
+				opacity: 1;
+			}
+
+
+			50%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				transform: rotate(0);
+				opacity: 1;
+			}
+
+			
+			to{
+				height: 250px;
+				width: 250px;
+				top: calc(50vh);
+				left: calc(50vw - 380px);
+				transform: rotate(0);
+				opacity: 0.2;
+			}
+		}
+
+		>img:nth-of-type(2){
+			top: 12vh;
+			right: calc(50vw - 350px);
+			height: 120px;
+			width: 120px;
+		}
+
+		.lampBlinkStart{
+			animation: lampBlink 1.5s 4s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 4;
+		}
+
+		@keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+		
+		> h2:nth-of-type(1){
+			display: block;
+			float: none;
+			width: 290px;
+			margin: 23vh auto 0 auto;
+		}
+
+		.headingComeIn{
+			animation: textSlideIn 1s ease;
+			animation-fill-mode:forwards;
+		}
+
+		div:nth-of-type(1){
+			display: flex;
+			float: none;
+			margin: 0 auto;
+			width: 800px;
+			p{
+				margin: 50px 10px;
+			}
+
+			p:nth-of-type(1){
+				
+			}
+
+			p:nth-of-type(3){
+				
+			}
+		}
+
+		.paragraphComeIn{
+			animation: textSlideIn 2s ease 4s;
+			animation-fill-mode:forwards;
+		}
+	}
+
+}
