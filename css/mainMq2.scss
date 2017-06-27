@@ -105,4 +105,57 @@ $font-stack8: 'Courgette', cursive;
 		}
 	}
 
+	.skills{
+
+		h2{
+			margin-bottom: 25px;
+		}
+
+		.slider{
+			position: static;
+			height: auto;
+			width: auto;
+
+			.prevArrow{
+				display: none;
+			}
+
+			.nextArrow{
+				display: none;
+			}
+
+			.slides{
+				position: static;
+				display: block;
+				margin: 0 auto;
+				width: 800px;
+				height: auto;
+
+				img:nth-of-type(1), img:nth-of-type(10){
+					display: none;
+				}
+
+				img{
+					float: left;
+					margin: 25px 25px;
+					height: 150px;
+					max-width: 150px;
+					transition: 0.3s ease;
+				}
+
+				img:hover{
+					// max-height: 65px;
+					// max-width: 65px;
+					// transform: rotateY(45deg);
+					border: solid 1px white;
+					border-radius: 50%;
+				}
+			}
+
+			.progressBar{
+				display: none;
+			}
+		}
+	}
+
 }
