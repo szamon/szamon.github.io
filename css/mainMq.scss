@@ -183,7 +183,8 @@ $font-stack8: 'Courgette', cursive;
 			.prevArrow{
 				height: 240px;
 				padding-left: calc(50% - 190px);
-				box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				-webkit-box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				        box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
 				border-right: 1px solid white;
 				border-top-right-radius: 40%;
 				border-bottom-right-radius: 40%;
@@ -197,7 +198,8 @@ $font-stack8: 'Courgette', cursive;
 			.nextArrow{
 				height: 240px;
 				padding-right: calc(50% - 190px);
-				box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				-webkit-box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				        box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
 				border-right: 1px solid white;
 				border-top-left-radius: 40%;
 				border-bottom-left-radius: 40%;
@@ -223,13 +225,14 @@ $font-stack8: 'Courgette', cursive;
 					height: 250px;
 					max-height: 200px;
 					max-width: 200px;
+					-webkit-transition: 0.3s ease;
 					transition: 0.3s ease;
 				}
 
 				img:hover{
-					// max-height: 65px;
-					// max-width: 65px;
-					// transform: rotateY(45deg);
+					/* max-height: 65px;*/
+					/* max-width: 65px;*/
+					/* transform: rotateY(45deg);*/
 					border: solid 1px white;
 					border-radius: 50%;
 				}
@@ -244,17 +247,20 @@ $font-stack8: 'Courgette', cursive;
 				img{
 					max-width: 30px;
 					height: 30px;
+					-webkit-transition: 0.3s;
 					transition: 0.3s;
 				}
 
 				img:hover{
 					border-radius: 30%;
-					box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					-webkit-box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					        box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
 				}
 
 				.active{
 					border-radius: 30%;
-					box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					-webkit-box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					        box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
 				}
 			}
 		}
@@ -357,117 +363,3 @@ $font-stack8: 'Courgette', cursive;
 	}
 }
 
-// @media screen and (min-width:992px){
-	
-// 	.aboutMe{
-	
-// 		div:nth-of-type(1){
-// 			margin: 0 auto;
-// 			width: 70%;
-// 		}
-
-// 		.skills{
-// 			margin-top: 80px;
-// 		}
-
-// 	}
-
-
-// 	.contact{
-// 		padding-top: 12vh;
-		
-		
-// 		h2{
-			
-// 		}
-
-// 		.form{
-// 			display: flex;
-// 			flex-wrap: wrap;
-// 			flex-direction: row;
-// 			justify-content: flex-start;
-// 			height: 260px;
-// 			width: 600px;
-// 			margin: 30px auto 0 auto;
-			
-// 			label:nth-of-type(1), label:nth-of-type(2){
-// 				width: 50%;
-// 				margin: 0;
-// 			}
-
-// 			input{
-// 				height: 25px;
-// 				width: calc(50% - 20px);
-// 				margin: 0 10px;
-// 				line-height: 25px;
-// 			}
-
-// 			textarea{
-// 				height: 150px;
-// 				margin: 0 10px;
-// 				line-height: 25px;
-// 			}
-
-// 			label:nth-of-type(3), textarea{
-// 				width: 100%;
-// 			}
-
-// 			label:nth-of-type(1){
-// 				order: 1;
-// 			}
-
-// 			label:nth-of-type(2){
-// 				order: 2;
-// 			}
-
-// 			input:nth-of-type(1){
-// 				order: 3;
-// 			}
-
-// 			input:nth-of-type(2){
-// 				order: 4;
-// 			}
-
-// 			label:nth-of-type(3){
-// 				margin-top: 35px;
-// 				order: 5;
-// 			}
-
-// 			textarea{
-// 				order: 6;
-// 			}
-// 		}
-		
-// 		.phoneEmail{
-// 			display: flex;
-// 			align-items: center;
-// 			justify-content: center;
-// 			margin-top: 40px;
-			
-// 			.phone, .email{
-// 				display: flex;
-// 				align-items: center;
-// 				margin: 0 60px;
-
-// 					img{
-// 						float: none;
-// 						max-width: 45px;
-// 					}
-
-// 					p{
-
-// 						float: none;
-// 						margin: 0 0 0 5px;
-// 					}
-// 				}
-
-// 			.phone{
-// 				width: auto;
-// 			}
-
-// 			.email{
-// 				width: auto;
-// 			}
-// 		}
-// 	}
-// }
