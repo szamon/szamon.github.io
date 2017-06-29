@@ -2,17 +2,36 @@
 
 $(document).ready(function(){
 
-	//Menu display on click
-	$(".menu").click(function(){
-		if($(".overlay").hasClass("overlayOpen")){
-			$(".menu").removeClass("menuOpen");
-			$(".overlay").removeClass("overlayOpen");
+//VIEWPORT WIdTH CHECK
+	function viewport() {
+	    var e = window, a = 'inner';
+	    if (!('innerWidth' in window )) {
+	        a = 'client';
+	        e = document.documentElement || document.body;
+	    }
+	    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+		}
+
+	// var vpWidth = 
+	var windowWidth = viewport().width; 
+
+
+	slideStart();
+
+//ONCLICK MENU
+
+	var menu = $(".menu");
+	var overlay = $(".overlay");
+
+	menu.click(function(){
+		if(overlay.hasClass("overlayOpen")){
+			menu.removeClass("menuOpen");
+			overlay.removeClass("overlayOpen");
 		}else{
-			$(".menu").addClass("menuOpen");
-			$(".overlay").addClass("overlayOpen");
+			menu.addClass("menuOpen");
+			overlay.addClass("overlayOpen");
 			};
 	});
-
 
 	$('.scrollText a, .overlay li').click(
 		function(evt){
@@ -34,41 +53,92 @@ $(document).ready(function(){
 		var progressBarImg = $(".progressBar img");
 		var slides = $(".slides");
 		var counter = 2;
+		var negativeMargin;
+		var slidePosition;
+		if (windowWidth < 768){
+				console.log(windowWidth);
+				negativeMargin = -240;
+		}else if (windowWidth >= 768){
+			console.log(windowWidth);
+			negativeMargin = -300;
+		}
 		var sliderStart = function(speed){
-				var negativeMargin = -240;
-				var slidePosition = counter*negativeMargin;
-				if (windowWidth >= 768){
-					console.log(windowWidth);
-					slidePosition = counter*(-300);
-					negativeMargin = -300;
-				}
-				slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
-					if(counter < slidesLength - 1){
-					$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
-					$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
-					$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
-					counter += 1;
-					// console.log("dodałem 1 do licznika, licznik: "+counter);
-						if(counter < 2){
-							$(".progressBar img:nth-of-type(1)").removeClass("active");
-							$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
-							counter=slidesLength-1;
-							$(slides).css("margin-left", "-1920px");
-						}
-					}else{
-					counter = 2;
-					// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
-					$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
-					$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
-					$(slides).css("margin-left", negativeMargin+"px");
+
+			slidePosition = counter*negativeMargin;
+			
+			slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
+				if(counter < slidesLength - 1){
+				$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
+				$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
+				$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
+				counter += 1;
+				// console.log("dodałem 1 do licznika, licznik: "+counter);
+					if(counter < 2){
+						$(".progressBar img:nth-of-type(1)").removeClass("active");
+						$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
+						counter=slidesLength-1;
+						$(slides).css("margin-left", "-1920px");
 					}
-				});
-			}
+				}else{
+				counter = 2;
+				// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
+				$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
+				$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
+				$(slides).css("margin-left", negativeMargin+"px");
+				}
+			});
+		}
 		var interval = function(){
 			// console.log("zaczynam procedurę interval, licznik: "+counter);
 			sliderStart(1000);
 		}
-		var intervalStart = setInterval(interval, 2000);
+		if(windowWidth < 992){
+			var intervalStart = setInterval(interval, 2000);
+			console.log("slidestart interval set");
+		}
+
+		function resizedw(){
+	    // Haven't resized in 100ms!
+	    function viewport() {
+	    var e = window, a = 'inner';
+	    if (!('innerWidth' in window )) {
+	        a = 'client';
+	        e = document.documentElement || document.body;
+	    }
+	    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+		}
+		    windowWidth = viewport().width;
+			console.log(windowWidth);
+			clearInterval(intervalStart);
+			console.log("inteval cleared");
+			if (windowWidth < 992){
+				intervalStart = setInterval(interval, 2000);
+				if (windowWidth < 768){
+					console.log("inteval set, "+ windowWidth);
+					negativeMargin = -240;
+				}else if (windowWidth >= 768){
+					console.log("inteval set, "+ windowWidth);
+					negativeMargin = -300;
+					console.log("margin-left set to, "+ negativeMargin);
+				}
+			}else if (windowWidth >= 992){
+				console.log("inteval not set"+ windowWidth);
+				slides.css("display", "none");
+				function setMarginLeft(){
+					slides.css("margin-left", "auto");
+					console.log("func setMarginLeft");
+					slides.css("display", "block");
+				}
+				setTimeout(setMarginLeft, 700);
+				clearTimeout
+				console.log("margin-left of slides set to: "+ slides.css("margin-left"));
+			}
+		}	
+		var doit;
+		window.onresize = function(){
+			clearTimeout(doit);
+			doit = setTimeout(resizedw, 100);
+		};
 
 		var slideChange = function(){
 			$(slideChanger).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
@@ -95,27 +165,6 @@ $(document).ready(function(){
 			});
 		};
 		slideChange();
-
-		// function resizedw(){
-	 //    // Haven't resized in 100ms!
-	 //    	clearInterval(interval);
-		//     windowWidth = $(window).width();
-		// 		console.log(windowWidth);
-		// 		if (windowWidth < 992){
-		// 			intervalStart = setInterval(interval, 2000)
-		// 	}
-		// }	
-		// var doit;
-		// window.onresize = function(){
-		// 	clearTimeout(doit);
-		// 	doit = setTimeout(resizedw, 100);
-		// };
-	}
-
-	var windowWidth = $(window).width();
-
-	if (windowWidth < 992){
-		slideStart();
 	}
 
 	//SLIDE IN
@@ -138,7 +187,6 @@ $(document).ready(function(){
 	})(jQuery);
 
 	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
-
 
 	$(window).scroll(function(event) {
 	  
