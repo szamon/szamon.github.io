@@ -369,7 +369,7 @@ a{
 
 		p{
 			margin: 25px 6px 0 6px;
-			font-size: 1em;
+			font-size: 0.9em;
 			text-align: justify;
 		}
 
@@ -416,7 +416,7 @@ a{
 
 	h2{
 		margin-top: 12vh;
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 		font-size: 2em;
 	}
 
@@ -541,16 +541,16 @@ a{
 		display: inline-block;
 		width: 100%;
 		margin-top: 10vh;
-		margin-bottom: 25px;
 		font-weight: 100;
 	}
 
 	div:nth-of-type(1){
-		margin: 15px auto;
+		margin: 20px auto;
 		width: 80%;
 		border-top: 1px solid white;
 		border-bottom: 1px solid white;
-		
+		font-size: 0.9em;
+
 		h3:nth-of-type(1){
 			margin: 15px 0;
 		}
@@ -592,6 +592,7 @@ a{
 		width: 200px;
 		margin: 25px auto;
 		overflow: hidden;
+		font-size: 0.9em;
 
 		a{
 			img{
