@@ -328,38 +328,27 @@ $font-stack8: 'Courgette', cursive;
 				order: 6;
 			}
 		}
+	.phoneEmail{
+		font-size: 1em;
 		
-		.phoneEmail{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-top: 40px;
-			
-			.phone, .email{
-				display: flex;
-				align-items: center;
-				margin: 0 60px;
+		.phone, .email{
+			margin: 0 60px;
 
-					img{
-						float: none;
-						max-width: 45px;
-					}
-
-					p{
-
-						float: none;
-						margin: 0 0 0 5px;
-					}
+				img{
+					max-width: 45px;
 				}
 
-			.phone{
-				width: auto;
+				p{
+				}
 			}
 
-			.email{
-				width: auto;
-			}
+		.phone{
 		}
+
+		.email{
+		}
+	}
+
 	}
 }
 

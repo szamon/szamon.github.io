@@ -415,8 +415,8 @@ a{
 	overflow: hidden;
 
 	h2{
-		margin-top: 12vh;
-		margin-bottom: 35px;
+		margin-top: 14vh;
+		margin-bottom: 60px;
 		font-size: 2em;
 	}
 
@@ -670,34 +670,39 @@ a{
 			cursor: pointer;
 		}
 	}
+	
+	.phoneEmail{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 40px;
+		font-family: $font-stack;
+		font-size: 0.8em;
+		
+		.phone, .email{
+			display: flex;
+			align-items: center;
+			margin: 0 10px;
 
-	.phone, .email{
-		height: 25px;
-		margin: 20px auto 0 auto;
+				img{
+					float: none;
+					max-width: 30px;
+				}
 
-			img{
-				display: inline-block;
-				float: left;
-				max-width: 30px;
+				p{
+
+					float: none;
+					margin: 0 0 0 5px;
+				}
 			}
 
-			p{
-				display: inline-block;
-				float: left;
-				margin-top: 5px;
-				margin-left: 5px;
-				font-family: $font-stack;
-				font-weight: 100;
-
-			}
+		.phone{
+			width: auto;
 		}
 
-	.phone{
-		width: 120px;
-	}
-
-	.email{
-		width: 200px;
+		.email{
+			width: auto;
+		}
 	}
 
 	.scrollText{
