@@ -129,7 +129,7 @@ $(document).ready(function(){
 					console.log("func setMarginLeft");
 					slides.css("display", "block");
 				}
-				setTimeout(setMarginLeft, 700);
+				setTimeout(setMarginLeft, 1000);
 				clearTimeout
 				console.log("margin-left of slides set to: "+ slides.css("margin-left"));
 			}
