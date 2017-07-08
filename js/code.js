@@ -186,39 +186,37 @@ $(document).ready(function(){
 		    
 	})(jQuery);
 
-	// var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
-	var module = $(".aboutMe");
-	var aboutMeEl1 = $(".aboutMe >img:nth-of-type(1)");
-	var aboutMeEl2 = $(".aboutMe >img:nth-of-type(2)");
-	var aboutMeEl3 = $(".aboutMe h2");
-	var aboutMeEl4 = $(".aboutMe div:nth-of-type(1)");
+	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
+	var aboutMe = $(".aboutMe");
+	// var aboutMeEl1 = $(".aboutMe >img:nth-of-type(1)");
+	// var aboutMeEl2 = $(".aboutMe >img:nth-of-type(2)");
+	// var aboutMeEl3 = $(".aboutMe h2");
+	// var aboutMeEl4 = $(".aboutMe div:nth-of-type(1)");
 
 	$(window).scroll(function(event) {
 	  
-		if(module.visible(true)){
-			aboutMeEl1.addClass("questionMarkComeIn");
-			aboutMeEl2.addClass("lampBlinkStart");
-			aboutMeEl3.addClass("headingComeIn");
-			aboutMeEl4.addClass("paragraphComeIn");
-		}
-	  // module.each(function(i, el) {
-	  //   var el = $(el);
-	  //   if (el.visible(true)) {
-	  //   	if(i===0){
-	  //   		el.addClass("questionMarkComeIn");
-	  //   		console.log("pierwszy widoczny");
-	  //   	}else if(i===1){
-	  //   		el.addClass("lampBlinkStart");
-	  //   		console.log("drugi widoczny");
-	  //   	}else if(i===2){
-	  //   		el.addClass("headingComeIn");
-	  //   		console.log("trzeci widoczny");
-	  //   	}else if(i===3){
-	  //   		el.addClass("paragraphComeIn");
-	  //   		console.log("czwarty widoczny");
-	  //   	}
-	  //  		console.log(i, el);
-	   	// } 
+		// if(aboutMe.visible(true)){
+		// 	aboutMeEl1.addClass("questionMarkComeIn");
+		// 	aboutMeEl2.addClass("lampBlinkStart");
+		// 	aboutMeEl3.addClass("headingComeIn");
+		// 	aboutMeEl4.addClass("paragraphComeIn");
 
+		// }
+		module.each(function(i, el) {
+		    var el = $(el);
+	    	if(i===0){
+	    		el.addClass("questionMarkComeIn");
+	    		console.log("pierwszy widoczny");
+	    	}else if(i===1){
+	    		el.addClass("lampBlinkStart");
+	    		console.log("drugi widoczny");
+	    	}else if(i===2){
+	    		el.addClass("headingComeIn");
+	    		console.log("trzeci widoczny");
+	    	}else if(i===3){
+	    		el.addClass("paragraphComeIn");
+	    		console.log("czwarty widoczny");
+	    	}
+		});
 	});
 });
