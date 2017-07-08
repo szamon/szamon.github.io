@@ -168,46 +168,46 @@ $(document).ready(function(){
 	}
 
 	//SLIDE IN
-	// (function($) {
-	// 	$.fn.visible = function(partial) {
+	(function($) {
+		$.fn.visible = function(partial) {
 		    
-	// 	      var $t            = $(this),
-	// 	          $w            = $(window),
-	// 	          viewTop       = $w.scrollTop(),
-	// 	          viewBottom    = viewTop + $w.height(),
-	// 	          _top          = $t.offset().top,
-	// 	          _bottom       = _top + $t.height(),
-	// 	          compareTop    = partial === true ? _bottom : _top,
-	// 	          compareBottom = partial === true ? _top : _bottom;
+		      var $t            = $(this),
+		          $w            = $(window),
+		          viewTop       = $w.scrollTop(),
+		          viewBottom    = viewTop + $w.height(),
+		          _top          = $t.offset().top,
+		          _bottom       = _top + $t.height(),
+		          compareTop    = partial === true ? _bottom : _top,
+		          compareBottom = partial === true ? _top : _bottom;
 		    
-	// 	    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+		    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-	// 	  };
+		  };
 		    
-	// })(jQuery);
+	})(jQuery);
 
-	// var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
+	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
 
-	// $(window).scroll(function(event) {
+	$(window).scroll(function(event) {
 	  
-	//   module.each(function(i, el) {
-	//     var el = $(el);
-	//     if (el.visible(true)) {
-	//     	if(i===0){
-	//     		el.addClass("questionMarkComeIn");
-	//     		console.log("pierwszy widoczny");
-	//     	}else if(i===1){
-	//     		el.addClass("lampBlinkStart");
-	//     		console.log("drugi widoczny");
-	//     	}else if(i===2){
-	//     		el.addClass("headingComeIn");
-	//     		console.log("trzeci widoczny");
-	//     	}else if(i===3){
-	//     		el.addClass("paragraphComeIn");
-	//     		console.log("czwarty widoczny");
-	//     	}
-	//    		console.log(i, el);
-	//    	} 
-	//   });
-	// });
+	  // module.each(function(i, el) {
+	  //   var el = $(el);
+	  //   if (el.visible(true)) {
+	  //   	if(i===0){
+	  //   		el.addClass("questionMarkComeIn");
+	  //   		console.log("pierwszy widoczny");
+	  //   	}else if(i===1){
+	  //   		el.addClass("lampBlinkStart");
+	  //   		console.log("drugi widoczny");
+	  //   	}else if(i===2){
+	  //   		el.addClass("headingComeIn");
+	  //   		console.log("trzeci widoczny");
+	  //   	}else if(i===3){
+	  //   		el.addClass("paragraphComeIn");
+	  //   		console.log("czwarty widoczny");
+	  //   	}
+	  //  		console.log(i, el);
+	   	} 
+	  });
+	});
 });
