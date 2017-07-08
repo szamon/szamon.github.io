@@ -16,7 +16,6 @@ $(document).ready(function(){
 	var windowWidth = viewport().width; 
 
 
-	slideStart();
 
 //ONCLICK MENU
 
