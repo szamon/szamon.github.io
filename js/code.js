@@ -195,28 +195,24 @@ $(document).ready(function(){
 
 	$(window).scroll(function(event) {
 	  
-		// if(aboutMe.visible(true)){
-		// 	aboutMeEl1.addClass("questionMarkComeIn");
-		// 	aboutMeEl2.addClass("lampBlinkStart");
-		// 	aboutMeEl3.addClass("headingComeIn");
-		// 	aboutMeEl4.addClass("paragraphComeIn");
-
-		// }
-		module.each(function(i, el) {
-		    var el = $(el);
-	    	if(i===0){
-	    		el.addClass("questionMarkComeIn");
-	    		console.log("pierwszy widoczny");
-	    	}else if(i===1){
-	    		el.addClass("lampBlinkStart");
-	    		console.log("drugi widoczny");
-	    	}else if(i===2){
-	    		el.addClass("headingComeIn");
-	    		console.log("trzeci widoczny");
-	    	}else if(i===3){
-	    		el.addClass("paragraphComeIn");
-	    		console.log("czwarty widoczny");
-	    	}
+		if(aboutMe.visible(true)){
+			
+			module.each(function(i, el) {
+			    var el = $(el);
+		    	if(i===0){
+		    		el.addClass("questionMarkComeIn");
+		    		console.log("pierwszy widoczny");
+		    	}else if(i===1){
+		    		el.addClass("lampBlinkStart");
+		    		console.log("drugi widoczny");
+		    	}else if(i===2){
+		    		el.addClass("headingComeIn");
+		    		console.log("trzeci widoczny");
+		    	}else if(i===3){
+		    		el.addClass("paragraphComeIn");
+		    		console.log("czwarty widoczny");
+		    	}
+		    }
 		});
 	});
 });
