@@ -212,7 +212,7 @@ $(document).ready(function(){
 		    		el.addClass("paragraphComeIn");
 		    		console.log("czwarty widoczny");
 		    	}
-		    }
-		});
+			});
+		}
 	});
 });
