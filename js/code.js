@@ -12,11 +12,7 @@ $(document).ready(function(){
 	    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
 		}
 
-	// var vpWidth = 
 	var windowWidth = viewport().width; 
-
-
-	slideStart();
 
 //ONCLICK MENU
 
@@ -37,10 +33,23 @@ $(document).ready(function(){
 		function(evt){
 			evt.preventDefault();
 			$("html, body").animate({"scrollTop": $($.attr(this, "href")).offset().top}, 500);
-			if($(".overlay").hasClass("overlayOpen")){
-			$(".menu").removeClass("menuOpen");
-			$(".overlay").removeClass("overlayOpen");}
+			if(overlay.hasClass("overlayOpen")){
+			menu.removeClass("menuOpen");
+			overlay.removeClass("overlayOpen");}
 		});
+
+//ZMIANA
+
+	window.requestAnimFrame = (function(){
+		return  window.requestAnimationFrame || 
+		        window.webkitRequestAnimationFrame || 
+				window.mozRequestAnimationFrame || 
+				window.oRequestAnimationFrame || 
+				window.msRequestAnimationFrame || 
+		        function(/* function FrameRequestCallback */ callback, /* DOMElement Element */ element){
+	            	window.setTimeout(callback, 1000 / 60);
+	          	};
+	})();
 
 //SKILLS CAROUSEL
 
@@ -56,13 +65,14 @@ $(document).ready(function(){
 		var negativeMargin;
 		var slidePosition;
 		if (windowWidth < 768){
-				console.log(windowWidth);
-				negativeMargin = -240;
+			console.log(windowWidth);
+			negativeMargin = -240;
 		}else if (windowWidth >= 768){
 			console.log(windowWidth);
 			negativeMargin = -300;
 		}
-		var sliderStart = function(speed){
+
+		function sliderMove(speed){
 
 			slidePosition = counter*negativeMargin;
 			
@@ -88,10 +98,13 @@ $(document).ready(function(){
 				}
 			});
 		}
+
 		var interval = function(){
 			// console.log("zaczynam procedurę interval, licznik: "+counter);
-			sliderStart(1000);
+			slides.stop(true,true);
+			sliderMove(1000);
 		}
+
 		if(windowWidth < 992){
 			var intervalStart = setInterval(interval, 2000);
 			console.log("slidestart interval set");
@@ -99,14 +112,15 @@ $(document).ready(function(){
 
 		function resizedw(){
 	    // Haven't resized in 100ms!
-	    function viewport() {
-	    var e = window, a = 'inner';
-	    if (!('innerWidth' in window )) {
-	        a = 'client';
-	        e = document.documentElement || document.body;
-	    }
-	    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-		}
+		    function viewport() {
+			    var e = window, a = 'inner';
+			    if (!('innerWidth' in window )) {
+			        a = 'client';
+			        e = document.documentElement || document.body;
+			    }
+			    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+			}
+
 		    windowWidth = viewport().width;
 			console.log(windowWidth);
 			clearInterval(intervalStart);
@@ -140,7 +154,7 @@ $(document).ready(function(){
 			doit = setTimeout(resizedw, 100);
 		};
 
-		var slideChange = function(){
+		function slideChange(){
 			$(slideChanger).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
 			$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); console.log("leave")});
 			$(progressBarImg).each(function(e){
@@ -152,8 +166,8 @@ $(document).ready(function(){
 					$(progressBarImg).each(function(){$(this).removeClass("active");});
 					// console.log("Licznik zmienił się na: "+(e+1));
 					// console.log("zmiana slajdu");
-					sliderStart(100);	
-					});
+					sliderMove(100);	
+				});
 			});
 			slideChanger.click(function(evt){
 				evt.preventDefault();
@@ -161,13 +175,15 @@ $(document).ready(function(){
 				counter += parseInt($(this).attr("href"));
 				// console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
 				// console.log("zmiana slajdu");
-				sliderStart(100);	
+				sliderMove(100);	
 			});
 		};
 		slideChange();
 	}
 
-	//SLIDE IN
+	slideStart();
+
+	//ABOUT ME SLIDE IN
 	(function($) {
 		$.fn.visible = function(partial) {
 		    

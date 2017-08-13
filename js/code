@@ -1,3 +1,0 @@
-$(document).ready(
-	$(.menu).onclick().addClass(.menuOpen);
-	);
