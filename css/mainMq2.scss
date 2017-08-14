@@ -9,7 +9,6 @@ $font-stack8: 'Courgette', cursive;
 
 @media screen and (min-width:992px){
 	.aboutMe{
-
 		.questionMarkComeIn{
 			-webkit-animation: questionSlideIn 6s ease 0.5s;
 			        animation: questionSlideIn 6s ease 0.5s;
@@ -27,8 +26,7 @@ $font-stack8: 'Courgette', cursive;
 				        transform: rotate(0);
 				opacity: 1;
 			}
-
-
+			
 			50%{
 				height: 300px;
 				width: 300px;

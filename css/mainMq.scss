@@ -111,17 +111,6 @@ $font-stack8: 'Courgette', cursive;
 			clear: left;
 			width: 350px;
 			margin-left: 100px;
-			p{
-				
-			}
-
-			p:nth-of-type(1){
-				
-			}
-
-			p:nth-of-type(3){
-				
-			}
 		}
 
 		.paragraphComeIn{
@@ -134,17 +123,6 @@ $font-stack8: 'Courgette', cursive;
 
 		div:nth-of-type(1){
 			width: 380px;
-			
-			h3:nth-of-type(1){
-			}
-
-			h3:nth-of-type(2){
-				
-			}
-
-			p{
-				
-			}
 
 			div{
 				margin: 18px auto;
@@ -152,21 +130,8 @@ $font-stack8: 'Courgette', cursive;
 
 		}
 		
-		h2:nth-of-type(2){
-		
-		}
-		
 		div:nth-of-type(2){
 			margin-top: 40px;
-			a{
-				img{
-					
-				}
-
-				p{
-					
-				}
-			}
 		}
 	}
 
@@ -268,10 +233,6 @@ $font-stack8: 'Courgette', cursive;
 	.contact{
 		padding-top: 12vh;
 		
-		h2{
-			
-		}
-
 		.form{
 			display: flex;
 			flex-wrap: wrap;
@@ -328,27 +289,17 @@ $font-stack8: 'Courgette', cursive;
 				order: 6;
 			}
 		}
-	.phoneEmail{
-		font-size: 1em;
-		
-		.phone, .email{
-			margin: 0 60px;
+		.phoneEmail{
+			font-size: 1em;
+			
+			.phone, .email{
+				margin: 0 60px;
 
-				img{
-					max-width: 45px;
-				}
-
-				p{
-				}
+					img{
+						max-width: 45px;
+					}
 			}
-
-		.phone{
 		}
-
-		.email{
-		}
-	}
-
 	}
 }
 

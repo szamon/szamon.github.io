@@ -788,6 +788,515 @@ Animations
   }
 }
 
+/*************************
+Media Queries
+*************************/
+
+@media screen and (min-width:768px){
+	.intro{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 40vh;
+
+		.myPhoto{
+			margin: 0 70px 0 calc(50% - 195px);
+			}
+			.myNameTitle{
+			> p:nth-of-type(1){
+				margin: 20px 0 0 5px;
+			}
+
+			> p:nth-of-type(2){
+				margin-left: 5px;
+			}
+
+			> p:nth-of-type(3){
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.aboutMe{
+
+		.questionMarkComeIn{
+			animation: questionSlideIn 6s ease 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes questionSlideIn{
+			20%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 175px);
+				left: 100px;
+				transform: rotate(0);
+				opacity: 1;
+			}
+
+
+			50%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 175px);
+				left: 100px;
+				transform: rotate(0);
+				opacity: 1;
+			}
+
+			
+			to{
+				height: 300px;
+				width: 300px;
+				top: calc(50vh - 150px);
+				left: 125px;
+				transform: rotate(0);
+				opacity: 0.2;
+			}
+		}
+
+		>img:nth-of-type(2){
+			display: block;
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			top: calc(50vh - 100px);
+			right: 90px;
+			opacity: 0;
+		}
+
+		.lampBlinkStart{
+			animation: lampBlink 1.5s 2s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 4;
+		}
+
+		@keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+		
+		> h2:nth-of-type(1){
+			float: left;
+			width: 290px;
+			margin: 11vh auto 0 130px;
+		}
+
+		.headingComeIn{
+			animation: textSlideIn 1s ease;
+			animation-fill-mode:forwards;
+		}
+
+		div:nth-of-type(1){
+			float: left;
+			clear: left;
+			width: 350px;
+			margin-left: 100px;
+		}
+
+		.paragraphComeIn{
+			animation: textSlideIn 2s ease 4s;
+			animation-fill-mode:forwards;
+		}
+	}
+
+	.portfolio{
+
+		div:nth-of-type(1){
+			width: 380px;
+
+			div{
+				margin: 18px auto;
+			}
+
+		}
+		
+		div:nth-of-type(2){
+			margin-top: 40px;
+		}
+	}
+
+	.skills{
+
+		h2{
+			margin-top: 12vh;
+			margin-bottom: 50px;
+		}
+
+		.slider{
+			height: 300px;
+
+			.prevArrow{
+				height: 240px;
+				padding-left: calc(50% - 190px);
+				-webkit-box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				        box-shadow: inset -30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				border-right: 1px solid white;
+				border-top-right-radius: 40%;
+				border-bottom-right-radius: 40%;
+				background: rgb(220, 223, 229);
+
+					img{
+						margin-top: 100px;
+					}
+				}
+
+			.nextArrow{
+				height: 240px;
+				padding-right: calc(50% - 190px);
+				-webkit-box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				        box-shadow: inset 30px 0px 55px 0px rgba(66, 72, 81, 0.8);
+				border-right: 1px solid white;
+				border-top-left-radius: 40%;
+				border-bottom-left-radius: 40%;
+				background: rgb(234, 236, 239);
+
+					img{
+						margin-top: 100px;
+					}
+				}
+
+			.slides{
+				position: absolute;
+				top: 0;
+				margin-left: -300px;
+				left: calc(50% - 150px);
+				height: 250px;
+				width: 3000px;
+				overflow: hidden;
+
+				img{
+					float: left;
+					margin: 25px 50px;
+					height: 250px;
+					max-height: 200px;
+					max-width: 200px;
+					-webkit-transition: 0.3s ease;
+					transition: 0.3s ease;
+				}
+
+				img:hover{
+					/* max-height: 65px;*/
+					/* max-width: 65px;*/
+					/* transform: rotateY(45deg);*/
+					border: solid 1px white;
+					border-radius: 50%;
+				}
+			}
+
+			.progressBar{
+				position: absolute;
+				bottom: 0;
+				left: calc(50% - 135px);
+				height: 30px;
+
+				img{
+					max-width: 30px;
+					height: 30px;
+					-webkit-transition: 0.3s;
+					transition: 0.3s;
+				}
+
+				img:hover{
+					border-radius: 30%;
+					-webkit-box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					        box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+				}
+
+				.active{
+					border-radius: 30%;
+					-webkit-box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+					        box-shadow: 0px 0px 5px 0px rgba(256,256,256,0.75);
+				}
+			}
+		}
+	}
+	.contact{
+		padding-top: 12vh;
+		
+		.form{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-start;
+			height: 260px;
+			width: 600px;
+			margin: 30px auto 0 auto;
+			
+			label:nth-of-type(1), label:nth-of-type(2){
+				width: 50%;
+				margin: 0;
+			}
+
+			input{
+				height: 25px;
+				width: calc(50% - 20px);
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			textarea{
+				height: 150px;
+				margin: 0 10px;
+				line-height: 25px;
+			}
+
+			label:nth-of-type(3), textarea{
+				width: 100%;
+			}
+
+			label:nth-of-type(1){
+				order: 1;
+			}
+
+			label:nth-of-type(2){
+				order: 2;
+			}
+
+			input:nth-of-type(1){
+				order: 3;
+			}
+
+			input:nth-of-type(2){
+				order: 4;
+			}
+
+			label:nth-of-type(3){
+				margin-top: 35px;
+				order: 5;
+			}
+
+			textarea{
+				order: 6;
+			}
+		}
+		.phoneEmail{
+			font-size: 1em;
+			
+			.phone, .email{
+				margin: 0 60px;
+
+					img{
+						max-width: 45px;
+					}
+			}
+		}
+	}
+}
+
+@media screen and (min-width:992px){
+	.aboutMe{
+		.questionMarkComeIn{
+			-webkit-animation: questionSlideIn 6s ease 0.5s;
+			        animation: questionSlideIn 6s ease 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+		}
+
+		@-webkit-keyframes questionSlideIn{
+			20%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+			
+			50%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+			
+			to{
+				height: 250px;
+				width: 250px;
+				top: calc(50vh);
+				left: calc(50vw - 380px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
+		}
+
+		@keyframes questionSlideIn{
+			20%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+
+			50%{
+				height: 300px;
+				width: 300px;
+				top: 34vh;
+				left: calc(50vw - 150px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+			
+			to{
+				height: 250px;
+				width: 250px;
+				top: calc(50vh);
+				left: calc(50vw - 380px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
+		}
+
+		>img:nth-of-type(2){
+			top: 12vh;
+			right: calc(50vw - 350px);
+			height: 120px;
+			width: 120px;
+		}
+
+		.lampBlinkStart{
+			-webkit-animation: lampBlink 1.5s 4s;
+			        animation: lampBlink 1.5s 4s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+			-webkit-animation-iteration-count: 4;
+			        animation-iteration-count: 4;
+		}
+
+		@-webkit-keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+
+		@keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+		
+		> h2:nth-of-type(1){
+			display: block;
+			float: none;
+			width: 290px;
+			margin: 23vh auto 0 auto;
+		}
+
+		.headingComeIn{
+			-webkit-animation: textSlideIn 1s ease;
+			        animation: textSlideIn 1s ease;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
+		}
+
+		div:nth-of-type(1){
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			float: none;
+			margin: 0 auto;
+			width: 800px;
+			p{
+				margin: 50px 10px;
+				font-size: 1.3em;
+			}
+
+			p:nth-of-type(1){
+				
+			}
+
+			p:nth-of-type(3){
+				
+			}
+		}
+
+		.paragraphComeIn{
+			-webkit-animation: textSlideIn 2s ease 4s;
+			        animation: textSlideIn 2s ease 4s;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
+		}
+	}
+
+	.skills{
+
+		h2{
+			margin-bottom: 25px;
+		}
+
+		.slider{
+			position: static;
+			height: auto;
+			width: auto;
+
+			.prevArrow{
+				display: none;
+			}
+
+			.nextArrow{
+				display: none;
+			}
+
+			.slides{
+				position: static;
+				display: block;
+				margin: 0 auto;
+				width: 800px;
+				height: auto;
+
+				img:nth-of-type(1), img:nth-of-type(10){
+					display: none;
+				}
+
+				img{
+					float: left;
+					margin: 25px 25px;
+					height: 150px;
+					max-width: 150px;
+					-webkit-transition: 0.3s ease;
+					transition: 0.3s ease;
+				}
+
+				img:hover{
+					/* max-height: 65px;*/
+					/* max-width: 65px;*/
+					/* transform: rotateY(45deg);*/
+					border: solid 1px white;
+					border-radius: 50%;
+				}
+			}
+
+			.progressBar{
+				display: none;
+			}
+		}
+	}
+}
 
 /*************************
 Clearfix
