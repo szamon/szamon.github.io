@@ -1,12 +1,6 @@
 
 $font-stack: "Bangers", helvetica;
-$font-stack2: 'Varela Round', sans-serif;
-$font-stack3: 'Alegreya', serif;
-$font-stack4: 'Architects Daughter', cursive;
-$font-stack5: 'Comfortaa', cursive;
-$font-stack6: 'Satisfy', cursive;
-$font-stack7: 'Kaushan Script', cursive;
-$font-stack8: 'Courgette', cursive;
+$font-stack2: 'Kaushan Script', cursive;
 
 /*************************
 Mixins
@@ -75,17 +69,17 @@ a{
 	color: white;
 	z-index: 9999;
 
-		span:nth-of-type(1){
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+	span:nth-of-type(1){
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
-		span:nth-of-type(2){
-			position: absolute;
-			top: 3px;
-			left: 10px;
-		}
+	span:nth-of-type(2){
+		position: absolute;
+		top: 3px;
+		left: 10px;
+	}
 }
 
 .menu{
@@ -199,7 +193,6 @@ a{
 
 .intro{
 	position: relative;
-	/*background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgb(40, 58, 89) 3%);*/
 	min-height: 100vh;
 	width: 100%;
 	padding-top: 30vh;
@@ -240,16 +233,15 @@ a{
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollText);
 	}
-
 }
 
 .aboutMe{
+	position: relative;
 	min-height: 100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.95);
-	font-family: $font-stack7;
-	position: relative;
+	font-family: $font-stack2;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -372,25 +364,11 @@ a{
 			font-size: 0.9em;
 			text-align: justify;
 		}
-
-		p:nth-of-type(1){
-			/* padding-top: 5px;*/
-			/* border-top: 1px solid white;*/
-			/* border-top-left-radius: 5%;*/
-			/* border-top-right-radius: 5%;*/
-		}
-
-		p:nth-of-type(3){
-			/* padding-bottom: 5px;*/
-			/* border-bottom: 1px solid white;*/
-			/* border-bottom-left-radius: 5%;*/
-			/* border-bottom-right-radius: 5%;*/
-		}
 	}
 
 	.paragraphComeIn{
-		-webkit-animation: textSlideIn 2s ease 0.5s;
-		        animation: textSlideIn 2s ease 0.5s;
+		-webkit-animation: textSlideIn 1s ease 0.5s;
+		        animation: textSlideIn 1s ease 0.5s;
 		-webkit-animation-fill-mode:forwards;
 		        animation-fill-mode:forwards;
 	}
@@ -407,7 +385,7 @@ a{
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(76, 83, 94, 0.9);
-	font-family: $font-stack7;
+	font-family: $font-stack2;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -437,13 +415,13 @@ a{
 			border-bottom-right-radius: 15%;
 			cursor: pointer;
 
-				img{
-					max-width: 40px;
-					-webkit-transform: rotate(90deg);
-					        transform: rotate(90deg);
-					margin-top: 60px;
-				}
+			img{
+				max-width: 40px;
+				-webkit-transform: rotate(90deg);
+				        transform: rotate(90deg);
+				margin-top: 60px;
 			}
+		}
 
 		.nextArrow{
 			position: absolute;
@@ -458,13 +436,13 @@ a{
 			border-bottom-left-radius: 15%;
 			cursor: pointer;
 
-				img{
-					max-width: 40px;
-					-webkit-transform: rotate(-90deg);
-					        transform: rotate(-90deg);
-					margin-top: 60px;
-				}
+			img{
+				max-width: 40px;
+				-webkit-transform: rotate(-90deg);
+				        transform: rotate(-90deg);
+				margin-top: 60px;
 			}
+		}
 
 		.slides{
 			position: absolute;
@@ -485,9 +463,6 @@ a{
 			}
 
 			img:hover{
-				/* max-height: 65px;*/
-				/* max-width: 65px;*/
-				/* transform: rotateY(45deg);*/
 				border: solid 1px white;
 				border-radius: 50%;
 			}
@@ -526,12 +501,12 @@ a{
 }
 
 .portfolio{
+	position: relative;
 	min-height: 100vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.99);
 	font-family: $font-stack;
-	position: relative;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -55px 70px -70px black;
@@ -556,12 +531,12 @@ a{
 		}
 
 		h3:nth-of-type(2){
-			font-family: $font-stack7;
+			font-family: $font-stack2;
 			margin: 10px 0;
 		}
 
 		p{
-			font-family: $font-stack7;
+			font-family: $font-stack2;
 			margin: 8px 0;
 		}
 
@@ -621,7 +596,7 @@ a{
 	width: 100%;
 	padding-top: 13vh;
 	background-color: rgba(40, 58, 89, 0.99);
-	font-family: $font-stack7;
+	font-family: $font-stack2;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -55px 70px -70px white;
@@ -647,7 +622,7 @@ a{
 		input{
 			margin-top: 5px;
 			border-radius: 5%;
-			font-family: $font-stack7;
+			font-family: $font-stack2;
 			color: rgb(40, 58, 89);
 		}
 
@@ -655,7 +630,7 @@ a{
 			height: 80px;
 			margin-top: 5px;
 			border-radius: 2%;
-			font-family: $font-stack7;
+			font-family: $font-stack2;
 			color: rgb(40, 58, 89);
 		}
 
@@ -672,29 +647,38 @@ a{
 	}
 	
 	.phoneEmail{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin-top: 40px;
 		font-family: $font-stack;
 		font-size: 0.8em;
 		
 		.phone, .email{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			align-items: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			margin: 0 10px;
 
-				img{
-					float: none;
-					max-width: 30px;
-				}
-
-				p{
-
-					float: none;
-					margin: 0 0 0 5px;
-				}
+			img{
+				float: none;
+				max-width: 30px;
 			}
+
+			p{
+				float: none;
+				margin: 0 0 0 5px;
+			}
+		}
 
 		.phone{
 			width: auto;
@@ -721,71 +705,71 @@ Animations
 *************************/
 
 @-webkit-keyframes scrollText {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+	from {
+		-webkit-transform: translateY(0px);
+		        transform: translateY(0px);
+		opacity: 1;
+	}
 
-  to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-    opacity: 0;
-  }
+	to {
+		-webkit-transform: translateY(5px);
+		        transform: translateY(5px);
+		opacity: 0;
+	}
 }
 
 @keyframes scrollText {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+	from {
+		-webkit-transform: translateY(0px);
+		   		transform: translateY(0px);
+		opacity: 1;
+	}
 
-  to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-    opacity: 0;
-  }
+	to {
+		-webkit-transform: translateY(5px);
+				transform: translateY(5px);
+		opacity: 0;
+	}
 }
 
 @-webkit-keyframes scrollTextRev {
-  0% {
-    -webkit-transform: translateY(5px) rotate(0deg);
-            transform: translateY(5px) rotate(0deg);
-    opacity: 1;
-  }
+	0% {
+		-webkit-transform: translateY(5px) rotate(0deg);
+		        transform: translateY(5px) rotate(0deg);
+		opacity: 1;
+	}
 
-  50% {
-    -webkit-transform: translateY(5px) rotate(-180deg);
-            transform: translateY(5px) rotate(-180deg);
-    opacity: 1;
-}
+	50% {
+		-webkit-transform: translateY(5px) rotate(-180deg);
+		        transform: translateY(5px) rotate(-180deg);
+		opacity: 1;
+	}
 
-  100% {
-    -webkit-transform: translateY(0px) rotate(-180deg);
-            transform: translateY(0px) rotate(-180deg);
-    opacity: 0;
-  }
+	100% {
+		-webkit-transform: translateY(0px) rotate(-180deg);
+		        transform: translateY(0px) rotate(-180deg);
+		opacity: 0;
+	}
 }
 
 @keyframes scrollTextRev {
-  0% {
-    -webkit-transform: translateY(5px) rotate(0deg);
-            transform: translateY(5px) rotate(0deg);
-    opacity: 1;
-  }
+	0% {
+		-webkit-transform: translateY(5px) rotate(0deg);
+		        transform: translateY(5px) rotate(0deg);
+		opacity: 1;
+	}
 
-  50% {
-    -webkit-transform: translateY(5px) rotate(-180deg);
-            transform: translateY(5px) rotate(-180deg);
-    opacity: 1;
-}
+	50% {
+		-webkit-transform: translateY(5px) rotate(-180deg);
+		        transform: translateY(5px) rotate(-180deg);
+		opacity: 1;
+	}
 
-  100% {
-    -webkit-transform: translateY(0px) rotate(-180deg);
-            transform: translateY(0px) rotate(-180deg);
-    opacity: 0;
-  }
+	100% {
+		-webkit-transform: translateY(0px) rotate(-180deg);
+		        transform: translateY(0px) rotate(-180deg);
+		opacity: 0;
+	}
 }
 
 /*************************
@@ -793,15 +777,21 @@ Media Queries
 *************************/
 
 @media screen and (min-width:768px){
+
 	.intro{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding-top: 40vh;
 
 		.myPhoto{
 			margin: 0 70px 0 calc(50% - 195px);
-			}
-			.myNameTitle{
+		}
+
+		.myNameTitle{
+
 			> p:nth-of-type(1){
 				margin: 20px 0 0 5px;
 			}
@@ -819,55 +809,103 @@ Media Queries
 	.aboutMe{
 
 		.questionMarkComeIn{
-			animation: questionSlideIn 6s ease 0.5s;
-			animation-fill-mode: forwards;
+			-webkit-animation: questionSlideIn 6s ease 0.5s;
+			        animation: questionSlideIn 6s ease 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+		}
+
+		@-webkit-keyframes questionSlideIn{
+			20%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 140px);
+				left: 100px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+			50%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 140px);
+				left: 100px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+			to{
+				height: 300px;
+				width: 300px;
+				top: calc(50vh - 120px);
+				left: 125px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
 		}
 
 		@keyframes questionSlideIn{
 			20%{
 				height: 350px;
 				width: 350px;
-				top: calc(50vh - 175px);
+				top: calc(50vh - 140px);
 				left: 100px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 1;
 			}
-
 
 			50%{
 				height: 350px;
 				width: 350px;
-				top: calc(50vh - 175px);
+				top: calc(50vh - 140px);
 				left: 100px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 1;
 			}
-
 			
 			to{
 				height: 300px;
 				width: 300px;
-				top: calc(50vh - 150px);
+				top: calc(50vh - 120px);
 				left: 125px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 0.2;
 			}
 		}
 
 		>img:nth-of-type(2){
+			position: absolute;
 			display: block;
 			height: 200px;
 			width: 200px;
-			position: absolute;
 			top: calc(50vh - 100px);
 			right: 90px;
 			opacity: 0;
 		}
 
 		.lampBlinkStart{
-			animation: lampBlink 1.5s 2s;
-			animation-fill-mode: forwards;
-			animation-iteration-count: 4;
+			-webkit-animation: lampBlink 1.5s 2s;
+			        animation: lampBlink 1.5s 2s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+			-webkit-animation-iteration-count: 4;
+			        animation-iteration-count: 4;
+		}
+
+		@-webkit-keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
 		}
 
 		@keyframes lampBlink{
@@ -883,12 +921,14 @@ Media Queries
 		> h2:nth-of-type(1){
 			float: left;
 			width: 290px;
-			margin: 11vh auto 0 130px;
+			margin: 20vh auto 0 130px;
 		}
 
 		.headingComeIn{
-			animation: textSlideIn 1s ease;
-			animation-fill-mode:forwards;
+			-webkit-animation: textSlideIn 1s ease;
+			        animation: textSlideIn 1s ease;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
 		}
 
 		div:nth-of-type(1){
@@ -899,8 +939,10 @@ Media Queries
 		}
 
 		.paragraphComeIn{
-			animation: textSlideIn 2s ease 4s;
-			animation-fill-mode:forwards;
+			-webkit-animation: textSlideIn 2s ease 4s;
+			        animation: textSlideIn 2s ease 4s;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
 		}
 	}
 
@@ -912,7 +954,6 @@ Media Queries
 			div{
 				margin: 18px auto;
 			}
-
 		}
 		
 		div:nth-of-type(2){
@@ -940,10 +981,10 @@ Media Queries
 				border-bottom-right-radius: 40%;
 				background: rgb(220, 223, 229);
 
-					img{
-						margin-top: 100px;
-					}
+				img{
+					margin-top: 100px;
 				}
+			}
 
 			.nextArrow{
 				height: 240px;
@@ -955,10 +996,10 @@ Media Queries
 				border-bottom-left-radius: 40%;
 				background: rgb(234, 236, 239);
 
-					img{
-						margin-top: 100px;
-					}
+				img{
+					margin-top: 100px;
 				}
+			}
 
 			.slides{
 				position: absolute;
@@ -980,9 +1021,6 @@ Media Queries
 				}
 
 				img:hover{
-					/* max-height: 65px;*/
-					/* max-width: 65px;*/
-					/* transform: rotateY(45deg);*/
 					border: solid 1px white;
 					border-radius: 50%;
 				}
@@ -1015,14 +1053,23 @@ Media Queries
 			}
 		}
 	}
+
 	.contact{
 		padding-top: 12vh;
 		
 		.form{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: flex-start;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
 			height: 260px;
 			width: 600px;
 			margin: 30px auto 0 auto;
@@ -1050,46 +1097,61 @@ Media Queries
 			}
 
 			label:nth-of-type(1){
-				order: 1;
+				-webkit-box-ordinal-group: 2;
+				    -ms-flex-order: 1;
+				        order: 1;
 			}
 
 			label:nth-of-type(2){
-				order: 2;
+				-webkit-box-ordinal-group: 3;
+				    -ms-flex-order: 2;
+				        order: 2;
 			}
 
 			input:nth-of-type(1){
-				order: 3;
+				-webkit-box-ordinal-group: 4;
+				    -ms-flex-order: 3;
+				        order: 3;
 			}
 
 			input:nth-of-type(2){
-				order: 4;
+				-webkit-box-ordinal-group: 5;
+				    -ms-flex-order: 4;
+				        order: 4;
 			}
 
 			label:nth-of-type(3){
 				margin-top: 35px;
-				order: 5;
+				-webkit-box-ordinal-group: 6;
+				    -ms-flex-order: 5;
+				        order: 5;
 			}
 
 			textarea{
-				order: 6;
+				-webkit-box-ordinal-group: 7;
+				    -ms-flex-order: 6;
+				        order: 6;
 			}
 		}
+
 		.phoneEmail{
 			font-size: 1em;
 			
 			.phone, .email{
 				margin: 0 60px;
 
-					img{
-						max-width: 45px;
-					}
+				img{
+					max-width: 45px;
+				}
 			}
 		}
 	}
 }
 
 @media screen and (min-width:992px){
+
 	.aboutMe{
+
 		.questionMarkComeIn{
 			-webkit-animation: questionSlideIn 6s ease 0.5s;
 			        animation: questionSlideIn 6s ease 0.5s;
@@ -1108,7 +1170,7 @@ Media Queries
 				opacity: 1;
 			}
 			
-			50%{
+			35%{
 				height: 300px;
 				width: 300px;
 				top: 34vh;
@@ -1118,6 +1180,15 @@ Media Queries
 				opacity: 1;
 			}
 
+			70%{
+				height: 250px;
+				width: 250px;
+				top: calc(50vh);
+				left: calc(50vw - 380px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
 			
 			to{
 				height: 250px;
@@ -1142,7 +1213,7 @@ Media Queries
 			}
 
 
-			50%{
+			35%{
 				height: 300px;
 				width: 300px;
 				top: 34vh;
@@ -1152,7 +1223,16 @@ Media Queries
 				opacity: 1;
 			}
 
-			
+			70%{
+				height: 250px;
+				width: 250px;
+				top: calc(50vh);
+				left: calc(50vw - 380px);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
+
 			to{
 				height: 250px;
 				width: 250px;
@@ -1221,23 +1301,16 @@ Media Queries
 			float: none;
 			margin: 0 auto;
 			width: 800px;
+
 			p{
 				margin: 50px 10px;
 				font-size: 1.3em;
 			}
-
-			p:nth-of-type(1){
-				
-			}
-
-			p:nth-of-type(3){
-				
-			}
 		}
 
 		.paragraphComeIn{
-			-webkit-animation: textSlideIn 2s ease 4s;
-			        animation: textSlideIn 2s ease 4s;
+			-webkit-animation: textSlideIn 2s ease 1s;
+			        animation: textSlideIn 2s ease 1s;
 			-webkit-animation-fill-mode:forwards;
 			        animation-fill-mode:forwards;
 		}
@@ -1283,9 +1356,6 @@ Media Queries
 				}
 
 				img:hover{
-					/* max-height: 65px;*/
-					/* max-width: 65px;*/
-					/* transform: rotateY(45deg);*/
 					border: solid 1px white;
 					border-radius: 50%;
 				}
@@ -1303,18 +1373,18 @@ Clearfix
 *************************/
 
 .clearfix{
-  *zoom: 1;
+	*zoom: 1;
 
-  &:before{
-    content: " ";
-    display: table;
-  }
+	&:before{
+		content: " ";
+		display: table;
+	}
 
-  &:after{
-    @extend :before;
-  }
+	&:after{
+		@extend :before;
+	}
 
-  &:after{
-    clear: both;
-  }
+	&:after{
+		clear: both;
+	}
 }
