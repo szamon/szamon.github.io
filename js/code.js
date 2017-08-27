@@ -111,7 +111,6 @@ $(document).ready(function(){
 		}
 
 		function resizedw(){
-	    // Haven't resized in 100ms!
 		    function viewport() {
 			    var e = window, a = 'inner';
 			    if (!('innerWidth' in window )) {
