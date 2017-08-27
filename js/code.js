@@ -38,19 +38,6 @@ $(document).ready(function(){
 			overlay.removeClass("overlayOpen");}
 		});
 
-//ZMIANA
-
-	window.requestAnimFrame = (function(){
-		return  window.requestAnimationFrame || 
-		        window.webkitRequestAnimationFrame || 
-				window.mozRequestAnimationFrame || 
-				window.oRequestAnimationFrame || 
-				window.msRequestAnimationFrame || 
-		        function(/* function FrameRequestCallback */ callback, /* DOMElement Element */ element){
-	            	window.setTimeout(callback, 1000 / 60);
-	          	};
-	})();
-
 //SKILLS CAROUSEL
 
 	function slideStart(){
@@ -203,15 +190,14 @@ $(document).ready(function(){
 
 	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
 	var aboutMe = $(".aboutMe");
+	var portfolioItems = $(".portfolioItem");
 	// var aboutMeEl1 = $(".aboutMe >img:nth-of-type(1)");
 	// var aboutMeEl2 = $(".aboutMe >img:nth-of-type(2)");
 	// var aboutMeEl3 = $(".aboutMe h2");
 	// var aboutMeEl4 = $(".aboutMe div:nth-of-type(1)");
 
 	$(window).scroll(function(event) {
-	  
 		if(aboutMe.visible(true)){
-			
 			module.each(function(i, el) {
 			    var el = $(el);
 		    	if(i===0){
@@ -229,5 +215,9 @@ $(document).ready(function(){
 		    	}
 			});
 		}
+		if(portfolioItems.visible(true)){
+			portfolioItems.addClass("portfolioItemVisible");
+			console.log("porftolio visible");
+		};
 	});
 });
