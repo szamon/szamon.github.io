@@ -481,9 +481,9 @@ a {
     height: 100%;
     z-index: -1; }
   .portfolio > div:nth-of-type(1)::after {
-    background: url("../img/absolutefreedom.jpg") 50% no-repeat; }
+    background: url("../img/absoluteFreedom.jpg") 50% no-repeat; }
   .portfolio > div:nth-of-type(2)::after {
-    background: url("../img/todolist.jpg") 50% no-repeat; }
+    background: url("../img/toDoList.jpg") 50% no-repeat; }
   .portfolio .portfolioItem {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
