@@ -72,7 +72,11 @@ a{
 	left: 1rem;
 	height: 24px;
 	width: 40px;
+	font-family: $font-stack;
 	font-size: 2em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 	color: white;
 	z-index: 9999;
 
@@ -572,6 +576,7 @@ a{
 
 	>div:nth-of-type(1){
 		-webkit-transition: 1s ease 0.4s;
+		-webkit-transition: 1s ease 0.1s;
 		transition: 1s ease 0.1s;
 
 		p{
@@ -581,6 +586,7 @@ a{
 
 	>div:nth-of-type(2){
 		-webkit-transition: 1s ease 0.1s;
+		-webkit-transition: 1s ease 0.2s;
 		transition: 1s ease 0.2s;
 
 		p{
@@ -590,6 +596,7 @@ a{
 
 	>div:nth-of-type(3){
 		-webkit-transition: 1s ease 0.1s;
+		-webkit-transition: 1s ease 0.3s;
 		transition: 1s ease 0.3s;
 
 		p{
