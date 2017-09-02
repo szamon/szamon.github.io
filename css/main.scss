@@ -13,6 +13,10 @@ Mixins
 	right: $right;
 	height: 60px;
 	font-family: $font-stack;
+	font-size: 1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 
 	p{
 		font-size: 1em;
@@ -55,6 +59,10 @@ a{
 	background: url("../img/spacewalker.jpg") fixed center no-repeat;
 	background-size: cover;
 	font-family: $font-stack;
+	font-size: 1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 	z-index: 1;
 }
 
@@ -64,7 +72,6 @@ a{
 	left: 1rem;
 	height: 24px;
 	width: 40px;
-	font-family: $font-stack;
 	font-size: 2em;
 	color: white;
 	z-index: 9999;
@@ -147,7 +154,6 @@ a{
 		li{
 			margin: 15px auto;
 			height: 30px;
-			font-family: $font-stack;
 			font-size: 2em;
 			text-align: center;
 			color: white;
@@ -502,11 +508,10 @@ a{
 
 .portfolio{
 	position: relative;
-	min-height: calc(100vh + 150px);
+	min-height: calc(100vh + 350px);
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.97);
-	font-family: $font-stack;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -55px 70px -70px black;
@@ -519,7 +524,7 @@ a{
 		font-weight: 100;
 	}
 
-	>div:nth-of-type(1), >div:nth-of-type(2){
+	>div:nth-of-type(1), >div:nth-of-type(2), >div:nth-of-type(3){
 		position: relative;
 		height: 185px;
 		width: 260px;
@@ -567,7 +572,7 @@ a{
 
 	>div:nth-of-type(1){
 		-webkit-transition: 1s ease 0.4s;
-		transition: 1s ease 0.4s;
+		transition: 1s ease 0.1s;
 
 		p{
 			margin-top: 5px;
@@ -576,16 +581,25 @@ a{
 
 	>div:nth-of-type(2){
 		-webkit-transition: 1s ease 0.1s;
-		transition: 1s ease 0.1s;
+		transition: 1s ease 0.2s;
+
+		p{
+			margin-top: 30px;
+		}
+	}
+
+	>div:nth-of-type(3){
+		-webkit-transition: 1s ease 0.1s;
+		transition: 1s ease 0.3s;
 
 		p{
 			margin-top: 30px;
 		}
 	}
 	
-	>div:nth-of-type(1)::after, >div:nth-of-type(2)::after {
+	>div:nth-of-type(1)::after, >div:nth-of-type(2)::after, >div:nth-of-type(3)::after {
 		content: "";
-		opacity: 0.20;
+		opacity: 0.40;
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -602,6 +616,10 @@ a{
 
 	>div:nth-of-type(2)::after{
 		background: url("../img/toDoList.jpg") 50% no-repeat;
+	}
+
+	>div:nth-of-type(3)::after{
+		background: url("../img/Quiz.jpg") 50% no-repeat;
 	}
 	
 	.portfolioItem{
@@ -622,7 +640,7 @@ a{
 		font-weight: 100;
 	}
 	
-	div:nth-of-type(3){
+	div:nth-of-type(4){
 		width: 200px;
 		margin: 25px auto;
 		overflow: hidden;
@@ -1007,7 +1025,7 @@ Media Queries
 
 	.portfolio{
 
-		div:nth-of-type(1), div:nth-of-type(2){
+		div:nth-of-type(1), div:nth-of-type(2), div:nth-of-type(3) {
 			width: 380px;
 
 			div{
@@ -1020,6 +1038,10 @@ Media Queries
 		}
 
 		>div:nth-of-type(2) p {
+			margin-top: 35px;
+		}
+
+		>div:nth-of-type(3) p {
 			margin-top: 35px;
 		}
 		

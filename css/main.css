@@ -20,6 +20,10 @@ a {
   background: url("../img/spacewalker.jpg") fixed center no-repeat;
   background-size: cover;
   font-family: "Bangers", helvetica;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   z-index: 1; }
 
 .logo {
@@ -28,7 +32,6 @@ a {
   left: 1rem;
   height: 24px;
   width: 40px;
-  font-family: "Bangers", helvetica;
   font-size: 2em;
   color: white;
   z-index: 9999; }
@@ -92,7 +95,6 @@ a {
     .overlay nav ul li {
       margin: 15px auto;
       height: 30px;
-      font-family: "Bangers", helvetica;
       font-size: 2em;
       text-align: center;
       color: white;
@@ -152,7 +154,11 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    font-family: "Bangers", helvetica; }
+    font-family: "Bangers", helvetica;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal; }
     .intro .scrollText p {
       font-size: 1em;
       color: white; }
@@ -279,7 +285,11 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    font-family: "Bangers", helvetica; }
+    font-family: "Bangers", helvetica;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal; }
     .aboutMe .scrollText p {
       font-size: 1em;
       color: white; }
@@ -391,7 +401,11 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    font-family: "Bangers", helvetica; }
+    font-family: "Bangers", helvetica;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal; }
     .skills .scrollText p {
       font-size: 1em;
       color: white; }
@@ -409,11 +423,10 @@ a {
 
 .portfolio {
   position: relative;
-  min-height: calc(100vh + 150px);
+  min-height: calc(100vh + 350px);
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.97);
-  font-family: "Bangers", helvetica;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -55px 70px -70px black;
@@ -423,7 +436,7 @@ a {
     width: 100%;
     margin-top: 10vh;
     font-weight: 100; }
-  .portfolio > div:nth-of-type(1), .portfolio > div:nth-of-type(2) {
+  .portfolio > div:nth-of-type(1), .portfolio > div:nth-of-type(2), .portfolio > div:nth-of-type(3) {
     position: relative;
     height: 185px;
     width: 260px;
@@ -434,13 +447,13 @@ a {
     box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
     font-size: 0.9em;
     z-index: 2; }
-    .portfolio > div:nth-of-type(1) h3:nth-of-type(1), .portfolio > div:nth-of-type(2) h3:nth-of-type(1) {
+    .portfolio > div:nth-of-type(1) h3:nth-of-type(1), .portfolio > div:nth-of-type(2) h3:nth-of-type(1), .portfolio > div:nth-of-type(3) h3:nth-of-type(1) {
       margin: 15px 0 0 0;
       z-index: 2; }
-    .portfolio > div:nth-of-type(1) p, .portfolio > div:nth-of-type(2) p {
+    .portfolio > div:nth-of-type(1) p, .portfolio > div:nth-of-type(2) p, .portfolio > div:nth-of-type(3) p {
       font-family: "Kaushan Script", cursive;
       z-index: 2; }
-    .portfolio > div:nth-of-type(1) div, .portfolio > div:nth-of-type(2) div {
+    .portfolio > div:nth-of-type(1) div, .portfolio > div:nth-of-type(2) div, .portfolio > div:nth-of-type(3) div {
       position: absolute;
       bottom: 5px;
       left: 0;
@@ -456,22 +469,27 @@ a {
       -webkit-box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.6);
       box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.6);
       z-index: 2; }
-    .portfolio > div:nth-of-type(1) div:hover, .portfolio > div:nth-of-type(2) div:hover {
+    .portfolio > div:nth-of-type(1) div:hover, .portfolio > div:nth-of-type(2) div:hover, .portfolio > div:nth-of-type(3) div:hover {
       background: white;
       color: #4c535e; }
   .portfolio > div:nth-of-type(1) {
     -webkit-transition: 1s ease 0.4s;
-    transition: 1s ease 0.4s; }
+    transition: 1s ease 0.1s; }
     .portfolio > div:nth-of-type(1) p {
       margin-top: 5px; }
   .portfolio > div:nth-of-type(2) {
     -webkit-transition: 1s ease 0.1s;
-    transition: 1s ease 0.1s; }
+    transition: 1s ease 0.2s; }
     .portfolio > div:nth-of-type(2) p {
       margin-top: 30px; }
-  .portfolio > div:nth-of-type(1)::after, .portfolio > div:nth-of-type(2)::after {
+  .portfolio > div:nth-of-type(3) {
+    -webkit-transition: 1s ease 0.1s;
+    transition: 1s ease 0.3s; }
+    .portfolio > div:nth-of-type(3) p {
+      margin-top: 30px; }
+  .portfolio > div:nth-of-type(1)::after, .portfolio > div:nth-of-type(2)::after, .portfolio > div:nth-of-type(3)::after {
     content: "";
-    opacity: 0.20;
+    opacity: 0.40;
     top: 0;
     left: 0;
     bottom: 0;
@@ -484,6 +502,8 @@ a {
     background: url("../img/absoluteFreedom.jpg") 50% no-repeat; }
   .portfolio > div:nth-of-type(2)::after {
     background: url("../img/toDoList.jpg") 50% no-repeat; }
+  .portfolio > div:nth-of-type(3)::after {
+    background: url("../img/Quiz.jpg") 50% no-repeat; }
   .portfolio .portfolioItem {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
@@ -496,16 +516,16 @@ a {
     margin-top: 40px;
     margin-bottom: 15px;
     font-weight: 100; }
-  .portfolio div:nth-of-type(3) {
+  .portfolio div:nth-of-type(4) {
     width: 200px;
     margin: 25px auto;
     overflow: hidden;
     font-size: 0.9em; }
-    .portfolio div:nth-of-type(3) a img {
+    .portfolio div:nth-of-type(4) a img {
       display: inline-block;
       vertical-align: middle;
       max-width: 30%; }
-    .portfolio div:nth-of-type(3) a p {
+    .portfolio div:nth-of-type(4) a p {
       display: inline-block;
       vertical-align: middle;
       color: white;
@@ -516,7 +536,11 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    font-family: "Bangers", helvetica; }
+    font-family: "Bangers", helvetica;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal; }
     .portfolio .scrollText p {
       font-size: 1em;
       color: white; }
@@ -610,7 +634,11 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    font-family: "Bangers", helvetica; }
+    font-family: "Bangers", helvetica;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal; }
     .contact .scrollText p {
       font-size: 1em;
       color: white; }
@@ -798,13 +826,15 @@ Media Queries
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
 
-  .portfolio div:nth-of-type(1), .portfolio div:nth-of-type(2) {
+  .portfolio div:nth-of-type(1), .portfolio div:nth-of-type(2), .portfolio div:nth-of-type(3) {
     width: 380px; }
-    .portfolio div:nth-of-type(1) div, .portfolio div:nth-of-type(2) div {
+    .portfolio div:nth-of-type(1) div, .portfolio div:nth-of-type(2) div, .portfolio div:nth-of-type(3) div {
       margin: 18px auto; }
   .portfolio > div:nth-of-type(1) p {
     margin-top: 20px; }
   .portfolio > div:nth-of-type(2) p {
+    margin-top: 35px; }
+  .portfolio > div:nth-of-type(3) p {
     margin-top: 35px; }
   .portfolio div:nth-of-type(3) {
     margin-top: 40px; }
