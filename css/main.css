@@ -83,6 +83,7 @@ a {
   left: 0;
   height: 100vh;
   width: 100%;
+  font-family: "Bangers", helvetica;
   background: rgba(0, 0, 0, 0.9);
   z-index: 999;
   opacity: 0;
