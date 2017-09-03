@@ -21,9 +21,6 @@ a {
   background-size: cover;
   font-family: "Bangers", helvetica;
   font-size: 1em;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   z-index: 1; }
 
 .logo {
@@ -34,9 +31,6 @@ a {
   width: 40px;
   font-family: "Bangers", helvetica;
   font-size: 2em;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   color: white;
   z-index: 9999; }
   .logo span:nth-of-type(1) {
@@ -159,12 +153,8 @@ a {
     right: 0;
     height: 60px;
     font-family: "Bangers", helvetica;
-    font-size: 1em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal; }
+    font-size: 1em; }
     .intro .scrollText p {
-      font-size: 1em;
       color: white; }
     .intro .scrollText img {
       height: 40px;
@@ -290,12 +280,8 @@ a {
     right: 0;
     height: 60px;
     font-family: "Bangers", helvetica;
-    font-size: 1em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal; }
+    font-size: 1em; }
     .aboutMe .scrollText p {
-      font-size: 1em;
       color: white; }
     .aboutMe .scrollText img {
       height: 40px;
@@ -406,12 +392,8 @@ a {
     right: 0;
     height: 60px;
     font-family: "Bangers", helvetica;
-    font-size: 1em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal; }
+    font-size: 1em; }
     .skills .scrollText p {
-      font-size: 1em;
       color: white; }
     .skills .scrollText img {
       height: 40px;
@@ -510,7 +492,7 @@ a {
   .portfolio > div:nth-of-type(2)::after {
     background: url("../img/toDoList.jpg") 50% no-repeat; }
   .portfolio > div:nth-of-type(3)::after {
-    background: url("../img/Quiz.jpg") 50% no-repeat; }
+    background: url("../img/quiz.jpg") 50% no-repeat; }
   .portfolio .portfolioItem {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
@@ -544,12 +526,8 @@ a {
     right: 0;
     height: 60px;
     font-family: "Bangers", helvetica;
-    font-size: 1em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal; }
+    font-size: 1em; }
     .portfolio .scrollText p {
-      font-size: 1em;
       color: white; }
     .portfolio .scrollText img {
       height: 40px;
@@ -642,12 +620,8 @@ a {
     right: 0;
     height: 60px;
     font-family: "Bangers", helvetica;
-    font-size: 1em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal; }
+    font-size: 1em; }
     .contact .scrollText p {
-      font-size: 1em;
       color: white; }
     .contact .scrollText img {
       height: 40px;

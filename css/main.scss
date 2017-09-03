@@ -14,12 +14,8 @@ Mixins
 	height: 60px;
 	font-family: $font-stack;
 	font-size: 1em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
 
 	p{
-		font-size: 1em;
 		color: $color;
 	}
 
@@ -60,9 +56,6 @@ a{
 	background-size: cover;
 	font-family: $font-stack;
 	font-size: 1em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
 	z-index: 1;
 }
 
@@ -74,9 +67,6 @@ a{
 	width: 40px;
 	font-family: $font-stack;
 	font-size: 2em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
 	color: white;
 	z-index: 9999;
 
@@ -626,7 +616,7 @@ a{
 	}
 
 	>div:nth-of-type(3)::after{
-		background: url("../img/Quiz.jpg") 50% no-repeat;
+		background: url("../img/quiz.jpg") 50% no-repeat;
 	}
 	
 	.portfolioItem{
