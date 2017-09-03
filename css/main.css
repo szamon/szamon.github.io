@@ -267,7 +267,7 @@ a {
     .aboutMe div:nth-of-type(1) p {
       margin: 25px 6px 0 6px;
       font-size: 0.9em;
-      text-align: justify; }
+      text-align: left; }
   .aboutMe .paragraphComeIn {
     -webkit-animation: textSlideIn 1s ease 0.5s;
     animation: textSlideIn 1s ease 0.5s;
