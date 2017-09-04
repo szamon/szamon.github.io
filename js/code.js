@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
 //VIEWPORT WIdTH CHECK
@@ -52,10 +50,10 @@ $(document).ready(function(){
 		var negativeMargin;
 		var slidePosition;
 		if (windowWidth < 768){
-			console.log(windowWidth);
+			//console.log(windowWidth);
 			negativeMargin = -240;
 		}else if (windowWidth >= 768){
-			console.log(windowWidth);
+			//console.log(windowWidth);
 			negativeMargin = -300;
 		}
 
@@ -94,7 +92,7 @@ $(document).ready(function(){
 
 		if(windowWidth < 992){
 			var intervalStart = setInterval(interval, 2000);
-			console.log("slidestart interval set");
+			//console.log("slidestart interval set");
 		}
 
 		function resizedw(){
@@ -108,32 +106,33 @@ $(document).ready(function(){
 			}
 
 		    windowWidth = viewport().width;
-			console.log(windowWidth);
+			//console.log(windowWidth);
 			clearInterval(intervalStart);
-			console.log("inteval cleared");
+			//console.log("inteval cleared");
 			if (windowWidth < 992){
 				intervalStart = setInterval(interval, 2000);
 				if (windowWidth < 768){
-					console.log("inteval set, "+ windowWidth);
+					//console.log("inteval set, "+ windowWidth);
 					negativeMargin = -240;
 				}else if (windowWidth >= 768){
-					console.log("inteval set, "+ windowWidth);
+					//console.log("inteval set, "+ windowWidth);
 					negativeMargin = -300;
-					console.log("margin-left set to, "+ negativeMargin);
+					//console.log("margin-left set to, "+ negativeMargin);
 				}
 			}else if (windowWidth >= 992){
-				console.log("inteval not set"+ windowWidth);
+				//console.log("inteval not set"+ windowWidth);
 				slides.css("display", "none");
 				function setMarginLeft(){
 					slides.css("margin-left", "auto");
-					console.log("func setMarginLeft");
+					//console.log("func setMarginLeft");
 					slides.css("display", "block");
 				}
 				setTimeout(setMarginLeft, 1000);
 				clearTimeout
-				console.log("margin-left of slides set to: "+ slides.css("margin-left"));
+				//console.log("margin-left of slides set to: "+ slides.css("margin-left"));
 			}
-		}	
+		}
+
 		var doit;
 		window.onresize = function(){
 			clearTimeout(doit);
@@ -141,11 +140,11 @@ $(document).ready(function(){
 		};
 
 		function slideChange(){
-			$(slideChanger).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
-			$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); console.log("leave")});
+			$(slideChanger).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
+			$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
 			$(progressBarImg).each(function(e){
-				$(this).mouseenter(function(){clearInterval(intervalStart); console.log("enter")});
-				$(this).mouseleave(function(){intervalStart = setInterval(interval, 2000); console.log("leave")});
+				$(this).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
+				$(this).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
 				$(this).click(function(){
 					clearInterval(interval);
 					counter = e+1;
@@ -202,22 +201,22 @@ $(document).ready(function(){
 			    var el = $(el);
 		    	if(i===0){
 		    		el.addClass("questionMarkComeIn");
-		    		console.log("pierwszy widoczny");
+		    		//console.log("pierwszy widoczny");
 		    	}else if(i===1){
 		    		el.addClass("lampBlinkStart");
-		    		console.log("drugi widoczny");
+		    		//console.log("drugi widoczny");
 		    	}else if(i===2){
 		    		el.addClass("headingComeIn");
-		    		console.log("trzeci widoczny");
+		    		//console.log("trzeci widoczny");
 		    	}else if(i===3){
 		    		el.addClass("paragraphComeIn");
-		    		console.log("czwarty widoczny");
+		    		//console.log("czwarty widoczny");
 		    	}
 			});
 		}
 		if(portfolioItems.visible(true)){
 			portfolioItems.addClass("portfolioItemVisible");
-			console.log("porftolio visible");
+			//console.log("porftolio visible");
 		};
 	});
 });

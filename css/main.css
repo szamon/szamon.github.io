@@ -96,6 +96,7 @@ a {
       height: 30px;
       font-size: 2em;
       text-align: center;
+      list-style-type: none;
       color: white;
       cursor: pointer;
       opacity: 0;
