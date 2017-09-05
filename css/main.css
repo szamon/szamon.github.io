@@ -604,7 +604,8 @@ a {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      margin: 0 10px; }
+      margin: 0 10px;
+      color: white; }
       .contact .phoneEmail .phone img, .contact .phoneEmail .email img {
         float: none;
         max-width: 30px; }
