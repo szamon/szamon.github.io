@@ -634,7 +634,7 @@ a {
 }
 
 .portfolio .calculator::after {
-  background: url("../img/calculator.jpg") 50% no-repeat;
+  background: url("../img/Calculator.jpg") 50% no-repeat;
 }
 
 .portfolio .sessionClock::after {
