@@ -504,7 +504,7 @@ a{
 
 .portfolio{
 	position: relative;
-	min-height: calc(100vh + 350px);
+	min-height: calc(100vh + 1350px);
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.97);
@@ -520,7 +520,7 @@ a{
 		font-weight: 100;
 	}
 
-	>div:nth-of-type(1), >div:nth-of-type(2), >div:nth-of-type(3){
+	.szymskiBeats, .artofgraf, .sessionClock, .calculator, .drumMachine, .markdownPreviewer, .toDoQuestList, .supremeQuiz{
 		position: relative;
 		height: 185px;
 		width: 260px;
@@ -566,37 +566,37 @@ a{
 		}
 	}
 
-	>div:nth-of-type(1){
+	.portfolioItem{
 		-webkit-transition: 1s ease 0.4s;
 		-webkit-transition: 1s ease 0.1s;
 		transition: 1s ease 0.1s;
 
 		p{
-			margin-top: 5px;
-		}
-	}
-
-	>div:nth-of-type(2){
-		-webkit-transition: 1s ease 0.1s;
-		-webkit-transition: 1s ease 0.2s;
-		transition: 1s ease 0.2s;
-
-		p{
 			margin-top: 30px;
 		}
 	}
 
-	>div:nth-of-type(3){
-		-webkit-transition: 1s ease 0.1s;
-		-webkit-transition: 1s ease 0.3s;
-		transition: 1s ease 0.3s;
+	// .artofgraf{
+	// 	-webkit-transition: 1s ease 0.1s;
+	// 	-webkit-transition: 1s ease 0.2s;
+	// 	transition: 1s ease 0.2s;
 
-		p{
-			margin-top: 30px;
-		}
-	}
+	// 	p{
+	// 		margin-top: 30px;
+	// 	}
+	// }
+
+	// .toDoQuestList, .supremeQuiz{
+	// 	-webkit-transition: 1s ease 0.1s;
+	// 	-webkit-transition: 1s ease 0.3s;
+	// 	transition: 1s ease 0.3s;
+
+	// 	p{
+	// 		margin-top: 30px;
+	// 	}
+	// }
 	
-	>div:nth-of-type(1)::after, >div:nth-of-type(2)::after, >div:nth-of-type(3)::after {
+	.portfolioItem::after {
 		content: "";
 		opacity: 0.40;
 		top: 0;
@@ -609,16 +609,37 @@ a{
 		z-index: -1;   
 	}
 
-	>div:nth-of-type(1)::after{
+	.szymskiBeats::after{
+		background: url("../img/szymskiBeats.jpg") 0 no-repeat;
+		color: black;
+	}
+
+	.artofgraf::after{
 		background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
 	}
 
-	>div:nth-of-type(2)::after{
+	.drumMachine::after{
+		background: url("../img/drumMachine.jpg") 50% no-repeat;
+	}
+
+	.calculator::after{
+		background: url("../img/calculator.jpg") 50% no-repeat;
+	}
+
+	.sessionClock::after{
+		background: url("../img/sessionClock.jpg") 50% no-repeat;
+	}
+
+	.toDoQuestList::after{
 		background: url("../img/toDoList.jpg") 50% no-repeat;
 	}
 
-	>div:nth-of-type(3)::after{
+	.supremeQuiz::after{
 		background: url("../img/quiz.jpg") 50% no-repeat;
+	}
+
+	.markdownPreviewer::after{
+		background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 	}
 	
 	.portfolioItem{
@@ -639,7 +660,7 @@ a{
 		font-weight: 100;
 	}
 	
-	div:nth-of-type(4){
+	.githubProfile{
 		width: 200px;
 		margin: 25px auto;
 		overflow: hidden;
@@ -1025,29 +1046,18 @@ Media Queries
 
 	.portfolio{
 
-		div:nth-of-type(1), div:nth-of-type(2), div:nth-of-type(3) {
+		.portfolioItem {
 			width: 380px;
 
 			div{
 				margin: 18px auto;
 			}
+
+			p {
+				margin-top: 35px;
+			}			
 		}
 
-		>div:nth-of-type(1) p {
-			margin-top: 20px;
-		}
-
-		>div:nth-of-type(2) p {
-			margin-top: 35px;
-		}
-
-		>div:nth-of-type(3) p {
-			margin-top: 35px;
-		}
-		
-		div:nth-of-type(3){
-			margin-top: 40px;
-		}
 	}
 
 	.skills{

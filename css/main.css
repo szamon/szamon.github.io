@@ -534,7 +534,7 @@ a {
 
 .portfolio {
   position: relative;
-  min-height: calc(100vh + 350px);
+  min-height: calc(100vh + 1350px);
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.97);
@@ -551,7 +551,7 @@ a {
   font-weight: 100;
 }
 
-.portfolio > div:nth-of-type(1), .portfolio > div:nth-of-type(2), .portfolio > div:nth-of-type(3) {
+.portfolio .szymskiBeats, .portfolio .artofgraf, .portfolio .sessionClock, .portfolio .calculator, .portfolio .drumMachine, .portfolio .markdownPreviewer, .portfolio .toDoQuestList, .portfolio .supremeQuiz {
   position: relative;
   height: 185px;
   width: 260px;
@@ -564,17 +564,17 @@ a {
   z-index: 2;
 }
 
-.portfolio > div:nth-of-type(1) h3:nth-of-type(1), .portfolio > div:nth-of-type(2) h3:nth-of-type(1), .portfolio > div:nth-of-type(3) h3:nth-of-type(1) {
+.portfolio .szymskiBeats h3:nth-of-type(1), .portfolio .artofgraf h3:nth-of-type(1), .portfolio .sessionClock h3:nth-of-type(1), .portfolio .calculator h3:nth-of-type(1), .portfolio .drumMachine h3:nth-of-type(1), .portfolio .markdownPreviewer h3:nth-of-type(1), .portfolio .toDoQuestList h3:nth-of-type(1), .portfolio .supremeQuiz h3:nth-of-type(1) {
   margin: 15px 0 0 0;
   z-index: 2;
 }
 
-.portfolio > div:nth-of-type(1) p, .portfolio > div:nth-of-type(2) p, .portfolio > div:nth-of-type(3) p {
+.portfolio .szymskiBeats p, .portfolio .artofgraf p, .portfolio .sessionClock p, .portfolio .calculator p, .portfolio .drumMachine p, .portfolio .markdownPreviewer p, .portfolio .toDoQuestList p, .portfolio .supremeQuiz p {
   font-family: "Kaushan Script", cursive;
   z-index: 2;
 }
 
-.portfolio > div:nth-of-type(1) div, .portfolio > div:nth-of-type(2) div, .portfolio > div:nth-of-type(3) div {
+.portfolio .szymskiBeats div, .portfolio .artofgraf div, .portfolio .sessionClock div, .portfolio .calculator div, .portfolio .drumMachine div, .portfolio .markdownPreviewer div, .portfolio .toDoQuestList div, .portfolio .supremeQuiz div {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -592,42 +592,22 @@ a {
   z-index: 2;
 }
 
-.portfolio > div:nth-of-type(1) div:hover, .portfolio > div:nth-of-type(2) div:hover, .portfolio > div:nth-of-type(3) div:hover {
+.portfolio .szymskiBeats div:hover, .portfolio .artofgraf div:hover, .portfolio .sessionClock div:hover, .portfolio .calculator div:hover, .portfolio .drumMachine div:hover, .portfolio .markdownPreviewer div:hover, .portfolio .toDoQuestList div:hover, .portfolio .supremeQuiz div:hover {
   background: white;
   color: #4c535e;
 }
 
-.portfolio > div:nth-of-type(1) {
+.portfolio .portfolioItem {
   -webkit-transition: 1s ease 0.4s;
   -webkit-transition: 1s ease 0.1s;
   transition: 1s ease 0.1s;
 }
 
-.portfolio > div:nth-of-type(1) p {
-  margin-top: 5px;
-}
-
-.portfolio > div:nth-of-type(2) {
-  -webkit-transition: 1s ease 0.1s;
-  -webkit-transition: 1s ease 0.2s;
-  transition: 1s ease 0.2s;
-}
-
-.portfolio > div:nth-of-type(2) p {
+.portfolio .portfolioItem p {
   margin-top: 30px;
 }
 
-.portfolio > div:nth-of-type(3) {
-  -webkit-transition: 1s ease 0.1s;
-  -webkit-transition: 1s ease 0.3s;
-  transition: 1s ease 0.3s;
-}
-
-.portfolio > div:nth-of-type(3) p {
-  margin-top: 30px;
-}
-
-.portfolio > div:nth-of-type(1)::after, .portfolio > div:nth-of-type(2)::after, .portfolio > div:nth-of-type(3)::after {
+.portfolio .portfolioItem::after {
   content: "";
   opacity: 0.40;
   top: 0;
@@ -640,16 +620,37 @@ a {
   z-index: -1;
 }
 
-.portfolio > div:nth-of-type(1)::after {
+.portfolio .szymskiBeats::after {
+  background: url("../img/szymskiBeats.jpg") 0 no-repeat;
+  color: black;
+}
+
+.portfolio .artofgraf::after {
   background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
 }
 
-.portfolio > div:nth-of-type(2)::after {
+.portfolio .drumMachine::after {
+  background: url("../img/drumMachine.jpg") 50% no-repeat;
+}
+
+.portfolio .calculator::after {
+  background: url("../img/calculator.jpg") 50% no-repeat;
+}
+
+.portfolio .sessionClock::after {
+  background: url("../img/sessionClock.jpg") 50% no-repeat;
+}
+
+.portfolio .toDoQuestList::after {
   background: url("../img/toDoList.jpg") 50% no-repeat;
 }
 
-.portfolio > div:nth-of-type(3)::after {
+.portfolio .supremeQuiz::after {
   background: url("../img/quiz.jpg") 50% no-repeat;
+}
+
+.portfolio .markdownPreviewer::after {
+  background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 }
 
 .portfolio .portfolioItem {
@@ -670,20 +671,20 @@ a {
   font-weight: 100;
 }
 
-.portfolio div:nth-of-type(4) {
+.portfolio .githubProfile {
   width: 200px;
   margin: 25px auto;
   overflow: hidden;
   font-size: 0.9em;
 }
 
-.portfolio div:nth-of-type(4) a img {
+.portfolio .githubProfile a img {
   display: inline-block;
   vertical-align: middle;
   max-width: 30%;
 }
 
-.portfolio div:nth-of-type(4) a p {
+.portfolio .githubProfile a p {
   display: inline-block;
   vertical-align: middle;
   color: white;
@@ -1060,23 +1061,14 @@ Media Queries
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  .portfolio div:nth-of-type(1), .portfolio div:nth-of-type(2), .portfolio div:nth-of-type(3) {
+  .portfolio .portfolioItem {
     width: 380px;
   }
-  .portfolio div:nth-of-type(1) div, .portfolio div:nth-of-type(2) div, .portfolio div:nth-of-type(3) div {
+  .portfolio .portfolioItem div {
     margin: 18px auto;
   }
-  .portfolio > div:nth-of-type(1) p {
-    margin-top: 20px;
-  }
-  .portfolio > div:nth-of-type(2) p {
+  .portfolio .portfolioItem p {
     margin-top: 35px;
-  }
-  .portfolio > div:nth-of-type(3) p {
-    margin-top: 35px;
-  }
-  .portfolio div:nth-of-type(3) {
-    margin-top: 40px;
   }
   .skills h2 {
     margin-top: 12vh;
