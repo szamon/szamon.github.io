@@ -551,7 +551,7 @@ a {
   font-weight: 100;
 }
 
-.portfolio .szymskiBeats, .portfolio .artofgraf, .portfolio .sessionClock, .portfolio .calculator, .portfolio .drumMachine, .portfolio .markdownPreviewer, .portfolio .toDoQuestList, .portfolio .supremeQuiz {
+.portfolio .portfolioItem {
   position: relative;
   height: 185px;
   width: 260px;
@@ -564,17 +564,20 @@ a {
   z-index: 2;
 }
 
-.portfolio .szymskiBeats h3:nth-of-type(1), .portfolio .artofgraf h3:nth-of-type(1), .portfolio .sessionClock h3:nth-of-type(1), .portfolio .calculator h3:nth-of-type(1), .portfolio .drumMachine h3:nth-of-type(1), .portfolio .markdownPreviewer h3:nth-of-type(1), .portfolio .toDoQuestList h3:nth-of-type(1), .portfolio .supremeQuiz h3:nth-of-type(1) {
+.portfolio .portfolioItem h3:nth-of-type(1) {
   margin: 15px 0 0 0;
   z-index: 2;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.65);
+  font-size: 1.3em;
 }
 
-.portfolio .szymskiBeats p, .portfolio .artofgraf p, .portfolio .sessionClock p, .portfolio .calculator p, .portfolio .drumMachine p, .portfolio .markdownPreviewer p, .portfolio .toDoQuestList p, .portfolio .supremeQuiz p {
+.portfolio .portfolioItem p {
   font-family: "Kaushan Script", cursive;
   z-index: 2;
 }
 
-.portfolio .szymskiBeats div, .portfolio .artofgraf div, .portfolio .sessionClock div, .portfolio .calculator div, .portfolio .drumMachine div, .portfolio .markdownPreviewer div, .portfolio .toDoQuestList div, .portfolio .supremeQuiz div {
+.portfolio .portfolioItem div {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -592,7 +595,7 @@ a {
   z-index: 2;
 }
 
-.portfolio .szymskiBeats div:hover, .portfolio .artofgraf div:hover, .portfolio .sessionClock div:hover, .portfolio .calculator div:hover, .portfolio .drumMachine div:hover, .portfolio .markdownPreviewer div:hover, .portfolio .toDoQuestList div:hover, .portfolio .supremeQuiz div:hover {
+.portfolio .portfolioItem div:hover {
   background: white;
   color: #4c535e;
 }
