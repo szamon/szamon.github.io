@@ -9,8 +9,11 @@ $font-stack8: 'Courgette', cursive;
 
 @media screen and (min-width:768px){
 	.intro{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding-top: 40vh;
 
 		.myPhoto{
@@ -34,17 +37,20 @@ $font-stack8: 'Courgette', cursive;
 	.aboutMe{
 
 		.questionMarkComeIn{
-			animation: questionSlideIn 6s ease 0.5s;
-			animation-fill-mode: forwards;
+			-webkit-animation: questionSlideIn 6s ease 0.5s;
+			        animation: questionSlideIn 6s ease 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
 		}
 
-		@keyframes questionSlideIn{
+		@-webkit-keyframes questionSlideIn{
 			20%{
 				height: 350px;
 				width: 350px;
 				top: calc(50vh - 175px);
 				left: 100px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 1;
 			}
 
@@ -54,7 +60,8 @@ $font-stack8: 'Courgette', cursive;
 				width: 350px;
 				top: calc(50vh - 175px);
 				left: 100px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 1;
 			}
 
@@ -64,7 +71,42 @@ $font-stack8: 'Courgette', cursive;
 				width: 300px;
 				top: calc(50vh - 150px);
 				left: 125px;
-				transform: rotate(0);
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 0.2;
+			}
+		}
+
+		@keyframes questionSlideIn{
+			20%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 175px);
+				left: 100px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+
+			50%{
+				height: 350px;
+				width: 350px;
+				top: calc(50vh - 175px);
+				left: 100px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
+				opacity: 1;
+			}
+
+			
+			to{
+				height: 300px;
+				width: 300px;
+				top: calc(50vh - 150px);
+				left: 125px;
+				-webkit-transform: rotate(0);
+				        transform: rotate(0);
 				opacity: 0.2;
 			}
 		}
@@ -80,9 +122,22 @@ $font-stack8: 'Courgette', cursive;
 		}
 
 		.lampBlinkStart{
-			animation: lampBlink 1.5s 2s;
-			animation-fill-mode: forwards;
-			animation-iteration-count: 4;
+			-webkit-animation: lampBlink 1.5s 2s;
+			        animation: lampBlink 1.5s 2s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+			-webkit-animation-iteration-count: 4;
+			        animation-iteration-count: 4;
+		}
+
+		@-webkit-keyframes lampBlink{
+			0%{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
 		}
 
 		@keyframes lampBlink{
@@ -102,8 +157,10 @@ $font-stack8: 'Courgette', cursive;
 		}
 
 		.headingComeIn{
-			animation: textSlideIn 1s ease;
-			animation-fill-mode:forwards;
+			-webkit-animation: textSlideIn 1s ease;
+			        animation: textSlideIn 1s ease;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
 		}
 
 		div:nth-of-type(1){
@@ -114,8 +171,10 @@ $font-stack8: 'Courgette', cursive;
 		}
 
 		.paragraphComeIn{
-			animation: textSlideIn 2s ease 4s;
-			animation-fill-mode:forwards;
+			-webkit-animation: textSlideIn 2s ease 4s;
+			        animation: textSlideIn 2s ease 4s;
+			-webkit-animation-fill-mode:forwards;
+			        animation-fill-mode:forwards;
 		}
 	}
 
@@ -234,10 +293,18 @@ $font-stack8: 'Courgette', cursive;
 		padding-top: 12vh;
 		
 		.form{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: flex-start;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
 			height: 260px;
 			width: 600px;
 			margin: 30px auto 0 auto;
@@ -265,28 +332,40 @@ $font-stack8: 'Courgette', cursive;
 			}
 
 			label:nth-of-type(1){
-				order: 1;
+				-webkit-box-ordinal-group: 2;
+				    -ms-flex-order: 1;
+				        order: 1;
 			}
 
 			label:nth-of-type(2){
-				order: 2;
+				-webkit-box-ordinal-group: 3;
+				    -ms-flex-order: 2;
+				        order: 2;
 			}
 
 			input:nth-of-type(1){
-				order: 3;
+				-webkit-box-ordinal-group: 4;
+				    -ms-flex-order: 3;
+				        order: 3;
 			}
 
 			input:nth-of-type(2){
-				order: 4;
+				-webkit-box-ordinal-group: 5;
+				    -ms-flex-order: 4;
+				        order: 4;
 			}
 
 			label:nth-of-type(3){
 				margin-top: 35px;
-				order: 5;
+				-webkit-box-ordinal-group: 6;
+				    -ms-flex-order: 5;
+				        order: 5;
 			}
 
 			textarea{
-				order: 6;
+				-webkit-box-ordinal-group: 7;
+				    -ms-flex-order: 6;
+				        order: 6;
 			}
 		}
 		.phoneEmail{
