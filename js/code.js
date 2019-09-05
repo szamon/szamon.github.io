@@ -72,7 +72,7 @@ $(document).ready(function(){
 						$(".progressBar img:nth-of-type(1)").removeClass("active");
 						$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
 						counter=slidesLength-1;
-						$(slides).css("margin-left", "-1920px");
+						$(slides).css("margin-left", (slidesLength-2)*negativeMargin + "px");
 					}
 				}else{
 				counter = 2;
