@@ -602,8 +602,7 @@ a {
 
 .portfolio .portfolioItem {
   -webkit-transition: 1s ease 0.4s;
-  -webkit-transition: 1s ease 0.1s;
-  transition: 1s ease 0.1s;
+  transition: 1s ease 0.4s;
 }
 
 .portfolio .portfolioItem p {

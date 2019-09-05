@@ -189,6 +189,7 @@ $(document).ready(function(){
 
 	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
 	var aboutMe = $(".aboutMe");
+	var portfolio = $(".portfolio");
 	var portfolioItems = $(".portfolioItem");
 	// var aboutMeEl1 = $(".aboutMe >img:nth-of-type(1)");
 	// var aboutMeEl2 = $(".aboutMe >img:nth-of-type(2)");
@@ -214,7 +215,7 @@ $(document).ready(function(){
 		    	}
 			});
 		}
-		if(portfolioItems.visible(true)){
+		if(portfolio.visible(true)){
 			portfolioItems.addClass("portfolioItemVisible");
 			//console.log("porftolio visible");
 		};
