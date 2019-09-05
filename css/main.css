@@ -668,7 +668,7 @@ a {
   opacity: 1;
 }
 
-.portfolio h2:nth-of-type(2) {
+.portfolio h2:nth-of-type(2), .portfolio h2:nth-of-type(3) {
   margin-top: 40px;
   margin-bottom: 15px;
   font-weight: 100;
