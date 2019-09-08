@@ -202,6 +202,7 @@ a {
   height: 60px;
   font-family: "Bangers", helvetica;
   font-size: 1em;
+  letter-spacing: .6px;
 }
 
 .intro .scrollText p {
@@ -227,7 +228,8 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.95);
-  font-family: "Kaushan Script", cursive;
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -368,6 +370,8 @@ a {
   height: 60px;
   font-family: "Bangers", helvetica;
   font-size: 1em;
+  letter-spacing: .6px;
+  font-style: normal;
 }
 
 .aboutMe .scrollText p {
@@ -394,7 +398,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(76, 83, 94, 0.9);
-  font-family: "Kaushan Script", cursive;
+  font-family: "Indie Flower", sans-serif;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -406,6 +410,7 @@ a {
   margin-top: 14vh;
   margin-bottom: 60px;
   font-size: 2em;
+  font-style: italic;
 }
 
 .skills .slider {
@@ -513,6 +518,7 @@ a {
   height: 60px;
   font-family: "Bangers", helvetica;
   font-size: 1em;
+  letter-spacing: .6px;
 }
 
 .skills .scrollText p {
@@ -552,6 +558,8 @@ a {
 }
 
 .portfolio .portfolioItem {
+  -webkit-transition: 1s ease 0.4s;
+  transition: 1s ease 0.4s;
   position: relative;
   height: 185px;
   width: 260px;
@@ -560,21 +568,24 @@ a {
   border-bottom: 1px solid white;
   -webkit-box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
   box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
-  font-size: 0.9em;
   z-index: 2;
 }
 
 .portfolio .portfolioItem h3:nth-of-type(1) {
+  font-weight: 100;
   margin: 15px 0 0 0;
   z-index: 2;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.65);
   font-size: 1.3em;
 }
 
 .portfolio .portfolioItem p {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
+  font-size: 1em;
   z-index: 2;
+  margin-top: 20px;
 }
 
 .portfolio .portfolioItem div {
@@ -598,15 +609,6 @@ a {
 .portfolio .portfolioItem div:hover {
   background: white;
   color: #4c535e;
-}
-
-.portfolio .portfolioItem {
-  -webkit-transition: 1s ease 0.4s;
-  transition: 1s ease 0.4s;
-}
-
-.portfolio .portfolioItem p {
-  margin-top: 30px;
 }
 
 .portfolio .portfolioItem::after {
@@ -671,6 +673,7 @@ a {
   margin-top: 40px;
   margin-bottom: 15px;
   font-weight: 100;
+  letter-spacing: .7px;
 }
 
 .portfolio .githubProfile {
@@ -678,6 +681,7 @@ a {
   margin: 25px auto;
   overflow: hidden;
   font-size: 0.9em;
+  letter-spacing: .7px;
 }
 
 .portfolio .githubProfile a img {
@@ -701,6 +705,7 @@ a {
   height: 60px;
   font-family: "Bangers", helvetica;
   font-size: 1em;
+  letter-spacing: .6px;
 }
 
 .portfolio .scrollText p {
@@ -726,7 +731,8 @@ a {
   width: 100%;
   padding-top: 35vh;
   background-color: rgba(40, 58, 89, 0.99);
-  font-family: "Kaushan Script", cursive;
+  font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -55px 70px -70px white;
@@ -734,7 +740,6 @@ a {
 }
 
 .contact h2 {
-  font-family: "Bangers", helvetica;
   font-weight: 100;
 }
 
@@ -754,7 +759,8 @@ a {
 .contact form input {
   margin-top: 5px;
   border-radius: 5%;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
   color: #283a59;
 }
 
@@ -762,7 +768,8 @@ a {
   height: 80px;
   margin-top: 5px;
   border-radius: 2%;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
   color: #283a59;
 }
 
@@ -772,6 +779,7 @@ a {
   margin-top: 15px;
   border-radius: 20%;
   font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
   color: #283a59;
   background: white;
   cursor: pointer;
@@ -789,6 +797,7 @@ a {
   justify-content: center;
   margin-top: 40px;
   font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
   font-size: 0.8em;
 }
 
@@ -821,6 +830,12 @@ a {
   width: auto;
 }
 
+.contact .phoneEmail .email p {
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
+  font-size: 1.7em;
+}
+
 .contact .scrollText {
   position: absolute;
   bottom: 5px;
@@ -829,6 +844,7 @@ a {
   height: 60px;
   font-family: "Bangers", helvetica;
   font-size: 1em;
+  letter-spacing: .6px;
 }
 
 .contact .scrollText p {
@@ -1068,9 +1084,6 @@ Media Queries
   }
   .portfolio .portfolioItem div {
     margin: 18px auto;
-  }
-  .portfolio .portfolioItem p {
-    margin-top: 35px;
   }
   .skills h2 {
     margin-top: 12vh;

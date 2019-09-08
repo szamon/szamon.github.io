@@ -1,6 +1,7 @@
 
+$font-logo: "Bangers", helvetica;
 $font-stack: "Bangers", helvetica;
-$font-stack2: 'Kaushan Script', cursive;
+$font-stack2: "Indie Flower", sans-serif;
 
 /*************************
 Mixins
@@ -14,6 +15,7 @@ Mixins
 	height: 60px;
 	font-family: $font-stack;
 	font-size: 1em;
+	letter-spacing: .6px;
 
 	p{
 		color: $color;
@@ -65,7 +67,7 @@ a{
 	left: 1rem;
 	height: 24px;
 	width: 40px;
-	font-family: $font-stack;
+	font-family: $font-logo;
 	font-size: 2em;
 	color: white;
 	z-index: 9999;
@@ -244,6 +246,7 @@ a{
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.95);
 	font-family: $font-stack2;
+	font-style: italic;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -360,6 +363,7 @@ a{
 
 	div:nth-of-type(1){
 		opacity: 0;
+		
 
 		p{
 			margin: 25px 6px 0 6px;
@@ -377,6 +381,7 @@ a{
 
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollText);
+		font-style: normal;
 	}
 }
 	
@@ -398,6 +403,7 @@ a{
 		margin-top: 14vh;
 		margin-bottom: 60px;
 		font-size: 2em;
+		font-style: italic;
 	}
 
 	.slider{
@@ -521,6 +527,8 @@ a{
 	}
 
 	.portfolioItem{
+		-webkit-transition: 1s ease 0.4s;
+		transition: 1s ease 0.4s;
 		position: relative;
 		height: 185px;
 		width: 260px;
@@ -529,20 +537,23 @@ a{
 		border-bottom: 1px solid white;
 		-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
 		        box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
-		font-size: 0.9em;
 		z-index: 2;
 
 		h3:nth-of-type(1){
+			font-weight: 100;
 			margin: 15px 0 0 0;
 			z-index: 2;
-			letter-spacing: 1px;
+			letter-spacing: 1.3px;
 			text-shadow: 1px 1px rgba(0,0,0,0.65);
 			font-size: 1.3em;
 		}
 
 		p{	
 			font-family: $font-stack2;
+			font-style: italic;
+			font-size: 1em;
 			z-index: 2;
+			margin-top: 20px;
 		}
 
 		div{
@@ -566,15 +577,6 @@ a{
 		div:hover{
 			background: white;
 			color: rgb(76, 83, 94);
-		}
-	}
-
-	.portfolioItem{
-		-webkit-transition: 1s ease 0.4s;
-		transition: 1s ease 0.4s;
-
-		p{
-			margin-top: 30px;
 		}
 	}
 
@@ -660,6 +662,7 @@ a{
 		margin-top: 40px;
 		margin-bottom: 15px;
 		font-weight: 100;
+		letter-spacing: .7px;
 	}
 	
 	.githubProfile{
@@ -667,6 +670,7 @@ a{
 		margin: 25px auto;
 		overflow: hidden;
 		font-size: 0.9em;
+		letter-spacing: .7px;
 
 		a{
 			img{
@@ -695,14 +699,14 @@ a{
 	width: 100%;
 	padding-top: 35vh;
 	background-color: rgba(40, 58, 89, 0.99);
-	font-family: $font-stack2;
+	font-family: $font-stack;
+	letter-spacing: .6px;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -55px 70px -70px white;
 	        box-shadow: inset 0px -55px 70px -70px white;
 
 	h2{
-		font-family: $font-stack;
 		font-weight: 100;
 	}
 
@@ -722,6 +726,7 @@ a{
 			margin-top: 5px;
 			border-radius: 5%;
 			font-family: $font-stack2;
+			font-style: italic;
 			color: rgb(40, 58, 89);
 		}
 
@@ -730,6 +735,7 @@ a{
 			margin-top: 5px;
 			border-radius: 2%;
 			font-family: $font-stack2;
+			font-style: italic;
 			color: rgb(40, 58, 89);
 		}
 
@@ -739,6 +745,7 @@ a{
 			margin-top: 15px;
 			border-radius: 20%;
 			font-family: $font-stack;
+			letter-spacing: .6px;
 			color: rgb(40, 58, 89);
 			background: white;
 			cursor: pointer;
@@ -757,6 +764,7 @@ a{
 		        justify-content: center;
 		margin-top: 40px;
 		font-family: $font-stack;
+		letter-spacing: .6px;
 		font-size: 0.8em;
 		
 		.phone, .email{
@@ -786,6 +794,11 @@ a{
 
 		.email{
 			width: auto;
+			p{
+				font-family: $font-stack2;
+				font-style: italic;
+				font-size: 1.7em;
+			}
 		}
 	}
 
@@ -1053,11 +1066,7 @@ Media Queries
 
 			div{
 				margin: 18px auto;
-			}
-
-			p {
-				margin-top: 35px;
-			}			
+			}		
 		}
 
 	}
