@@ -1,7 +1,7 @@
 
 $font-logo: "Bangers", helvetica;
 $font-stack: "Bangers", helvetica;
-$font-stack2: "Indie Flower", sans-serif;
+$font-stack2: "Caveat", sans-serif;
 
 /*************************
 Mixins
@@ -246,7 +246,6 @@ a{
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.95);
 	font-family: $font-stack2;
-	font-style: italic;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -320,7 +319,7 @@ a{
 	> h2:nth-of-type(1){
 		width: 290px;
 		margin: 13vh auto 0 auto;
-		font-size: 2em;
+		font-size: 2rem;
 		padding-bottom: 3px;
 		border-bottom: 1.5px solid white;
 		border-bottom-left-radius: 15%;
@@ -363,12 +362,9 @@ a{
 
 	div:nth-of-type(1){
 		opacity: 0;
-		
-
+		font-size: 1.2rem;
 		p{
 			margin: 25px 6px 0 6px;
-			font-size: 0.9em;
-			text-align: left;
 		}
 	}
 
@@ -381,7 +377,6 @@ a{
 
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollText);
-		font-style: normal;
 	}
 }
 	
@@ -402,8 +397,7 @@ a{
 	h2{
 		margin-top: 14vh;
 		margin-bottom: 60px;
-		font-size: 2em;
-		font-style: italic;
+		font-size: 2rem;
 	}
 
 	.slider{
@@ -550,10 +544,9 @@ a{
 
 		p{	
 			font-family: $font-stack2;
-			font-style: italic;
-			font-size: 1em;
+			font-size: 1.3rem;
 			z-index: 2;
-			margin-top: 20px;
+			margin-top: 10px;
 		}
 
 		div{
@@ -726,7 +719,6 @@ a{
 			margin-top: 5px;
 			border-radius: 5%;
 			font-family: $font-stack2;
-			font-style: italic;
 			color: rgb(40, 58, 89);
 		}
 
@@ -735,7 +727,6 @@ a{
 			margin-top: 5px;
 			border-radius: 2%;
 			font-family: $font-stack2;
-			font-style: italic;
 			color: rgb(40, 58, 89);
 		}
 
@@ -796,8 +787,7 @@ a{
 			width: auto;
 			p{
 				font-family: $font-stack2;
-				font-style: italic;
-				font-size: 1.7em;
+				font-size: 1.9em;
 			}
 		}
 	}
@@ -1034,7 +1024,7 @@ Media Queries
 		> h2:nth-of-type(1){
 			float: left;
 			width: 290px;
-			margin: 20vh auto 0 130px;
+			margin: 10vh auto 0 130px;
 		}
 
 		.headingComeIn{
@@ -1066,7 +1056,11 @@ Media Queries
 
 			div{
 				margin: 18px auto;
-			}		
+			}	
+			
+			p{
+				margin-top: 15px;
+			}
 		}
 
 	}
@@ -1415,7 +1409,7 @@ Media Queries
 
 			p{
 				margin: 50px 10px;
-				font-size: 1.3em;
+				font-size: 1.4rem;
 			}
 		}
 

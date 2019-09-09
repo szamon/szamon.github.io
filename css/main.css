@@ -228,8 +228,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.95);
-  font-family: "Indie Flower", sans-serif;
-  font-style: italic;
+  font-family: "Caveat", sans-serif;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -304,7 +303,7 @@ a {
 .aboutMe > h2:nth-of-type(1) {
   width: 290px;
   margin: 13vh auto 0 auto;
-  font-size: 2em;
+  font-size: 2rem;
   padding-bottom: 3px;
   border-bottom: 1.5px solid white;
   border-bottom-left-radius: 15%;
@@ -347,12 +346,11 @@ a {
 
 .aboutMe div:nth-of-type(1) {
   opacity: 0;
+  font-size: 1.2rem;
 }
 
 .aboutMe div:nth-of-type(1) p {
   margin: 25px 6px 0 6px;
-  font-size: 0.9em;
-  text-align: left;
 }
 
 .aboutMe .paragraphComeIn {
@@ -371,7 +369,6 @@ a {
   font-family: "Bangers", helvetica;
   font-size: 1em;
   letter-spacing: .6px;
-  font-style: normal;
 }
 
 .aboutMe .scrollText p {
@@ -398,7 +395,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(76, 83, 94, 0.9);
-  font-family: "Indie Flower", sans-serif;
+  font-family: "Caveat", sans-serif;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -409,8 +406,7 @@ a {
 .skills h2 {
   margin-top: 14vh;
   margin-bottom: 60px;
-  font-size: 2em;
-  font-style: italic;
+  font-size: 2rem;
 }
 
 .skills .slider {
@@ -581,11 +577,10 @@ a {
 }
 
 .portfolio .portfolioItem p {
-  font-family: "Indie Flower", sans-serif;
-  font-style: italic;
-  font-size: 1em;
+  font-family: "Caveat", sans-serif;
+  font-size: 1.3rem;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .portfolio .portfolioItem div {
@@ -759,8 +754,7 @@ a {
 .contact form input {
   margin-top: 5px;
   border-radius: 5%;
-  font-family: "Indie Flower", sans-serif;
-  font-style: italic;
+  font-family: "Caveat", sans-serif;
   color: #283a59;
 }
 
@@ -768,8 +762,7 @@ a {
   height: 80px;
   margin-top: 5px;
   border-radius: 2%;
-  font-family: "Indie Flower", sans-serif;
-  font-style: italic;
+  font-family: "Caveat", sans-serif;
   color: #283a59;
 }
 
@@ -831,9 +824,8 @@ a {
 }
 
 .contact .phoneEmail .email p {
-  font-family: "Indie Flower", sans-serif;
-  font-style: italic;
-  font-size: 1.7em;
+  font-family: "Caveat", sans-serif;
+  font-size: 1.9em;
 }
 
 .contact .scrollText {
@@ -1059,7 +1051,7 @@ Media Queries
   .aboutMe > h2:nth-of-type(1) {
     float: left;
     width: 290px;
-    margin: 20vh auto 0 130px;
+    margin: 10vh auto 0 130px;
   }
   .aboutMe .headingComeIn {
     -webkit-animation: textSlideIn 1s ease;
@@ -1084,6 +1076,9 @@ Media Queries
   }
   .portfolio .portfolioItem div {
     margin: 18px auto;
+  }
+  .portfolio .portfolioItem p {
+    margin-top: 15px;
   }
   .skills h2 {
     margin-top: 12vh;
@@ -1378,7 +1373,7 @@ Media Queries
   }
   .aboutMe div:nth-of-type(1) p {
     margin: 50px 10px;
-    font-size: 1.3em;
+    font-size: 1.4rem;
   }
   .aboutMe .paragraphComeIn {
     -webkit-animation: textSlideIn 2s ease 1s;
