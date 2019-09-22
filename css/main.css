@@ -179,6 +179,10 @@ a {
   z-index: 9999;
 }
 
+.intro .myNameTitle {
+  letter-spacing: 1px;
+}
+
 .intro .myNameTitle > p:nth-of-type(1) {
   font-size: 2em;
 }
@@ -224,11 +228,12 @@ a {
 
 .aboutMe {
   position: relative;
-  min-height: 100vh;
+  min-height: 110vh;
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.95);
-  font-family: "Caveat", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -303,7 +308,7 @@ a {
 .aboutMe > h2:nth-of-type(1) {
   width: 290px;
   margin: 13vh auto 0 auto;
-  font-size: 2rem;
+  font-size: 1.5em;
   padding-bottom: 3px;
   border-bottom: 1.5px solid white;
   border-bottom-left-radius: 15%;
@@ -346,11 +351,12 @@ a {
 
 .aboutMe div:nth-of-type(1) {
   opacity: 0;
-  font-size: 1.2rem;
+  font-size: 1em;
 }
 
 .aboutMe div:nth-of-type(1) p {
   margin: 25px 6px 0 6px;
+  text-align: justify;
 }
 
 .aboutMe .paragraphComeIn {
@@ -395,7 +401,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(76, 83, 94, 0.9);
-  font-family: "Caveat", sans-serif;
+  font-family: "Bangers", helvetica;
   color: white;
   text-align: center;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -406,7 +412,7 @@ a {
 .skills h2 {
   margin-top: 14vh;
   margin-bottom: 60px;
-  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 .skills .slider {
@@ -536,7 +542,7 @@ a {
 
 .portfolio {
   position: relative;
-  min-height: calc(100vh + 1350px);
+  min-height: calc(100vh + 1550px);
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.97);
@@ -577,10 +583,11 @@ a {
 }
 
 .portfolio .portfolioItem p {
-  font-family: "Caveat", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
   z-index: 2;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .portfolio .portfolioItem div {
@@ -754,7 +761,7 @@ a {
 .contact form input {
   margin-top: 5px;
   border-radius: 5%;
-  font-family: "Caveat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #283a59;
 }
 
@@ -762,7 +769,7 @@ a {
   height: 80px;
   margin-top: 5px;
   border-radius: 2%;
-  font-family: "Caveat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #283a59;
 }
 
@@ -824,8 +831,9 @@ a {
 }
 
 .contact .phoneEmail .email p {
-  font-family: "Caveat", sans-serif;
-  font-size: 1.9em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 .contact .scrollText {
@@ -950,6 +958,7 @@ Media Queries
   }
   .intro .myNameTitle > p:nth-of-type(3) {
     margin-left: 5px;
+    width: auto;
   }
   .aboutMe .questionMarkComeIn {
     -webkit-animation: questionSlideIn 6s ease 0.5s;
@@ -1071,13 +1080,25 @@ Media Queries
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  .portfolio .portfolioItem {
-    width: 380px;
+  .portfolio {
+    min-height: calc(100vh + 900px);
   }
-  .portfolio .portfolioItem div {
+  .portfolio .portfolioItemsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 20px auto 0 auto;
+    width: 90%;
+  }
+  .portfolio .portfolioItemsContainer .portfolioItem {
+    width: 300px;
+  }
+  .portfolio .portfolioItemsContainer .portfolioItem div {
     margin: 18px auto;
   }
-  .portfolio .portfolioItem p {
+  .portfolio .portfolioItemsContainer .portfolioItem p {
     margin-top: 15px;
   }
   .skills h2 {
@@ -1239,6 +1260,9 @@ Media Queries
 }
 
 @media screen and (min-width: 992px) {
+  .wrapper {
+    font-size: 1.1em;
+  }
   .aboutMe .questionMarkComeIn {
     -webkit-animation: questionSlideIn 6s ease 0.5s;
     animation: questionSlideIn 6s ease 0.5s;
@@ -1373,7 +1397,7 @@ Media Queries
   }
   .aboutMe div:nth-of-type(1) p {
     margin: 50px 10px;
-    font-size: 1.4rem;
+    font-size: 1.1em;
   }
   .aboutMe .paragraphComeIn {
     -webkit-animation: textSlideIn 2s ease 1s;
@@ -1422,6 +1446,9 @@ Media Queries
   }
   .skills .slider .progressBar {
     display: none;
+  }
+  .portfolio .portfolioItemsContainer .portfolioItem {
+    width: 400px;
   }
 }
 

@@ -1,7 +1,7 @@
 
 $font-logo: "Bangers", helvetica;
 $font-stack: "Bangers", helvetica;
-$font-stack2: "Caveat", sans-serif;
+$font-stack2: "Quicksand", sans-serif;
 
 /*************************
 Mixins
@@ -217,7 +217,7 @@ a{
 	}
 
 	.myNameTitle{
-
+		letter-spacing: 1px;
 		> p:nth-of-type(1){
 			font-size: 2em;
 		}
@@ -241,11 +241,12 @@ a{
 
 .aboutMe{
 	position: relative;
-	min-height: 100vh;
+	min-height: 110vh;
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.95);
 	font-family: $font-stack2;
+	font-style: italic;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -319,7 +320,7 @@ a{
 	> h2:nth-of-type(1){
 		width: 290px;
 		margin: 13vh auto 0 auto;
-		font-size: 2rem;
+		font-size: 1.5em;
 		padding-bottom: 3px;
 		border-bottom: 1.5px solid white;
 		border-bottom-left-radius: 15%;
@@ -362,9 +363,10 @@ a{
 
 	div:nth-of-type(1){
 		opacity: 0;
-		font-size: 1.2rem;
+		font-size: 1em;
 		p{
 			margin: 25px 6px 0 6px;
+			text-align: justify;
 		}
 	}
 
@@ -387,7 +389,7 @@ a{
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(76, 83, 94, 0.9);
-	font-family: $font-stack2;
+	font-family: $font-stack;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -397,7 +399,7 @@ a{
 	h2{
 		margin-top: 14vh;
 		margin-bottom: 60px;
-		font-size: 2rem;
+		letter-spacing: 2px;
 	}
 
 	.slider{
@@ -504,7 +506,7 @@ a{
 
 .portfolio{
 	position: relative;
-	min-height: calc(100vh + 1350px);
+	min-height: calc(100vh + 1550px);
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.97);
@@ -544,9 +546,10 @@ a{
 
 		p{	
 			font-family: $font-stack2;
-			font-size: 1.3rem;
+			font-size:0.9em;
+			font-style: italic;
 			z-index: 2;
-			margin-top: 10px;
+			margin-top: 15px;
 		}
 
 		div{
@@ -787,7 +790,8 @@ a{
 			width: auto;
 			p{
 				font-family: $font-stack2;
-				font-size: 1.9em;
+				font-size: 1.5em;
+				font-style: italic;
 			}
 		}
 	}
@@ -905,6 +909,7 @@ Media Queries
 
 			> p:nth-of-type(3){
 				margin-left: 5px;
+				width: auto;
 			}
 		}
 	}
@@ -1050,16 +1055,23 @@ Media Queries
 	}
 
 	.portfolio{
+		min-height: calc(100vh + 900px);
 
-		.portfolioItem {
-			width: 380px;
+		.portfolioItemsContainer{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 20px auto 0 auto;
+			width: 90%;
+			.portfolioItem {
+				width: 300px;
 
-			div{
-				margin: 18px auto;
-			}	
-			
-			p{
-				margin-top: 15px;
+				div{
+					margin: 18px auto;
+				}	
+				
+				p{
+					margin-top: 15px;
+				}
 			}
 		}
 
@@ -1255,6 +1267,10 @@ Media Queries
 
 @media screen and (min-width:992px){
 
+	.wrapper{
+		font-size: 1.1em;
+	}
+
 	.aboutMe{
 
 		.questionMarkComeIn{
@@ -1409,7 +1425,7 @@ Media Queries
 
 			p{
 				margin: 50px 10px;
-				font-size: 1.4rem;
+				font-size: 1.1em;
 			}
 		}
 
@@ -1472,6 +1488,14 @@ Media Queries
 
 			.progressBar{
 				display: none;
+			}
+		}
+	}
+
+	.portfolio{
+		.portfolioItemsContainer{
+			.portfolioItem{
+				width: 400px;
 			}
 		}
 	}

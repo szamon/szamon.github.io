@@ -139,9 +139,6 @@
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  .portfolio div:nth-of-type(1) {
-    width: 380px;
-  }
   .portfolio div:nth-of-type(1) div {
     margin: 18px auto;
   }
