@@ -319,13 +319,25 @@ a{
 	
 	> h2:nth-of-type(1){
 		width: 290px;
-		margin: 13vh auto 0 auto;
+		margin: 13vh auto 15px auto;
 		font-size: 1.5em;
 		padding-bottom: 3px;
 		border-bottom: 1.5px solid white;
 		border-bottom-left-radius: 15%;
 		border-bottom-right-radius: 15%;
 		opacity: 0;
+	}
+
+	div:nth-of-type(1){
+		opacity: 0;
+		font-size: 1em;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 2px;
+		border: 1px solid rgba(255, 255, 255, .1);
+		p{
+			margin: 6px 6px;
+			text-align: justify;
+		}
 	}
 
 	.headingComeIn{
@@ -358,15 +370,6 @@ a{
 			opacity: 1;
 			-webkit-transform: translate(0, 0);
 			        transform: translate(0, 0);
-		}
-	}
-
-	div:nth-of-type(1){
-		opacity: 0;
-		font-size: 1em;
-		p{
-			margin: 25px 6px 0 6px;
-			text-align: justify;
 		}
 	}
 
@@ -1029,7 +1032,7 @@ Media Queries
 		> h2:nth-of-type(1){
 			float: left;
 			width: 290px;
-			margin: 10vh auto 0 130px;
+			margin: 10vh auto 15px 130px;
 		}
 
 		.headingComeIn{
@@ -1405,7 +1408,7 @@ Media Queries
 			display: block;
 			float: none;
 			width: 290px;
-			margin: 23vh auto 0 auto;
+			margin: 23vh auto 15px auto;
 		}
 
 		.headingComeIn{
@@ -1424,7 +1427,7 @@ Media Queries
 			width: 800px;
 
 			p{
-				margin: 50px 10px;
+				margin: 6px 10px;
 				font-size: 1.1em;
 			}
 		}
