@@ -1453,6 +1453,9 @@ Media Queries
   .skills .slider .progressBar {
     display: none;
   }
+  .portfolio .portfolioItemsContainer {
+    max-width: 1000px;
+  }
   .portfolio .portfolioItemsContainer .portfolioItem {
     width: 400px;
   }
