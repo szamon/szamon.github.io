@@ -960,6 +960,9 @@ Media Queries
     margin-left: 5px;
     width: auto;
   }
+  .aboutMe {
+    min-height: 100vh;
+  }
   .aboutMe .questionMarkComeIn {
     -webkit-animation: questionSlideIn 6s ease 0.5s;
     animation: questionSlideIn 6s ease 0.5s;
