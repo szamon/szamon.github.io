@@ -246,7 +246,6 @@ a{
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.95);
 	font-family: $font-stack2;
-	font-style: italic;
 	color: white;
 	text-align: center;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
@@ -321,6 +320,7 @@ a{
 		width: 290px;
 		margin: 13vh auto 15px auto;
 		font-size: 1.5em;
+		font-style: italic;
 		padding-bottom: 3px;
 		border-bottom: 1.5px solid white;
 		border-bottom-left-radius: 15%;
@@ -331,6 +331,7 @@ a{
 	div:nth-of-type(1){
 		opacity: 0;
 		font-size: 1em;
+		font-style: italic;
 		background: rgba(255, 255, 255, 0.05);
 		border-radius: 2px;
 		border: 1px solid rgba(255, 255, 255, .1);
