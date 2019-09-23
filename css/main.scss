@@ -510,7 +510,7 @@ a{
 
 .portfolio{
 	position: relative;
-	min-height: calc(100vh + 1550px);
+	height: 2175px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.97);
@@ -1059,7 +1059,7 @@ Media Queries
 	}
 
 	.portfolio{
-		min-height: calc(100vh + 900px);
+		height: 1450px;
 
 		.portfolioItemsContainer{
 			display: flex;
