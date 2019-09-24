@@ -1088,7 +1088,7 @@ Media Queries
     animation-fill-mode: forwards;
   }
   .portfolio {
-    height: 1500px;
+    height: 1450px;
   }
   .portfolio .portfolioItemsContainer {
     display: -webkit-box;
