@@ -204,6 +204,98 @@ a{
 	}
 }
 
+@keyframes introTextSlide{
+	from{
+		opacity: 0;
+		transform: translate(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translate(0px);
+	}
+}
+
+@keyframes introUnderlineAppear{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes introPicturePop{
+	0%{
+		transform: translate(0px, -300px);
+	}
+	15%{
+		transform: translate(0px, 0px) rotateY(180deg);
+		opacity: 1;
+	}
+	18%{
+		transform: translate(0px, -50px) rotateY(0deg);
+	}
+	23%{
+		transform: translate(0px, -80px) rotateY(180deg);
+	}
+	28%{
+		transform: translate(0px, -50px) rotateY(0deg);
+	}
+	30%{
+		transform: translate(0px, 0px) rotateY(180deg);
+	}
+	33%{
+		transform: translate(0px, -33px) rotateY(0deg);
+	}
+	38%{
+		transform: translate(0px, -50px) rotateY(180deg);
+	}
+	42%{
+		transform: translate(0px, -33px) rotateY(0deg);
+	}
+	45%{
+		transform: translate(0px, 0px) rotateY(180deg);
+	}
+	48%{
+		transform: translate(0px, -15px) rotateY(0deg);
+	}
+	53%{
+		transform: translate(0px, -20px) rotateY(180deg);
+	}
+	58%{
+		transform: translate(0px, -15px) rotateY(0deg);
+	}
+	60%{
+		transform: translate(0px, 0px) rotateY(0deg);
+	}
+	63%{
+		transform: translate(0px, -3px) rotateY(180deg);
+	}
+	65%{
+		transform: translate(0px, -5px) rotateY(180deg);
+	}
+	67%{
+		transform: translate(0px, -3px) rotateY(0deg);
+	}
+	68%{
+		transform: translate(0px, 0px) rotateY(0deg);
+	}
+	73%{
+		transform: rotateY(180deg);
+	}
+	80%{
+		transform: rotateY(120deg);
+	}
+	90%{
+		transform: rotateY(30deg);
+	}
+	100%{
+		transform: translate(0px, 0px);
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+
 .intro{
 	position: relative;
 	min-height: 100vh;
@@ -224,23 +316,35 @@ a{
 		background: url("../img/fotka_1.jpg") no-repeat center/cover;
 		border-radius: 50%;
 		z-index: 9999;
+		opacity: 0;
+		animation: introPicturePop 3s linear 2s forwards;
 	}
 
 	.myNameTitle{
 		letter-spacing: 1px;
+		text-align: center;
+		width: 250px;
+		margin: 0 auto;
+		overflow: visible;
 		> p:nth-of-type(1){
 			font-size: 2em;
+			opacity: 0;
+			animation: introTextSlide .6s ease-out 1s forwards;
 		}
 
 		> p:nth-of-type(2){
 			font-size: 1em;
+			opacity: 0;
+			animation: introTextSlide .6s ease-out 1.4s forwards;
 		}
 
 		> p:nth-of-type(3){
 			margin: 3px auto 0;
 			height: 1px;
-			width: 200px;
+			width: 180px;
 			background: white;
+			opacity: 0;
+			animation: introUnderlineAppear .2s ease-out 5s forwards;
 		}
 	}
 
@@ -908,11 +1012,11 @@ Media Queries
 		padding-top: 40vh;
 
 		.myPhoto{
-			margin: 0 70px 0 calc(50% - 195px);
+			margin: 0 0 0 calc(50% - 195px);
 		}
 
 		.myNameTitle{
-
+			margin: 0;
 			> p:nth-of-type(1){
 				margin: 20px 0 0 5px;
 			}
