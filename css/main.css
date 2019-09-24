@@ -204,18 +204,26 @@ a {
 @-webkit-keyframes introUnderlineAppear {
   from {
     opacity: 0;
+    -webkit-transform: translate(0, 5px);
+            transform: translate(0, 5px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
   }
 }
 
 @keyframes introUnderlineAppear {
   from {
     opacity: 0;
+    -webkit-transform: translate(0, 5px);
+            transform: translate(0, 5px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
   }
 }
 
@@ -427,7 +435,7 @@ a {
   margin: 0 auto 5px;
   height: 100px;
   width: 100px;
-  background: url("../img/fotka_1.jpg") no-repeat center/cover;
+  background: url("../img/fotka_1.jpg") no-repeat 50% 30%/cover;
   border-radius: 50%;
   z-index: 9999;
   opacity: 0;
@@ -463,8 +471,8 @@ a {
   width: 180px;
   background: white;
   opacity: 0;
-  -webkit-animation: introUnderlineAppear .2s ease-out 5s forwards;
-          animation: introUnderlineAppear .2s ease-out 5s forwards;
+  -webkit-animation: introUnderlineAppear 1s ease-out 5s forwards;
+          animation: introUnderlineAppear 1s ease-out 5s forwards;
 }
 
 .intro .scrollText {
