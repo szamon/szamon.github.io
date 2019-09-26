@@ -38,135 +38,135 @@ $(document).ready(function(){
 
 //SKILLS CAROUSEL
 
-	function slideStart(){
-		var previousSlide = $(".arrowLeft");
-		var nextSlide = $(".arrowRight");
-		var slideChanger = $(".slideChanger");
-		var slidesLength = $(".slides img").length;
-		var slidesImg = $(".slides img");
-		var progressBarImg = $(".progressBar img");
-		var slides = $(".slides");
-		var counter = 2;
-		var negativeMargin;
-		var slidePosition;
-		if (windowWidth < 768){
-			//console.log(windowWidth);
-			negativeMargin = -240;
-		}else if (windowWidth >= 768){
-			//console.log(windowWidth);
-			negativeMargin = -300;
-		}
+	// function slideStart(){
+	// 	var previousSlide = $(".arrowLeft");
+	// 	var nextSlide = $(".arrowRight");
+	// 	var slideChanger = $(".slideChanger");
+	// 	var slidesLength = $(".slides img").length;
+	// 	var slidesImg = $(".slides img");
+	// 	var progressBarImg = $(".progressBar img");
+	// 	var slides = $(".slides");
+	// 	var counter = 2;
+	// 	var negativeMargin;
+	// 	var slidePosition;
+	// 	if (windowWidth < 768){
+	// 		//console.log(windowWidth);
+	// 		negativeMargin = -240;
+	// 	}else if (windowWidth >= 768){
+	// 		//console.log(windowWidth);
+	// 		negativeMargin = -300;
+	// 	}
 
-		function sliderMove(speed){
+	// 	function sliderMove(speed){
 
-			slidePosition = counter*negativeMargin;
+	// 		slidePosition = counter*negativeMargin;
 			
-			slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
-				if(counter < slidesLength - 1){
-				$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
-				$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
-				$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
-				counter += 1;
-				// console.log("dodałem 1 do licznika, licznik: "+counter);
-					if(counter < 2){
-						$(".progressBar img:nth-of-type(1)").removeClass("active");
-						$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
-						counter=slidesLength-1;
-						$(slides).css("margin-left", (slidesLength-2)*negativeMargin + "px");
-					}
-				}else{
-				counter = 2;
-				// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
-				$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
-				$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
-				$(slides).css("margin-left", negativeMargin+"px");
-				}
-			});
-		}
+	// 		slides.animate({"margin-left":slidePosition +"px"}, speed, function(){
+	// 			if(counter < slidesLength - 1){
+	// 			$(".progressBar img:nth-of-type("+(counter)+")").addClass("active");
+	// 			$(".progressBar img:nth-of-type("+(counter-1)+")").removeClass("active");
+	// 			$(".progressBar img:nth-of-type("+(counter+1)+")").removeClass("active");
+	// 			counter += 1;
+	// 			// console.log("dodałem 1 do licznika, licznik: "+counter);
+	// 				if(counter < 2){
+	// 					$(".progressBar img:nth-of-type(1)").removeClass("active");
+	// 					$(".progressBar img:nth-of-type("+(slidesLength-2)+")").addClass("active");
+	// 					counter=slidesLength-1;
+	// 					$(slides).css("margin-left", (slidesLength-2)*negativeMargin + "px");
+	// 				}
+	// 			}else{
+	// 			counter = 2;
+	// 			// console.log("automatycznie ustawiam licznik na 2, licznik: "+counter);
+	// 			$(".progressBar img:nth-of-type("+(counter-1)+")").addClass("active");
+	// 			$(".progressBar img:nth-of-type("+(slidesLength-2)+")").removeClass("active");
+	// 			$(slides).css("margin-left", negativeMargin+"px");
+	// 			}
+	// 		});
+	// 	}
 
-		var interval = function(){
-			// console.log("zaczynam procedurę interval, licznik: "+counter);
-			slides.stop(true,true);
-			sliderMove(1000);
-		}
+	// 	var interval = function(){
+	// 		// console.log("zaczynam procedurę interval, licznik: "+counter);
+	// 		slides.stop(true,true);
+	// 		sliderMove(1000);
+	// 	}
 
-		if(windowWidth < 992){
-			var intervalStart = setInterval(interval, 2000);
-			//console.log("slidestart interval set");
-		}
+	// 	if(windowWidth < 992){
+	// 		var intervalStart = setInterval(interval, 2000);
+	// 		//console.log("slidestart interval set");
+	// 	}
 
-		function resizedw(){
-		    function viewport() {
-			    var e = window, a = 'inner';
-			    if (!('innerWidth' in window )) {
-			        a = 'client';
-			        e = document.documentElement || document.body;
-			    }
-			    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-			}
+	// 	function resizedw(){
+	// 	    function viewport() {
+	// 		    var e = window, a = 'inner';
+	// 		    if (!('innerWidth' in window )) {
+	// 		        a = 'client';
+	// 		        e = document.documentElement || document.body;
+	// 		    }
+	// 		    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+	// 		}
 
-		    windowWidth = viewport().width;
-			//console.log(windowWidth);
-			clearInterval(intervalStart);
-			//console.log("inteval cleared");
-			if (windowWidth < 992){
-				intervalStart = setInterval(interval, 2000);
-				if (windowWidth < 768){
-					//console.log("inteval set, "+ windowWidth);
-					negativeMargin = -240;
-				}else if (windowWidth >= 768){
-					//console.log("inteval set, "+ windowWidth);
-					negativeMargin = -300;
-					//console.log("margin-left set to, "+ negativeMargin);
-				}
-			}else if (windowWidth >= 992){
-				//console.log("inteval not set"+ windowWidth);
-				slides.css("display", "none");
-				function setMarginLeft(){
-					slides.css("margin-left", "auto");
-					//console.log("func setMarginLeft");
-					slides.css("display", "block");
-				}
-				setTimeout(setMarginLeft, 1000);
-				clearTimeout
-				//console.log("margin-left of slides set to: "+ slides.css("margin-left"));
-			}
-		}
+	// 	    windowWidth = viewport().width;
+	// 		//console.log(windowWidth);
+	// 		clearInterval(intervalStart);
+	// 		//console.log("inteval cleared");
+	// 		if (windowWidth < 992){
+	// 			intervalStart = setInterval(interval, 2000);
+	// 			if (windowWidth < 768){
+	// 				//console.log("inteval set, "+ windowWidth);
+	// 				negativeMargin = -240;
+	// 			}else if (windowWidth >= 768){
+	// 				//console.log("inteval set, "+ windowWidth);
+	// 				negativeMargin = -300;
+	// 				//console.log("margin-left set to, "+ negativeMargin);
+	// 			}
+	// 		}else if (windowWidth >= 992){
+	// 			//console.log("inteval not set"+ windowWidth);
+	// 			slides.css("display", "none");
+	// 			function setMarginLeft(){
+	// 				slides.css("margin-left", "auto");
+	// 				//console.log("func setMarginLeft");
+	// 				slides.css("display", "block");
+	// 			}
+	// 			setTimeout(setMarginLeft, 1000);
+	// 			clearTimeout
+	// 			//console.log("margin-left of slides set to: "+ slides.css("margin-left"));
+	// 		}
+	// 	}
 
-		var doit;
-		window.onresize = function(){
-			clearTimeout(doit);
-			doit = setTimeout(resizedw, 100);
-		};
+	// 	var doit;
+	// 	window.onresize = function(){
+	// 		clearTimeout(doit);
+	// 		doit = setTimeout(resizedw, 100);
+	// 	};
 
-		function slideChange(){
-			$(slideChanger).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
-			$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
-			$(progressBarImg).each(function(e){
-				$(this).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
-				$(this).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
-				$(this).click(function(){
-					clearInterval(interval);
-					counter = e+1;
-					$(progressBarImg).each(function(){$(this).removeClass("active");});
-					// console.log("Licznik zmienił się na: "+(e+1));
-					// console.log("zmiana slajdu");
-					sliderMove(100);	
-				});
-			});
-			slideChanger.click(function(evt){
-				evt.preventDefault();
-				clearInterval(interval);
-				counter += parseInt($(this).attr("href"));
-				// console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
-				// console.log("zmiana slajdu");
-				sliderMove(100);	
-			});
-		};
-		slideChange();
-	}
+	// 	function slideChange(){
+	// 		$(slideChanger).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
+	// 		$(slideChanger).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
+	// 		$(progressBarImg).each(function(e){
+	// 			$(this).mouseenter(function(){clearInterval(intervalStart); /*console.log("enter")*/});
+	// 			$(this).mouseleave(function(){intervalStart = setInterval(interval, 2000); /*console.log("leave")*/});
+	// 			$(this).click(function(){
+	// 				clearInterval(interval);
+	// 				counter = e+1;
+	// 				$(progressBarImg).each(function(){$(this).removeClass("active");});
+	// 				// console.log("Licznik zmienił się na: "+(e+1));
+	// 				// console.log("zmiana slajdu");
+	// 				sliderMove(100);	
+	// 			});
+	// 		});
+	// 		slideChanger.click(function(evt){
+	// 			evt.preventDefault();
+	// 			clearInterval(interval);
+	// 			counter += parseInt($(this).attr("href"));
+	// 			// console.log("Licznik zmienił się o: "+parseInt($(this).attr("href")));
+	// 			// console.log("zmiana slajdu");
+	// 			sliderMove(100);	
+	// 		});
+	// 	};
+	// 	slideChange();
+	// }
 
-	slideStart();
+	//slideStart();
 
 	//ABOUT ME SLIDE IN
 	(function($) {
@@ -191,10 +191,6 @@ $(document).ready(function(){
 	var aboutMe = $(".aboutMe");
 	var portfolio = $(".portfolio");
 	var portfolioItems = $(".portfolioItem");
-	// var aboutMeEl1 = $(".aboutMe >img:nth-of-type(1)");
-	// var aboutMeEl2 = $(".aboutMe >img:nth-of-type(2)");
-	// var aboutMeEl3 = $(".aboutMe h2");
-	// var aboutMeEl4 = $(".aboutMe div:nth-of-type(1)");
 
 	$(window).scroll(function(event) {
 		if(aboutMe.visible(true)){
@@ -202,22 +198,126 @@ $(document).ready(function(){
 			    var el = $(el);
 		    	if(i===0){
 		    		el.addClass("questionMarkComeIn");
-		    		//console.log("pierwszy widoczny");
 		    	}else if(i===1){
 		    		el.addClass("lampBlinkStart");
-		    		//console.log("drugi widoczny");
 		    	}else if(i===2){
 		    		el.addClass("headingComeIn");
-		    		//console.log("trzeci widoczny");
 		    	}else if(i===3){
 		    		el.addClass("paragraphComeIn");
-		    		//console.log("czwarty widoczny");
 		    	}
 			});
 		}
 		if(portfolio.visible(true)){
 			portfolioItems.addClass("portfolioItemVisible");
-			//console.log("porftolio visible");
 		};
 	});
 });
+
+//SKILLS SLIDER
+
+const slidesData = [
+	{
+		name: "html5",
+		src: "img/html5.png",
+		alt: "HTML5 icon"
+	},
+	{
+		name: "CSS3",
+		src: "img/css32.png",
+		alt: "CSS3 icon"
+	},
+	{
+		name: "JS",
+		src: "img/javascript_logo.png",
+		alt: "JS icon"
+	},
+	{
+		name: "JQuery",
+		src: "img/jquery.png",
+		alt: "JQUery icon"
+	},
+	{
+		name: "SASS",
+		src: "img/sass.png",
+		alt: "SASS icon"
+	},
+	{
+		name: "Boostrap",
+		src: "img/bootstrap.png",
+		alt: "Bootstrap icon"
+	},
+	{
+		name: "Git",
+		src: "img/git.png",
+		alt: "Git icon"
+	},
+	{
+		name: "PSD",
+		src: "img/psd.png",
+		alt: "PSD icon"
+	},
+	{
+		name: "React",
+		src: "img/react.png",
+		alt: "React icon"
+	}
+];
+
+const arrowsData = [
+	{
+		name: "leftArrow",
+		src: "img/arrowDownWhite.png",
+		alt: "leftArrow"
+	},
+	{
+		name: "rightArrow",
+		src: "img/arrowDownWhite.png",
+		alt: "rightArrow"
+	}
+]
+
+const slider = document.createElement("div");
+slider.className = "slider";
+document.getElementsByClassName("skills")[0].appendChild(slider);
+
+const slidesContainer = document.createElement("div");
+slidesContainer.className = 'slidesContainer';
+slider.appendChild(slidesContainer);
+
+const slidesBar = document.createElement("div");
+slidesBar.className = "slidesBar";
+slider.appendChild(slidesBar);
+
+function createSlides(list){
+	return list.map((x) => {
+		let slide = document.createElement("img");
+		slide.src = x.src;
+		slide.alt = x.alt;
+		return slide;
+	})
+}
+
+function createArrows(arrows){
+	return arrows.map((x) => {
+		let arrow = document.createElement("img");
+		arrow.src = x.src;
+		arrow.className = x.name;
+		arrow.alt = x.alt;
+		return arrow;
+	})
+};
+
+let slides = createSlides(slidesData);
+let arrows = createArrows(arrowsData);
+
+slides.forEach((x) => {
+	slidesBar.appendChild(x);
+})
+
+slidesContainer.appendChild(arrows[0]);
+
+slidesContainer.appendChild(slides[0]);
+
+slidesContainer.appendChild(arrows[1]);
+
+
