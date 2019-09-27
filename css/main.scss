@@ -685,23 +685,29 @@ a{
 		letter-spacing: 2px;
 	}
 	.slider{
-		
+		overflow: hidden;
 		.slidesContainer{
 			position: relative;
-			top: 50%;
+			top: 7vh;
 			left: 0;
-			height: 150px;
+			height: 50vh;
 			border: 1px solid white;
+			overflow: hidden;
 			img{
-				width: 150px;
-				height: 150px;
+				width: 40%;
+				height: auto;
+				max-width: 300px;
 			}
-			.leftArrow, .rightArrow{
-				height: 80px;
-				width: auto;
-				line-height: 200px;
-				vertical-align: center;
+			.arrowContainer{
+				vertical-align: middle;
+				display: inline-block;
+				height: 100%;
+				.leftArrow, .rightArrow{
+					height: 20%;
+					width: auto;
+				}
 			}
+			
 		}
 	}
 	.slidesBar{

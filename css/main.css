@@ -697,24 +697,34 @@ a {
   letter-spacing: 2px;
 }
 
+.skills .slider {
+  overflow: hidden;
+}
+
 .skills .slider .slidesContainer {
   position: relative;
-  top: 50%;
+  top: 7vh;
   left: 0;
-  height: 150px;
+  height: 50vh;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 .skills .slider .slidesContainer img {
-  width: 150px;
-  height: 150px;
+  width: 40%;
+  height: auto;
+  max-width: 300px;
 }
 
-.skills .slider .slidesContainer .leftArrow, .skills .slider .slidesContainer .rightArrow {
-  height: 80px;
+.skills .slider .slidesContainer .arrowContainer {
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+}
+
+.skills .slider .slidesContainer .arrowContainer .leftArrow, .skills .slider .slidesContainer .arrowContainer .rightArrow {
+  height: 20%;
   width: auto;
-  line-height: 200px;
-  vertical-align: center;
 }
 
 .skills .slidesBar {
