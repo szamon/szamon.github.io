@@ -215,6 +215,7 @@ $(document).ready(function(){
 
 //SKILLS SLIDER
 
+//data to create imgs for slider
 const slidesData = [
 	{
 		name: "html5",
@@ -274,11 +275,14 @@ const arrowsData = [
 		src: "img/arrowDownWhite.png",
 		alt: "rightArrow"
 	}
-]
+];
+// .replaceChild was removing img from progress bar, so I copy data into another const
+const slidesData2 = slidesData.slice();
 
+const skills = document.getElementsByClassName("skills")[0];
 const slider = document.createElement("div");
 slider.className = "slider";
-document.getElementsByClassName("skills")[0].appendChild(slider);
+skills.appendChild(slider);
 
 const slidesContainer = document.createElement("div");
 slidesContainer.className = 'slidesContainer';
@@ -288,6 +292,7 @@ const slidesBar = document.createElement("div");
 slidesBar.className = "slidesBar";
 slider.appendChild(slidesBar);
 
+//creating imgs from slidesData
 function createSlides(list){
 	return list.map((x) => {
 		let slide = document.createElement("img");
@@ -295,8 +300,8 @@ function createSlides(list){
 		slide.alt = x.alt;
 		return slide;
 	})
-}
-
+};
+//the same as above with arrows
 function createArrows(arrows){
 	return arrows.map((x) => {
 		let arrow = document.createElement("img");
@@ -308,16 +313,56 @@ function createArrows(arrows){
 };
 
 let slides = createSlides(slidesData);
+let slides2 = createSlides(slidesData2);
 let arrows = createArrows(arrowsData);
 
-slides.forEach((x) => {
+//appending images for slidesBar
+slides2.forEach((x, i) => {
+	x.setAttribute("key", i);
 	slidesBar.appendChild(x);
-})
+});
 
 slidesContainer.appendChild(arrows[0]);
-
 slidesContainer.appendChild(slides[0]);
-
 slidesContainer.appendChild(arrows[1]);
+
+let arrowsDOM = document.querySelectorAll(".leftArrow, .rightArrow");
+
+arrowsDOM.forEach((x) => addEventListener("click", slideChange));
+slidesBar.childNodes[0].className = "activeSlide";
+let visibleSlide = 0;
+
+//slidesContainer.childNodes[1].style.webkitTransition = "all 1s";
+slidesContainer.childNodes[1].style = "transform: translate(0, 0); opacity: 1; transition: all .2s";
+
+
+//slidechange onclick
+function slideChange(e){
+	if(e.target.className === "leftArrow" && visibleSlide > 0){
+		slidesBar.childNodes[visibleSlide].className = "";
+		slidesContainer.childNodes[1].style = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
+		visibleSlide --;
+		setTimeout(() => {slidesContainer.removeChild(slidesContainer.childNodes[1])}, 200);
+		setTimeout(() => {
+			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
+			slidesContainer.childNodes[1].style = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
+			slidesContainer.childNodes[1].style.webkitTransition = "all .1s";
+		}, 200);
+		setTimeout(() => {slidesContainer.childNodes[1].style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+	}else if(e.target.className === "rightArrow" && visibleSlide < slides.length - 1){
+		slidesBar.childNodes[visibleSlide].className = "";
+		slidesContainer.childNodes[1].style = "transform: translate(-200px, 0); opacity: 0; transition: all .2s";
+		visibleSlide ++;
+		setTimeout(() => {slidesContainer.removeChild(slidesContainer.childNodes[1])}, 200);
+		setTimeout(() => {
+			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
+			slidesContainer.childNodes[1].style = "transform: translate(200px, 0); opacity: 0;  transition: all .2s";
+			slidesContainer.childNodes[1].style.webkitTransition = "all .1s";
+		}, 200);
+		setTimeout(() => {slidesContainer.childNodes[1].style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+	}
+	console.log(slides[visibleSlide], slidesContainer.childNodes[1], slidesContainer);
+	slidesBar.childNodes[visibleSlide].className = "activeSlide";
+}
 
 
