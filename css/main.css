@@ -697,27 +697,24 @@ a {
   letter-spacing: 2px;
 }
 
-.skills .slider .leftArrow {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.skills .slider .rightArrow {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
 .skills .slider .slidesContainer {
   position: relative;
   top: 50%;
   left: 0;
-  height: 250px;
+  height: 150px;
   border: 1px solid white;
 }
 
 .skills .slider .slidesContainer img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
+}
+
+.skills .slider .slidesContainer .leftArrow, .skills .slider .slidesContainer .rightArrow {
+  height: 80px;
+  width: auto;
+  line-height: 200px;
+  vertical-align: center;
 }
 
 .skills .slidesBar {

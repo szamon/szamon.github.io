@@ -268,29 +268,31 @@ const arrowsData = [
 	{
 		name: "leftArrow",
 		src: "img/arrowDownWhite.png",
-		alt: "leftArrow"
+		alt: "leftArrow",
+		style: "transform: rotate(90deg)"
 	},
 	{
 		name: "rightArrow",
 		src: "img/arrowDownWhite.png",
-		alt: "rightArrow"
+		alt: "rightArrow",
+		style: "transform: rotate(-90deg)"
 	}
 ];
 // .replaceChild was removing img from progress bar, so I copy data into another const
 const slidesData2 = slidesData.slice();
 
 const skills = document.getElementsByClassName("skills")[0];
-const slider = document.createElement("div");
-slider.className = "slider";
-skills.appendChild(slider);
+const sliderContainer = document.createElement("div");
+sliderContainer.className = "slider";
+skills.appendChild(sliderContainer);
 
 const slidesContainer = document.createElement("div");
 slidesContainer.className = 'slidesContainer';
-slider.appendChild(slidesContainer);
+sliderContainer.appendChild(slidesContainer);
 
 const slidesBar = document.createElement("div");
 slidesBar.className = "slidesBar";
-slider.appendChild(slidesBar);
+sliderContainer.appendChild(slidesBar);
 
 //creating imgs from slidesData
 function createSlides(list){
@@ -298,6 +300,7 @@ function createSlides(list){
 		let slide = document.createElement("img");
 		slide.src = x.src;
 		slide.alt = x.alt;
+		slide.className = "slide";
 		return slide;
 	})
 };
@@ -308,6 +311,7 @@ function createArrows(arrows){
 		arrow.src = x.src;
 		arrow.className = x.name;
 		arrow.alt = x.alt;
+		arrow.style = x.style
 		return arrow;
 	})
 };
@@ -329,8 +333,9 @@ slidesContainer.appendChild(arrows[1]);
 let arrowsDOM = document.querySelectorAll(".leftArrow, .rightArrow");
 
 arrowsDOM.forEach((x) => addEventListener("click", slideChange));
-slidesBar.childNodes[0].className = "activeSlide";
 let visibleSlide = 0;
+let dupa = 1;
+sideBarActive("act");
 
 //slidesContainer.childNodes[1].style.webkitTransition = "all 1s";
 slidesContainer.childNodes[1].style = "transform: translate(0, 0); opacity: 1; transition: all .2s";
@@ -339,30 +344,48 @@ slidesContainer.childNodes[1].style = "transform: translate(0, 0); opacity: 1; t
 //slidechange onclick
 function slideChange(e){
 	if(e.target.className === "leftArrow" && visibleSlide > 0){
-		slidesBar.childNodes[visibleSlide].className = "";
-		slidesContainer.childNodes[1].style = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
+		sideBarActive("dis");
 		visibleSlide --;
-		setTimeout(() => {slidesContainer.removeChild(slidesContainer.childNodes[1])}, 200);
-		setTimeout(() => {
-			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
-			slidesContainer.childNodes[1].style = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
-			slidesContainer.childNodes[1].style.webkitTransition = "all .1s";
-		}, 200);
-		setTimeout(() => {slidesContainer.childNodes[1].style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+		slideSwap("left");
 	}else if(e.target.className === "rightArrow" && visibleSlide < slides.length - 1){
-		slidesBar.childNodes[visibleSlide].className = "";
-		slidesContainer.childNodes[1].style = "transform: translate(-200px, 0); opacity: 0; transition: all .2s";
+		sideBarActive("dis");
 		visibleSlide ++;
-		setTimeout(() => {slidesContainer.removeChild(slidesContainer.childNodes[1])}, 200);
-		setTimeout(() => {
-			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
-			slidesContainer.childNodes[1].style = "transform: translate(200px, 0); opacity: 0;  transition: all .2s";
-			slidesContainer.childNodes[1].style.webkitTransition = "all .1s";
-		}, 200);
-		setTimeout(() => {slidesContainer.childNodes[1].style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+		slideSwap("right");
 	}
-	console.log(slides[visibleSlide], slidesContainer.childNodes[1], slidesContainer);
-	slidesBar.childNodes[visibleSlide].className = "activeSlide";
+	sideBarActive("act");
 }
 
+//add style to active slide on slidebar
+function sideBarActive(action){
+	let el = slidesBar.childNodes[visibleSlide];
+	if(action === "act"){
+		el.classList.add("activeSlide");
+	}else if(action === "dis"){
+		el.classList.remove("activeSlide");
+	}
+}
+
+//swap the slides
+function slideSwap(direction){
+	let currentSlide = slidesContainer.childNodes[1];
+	if(direction === "left"){
+		currentSlide.style = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
+		setTimeout(() => {slidesContainer.removeChild(currentSlide)}, 200);
+		setTimeout(() => {
+			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
+			currentSlide = slidesContainer.childNodes[1];
+			currentSlide.style = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
+		}, 200);
+		setTimeout(() => {currentSlide.style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+	}else if(direction === "right"){
+		currentSlide.style = "transform: translate(-200px, 0); opacity: 0; transition: all .2s";
+		setTimeout(() => {slidesContainer.removeChild(currentSlide)}, 200);
+		setTimeout(() => {
+			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
+			currentSlide = slidesContainer.childNodes[1];
+			currentSlide.style = "transform: translate(200px, 0); opacity: 0;  transition: all .2s";
+		}, 200);
+		setTimeout(() => {currentSlide.style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
+	}
+}
 

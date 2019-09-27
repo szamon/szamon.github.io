@@ -685,22 +685,22 @@ a{
 		letter-spacing: 2px;
 	}
 	.slider{
-		.leftArrow{
-			transform: rotate(90deg);
-		}
-		.rightArrow{
-			transform: rotate(-90deg);
-		}
+		
 		.slidesContainer{
 			position: relative;
 			top: 50%;
 			left: 0;
-			height: 250px;
+			height: 150px;
 			border: 1px solid white;
 			img{
-				width: 250px;
-				height: 250px;
-				//transition: all .3s;
+				width: 150px;
+				height: 150px;
+			}
+			.leftArrow, .rightArrow{
+				height: 80px;
+				width: auto;
+				line-height: 200px;
+				vertical-align: center;
 			}
 		}
 	}
