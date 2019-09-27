@@ -689,7 +689,6 @@ a{
 		.slidesContainer{
 			position: relative;
 			height: 50vh;
-			border: 1px solid white;
 			overflow: hidden;
 			vertical-align: middle;
 			.slide{
@@ -716,17 +715,17 @@ a{
 	.slidesBar{
 		position: relative;
 		bottom: 0;
-		height: 27px;
-		border: 1px solid white;
+		height: 8%;
 		transition: all 1s;
 		img{
 			margin: 0 2px;
-			width: 25px;
-			max-height: 25px;
+			width: 8%;
+			max-height: 8%;
 			transition: all 1s;
 		}
 		.activeSlide{
-			border: 1px solid white;
+			background: rgba(255, 255, 255, 0.3);
+			border-radius: 5%;
 		}
 	}
 }

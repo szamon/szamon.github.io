@@ -296,10 +296,11 @@ sliderContainer.appendChild(slidesBar);
 
 //creating imgs from slidesData
 function createSlides(list){
-	return list.map((x) => {
+	return list.map((x, i) => {
 		let slide = document.createElement("img");
 		slide.src = x.src;
 		slide.alt = x.alt;
+		slide.setAttribute("key", i);
 		slide.className = "slide";
 		return slide;
 	})
@@ -322,7 +323,6 @@ let arrows = createArrows(arrowsData);
 
 //appending images for slidesBar
 slides2.forEach((x, i) => {
-	x.setAttribute("key", i);
 	slidesBar.appendChild(x);
 });
 
@@ -333,8 +333,8 @@ slidesContainer.appendChild(arrows[1]);
 let arrowsDOM = document.querySelectorAll(".leftArrow, .rightArrow");
 
 arrowsDOM.forEach((x) => addEventListener("click", slideChange));
+slidesBar.childNodes.forEach((x) => addEventListener("click", slideChange));
 let visibleSlide = 0;
-let dupa = 1;
 sideBarActive("act");
 
 //slidesContainer.childNodes[1].style.webkitTransition = "all 1s";
@@ -343,17 +343,22 @@ slidesContainer.childNodes[1].style = "transform: translate(0, 0); opacity: 1; t
 
 //slidechange onclick
 function slideChange(e){
-	if(e.target.className === "leftArrow" && visibleSlide > 0){
+	let el = e.target;
+	if(el.className === "leftArrow" && visibleSlide > 0){
 		sideBarActive("dis");
 		visibleSlide --;
-		slideSwap("left");
-	}else if(e.target.className === "rightArrow" && visibleSlide < slides.length - 1){
+		slideSwap(visibleSlide);
+	}else if(el.className === "rightArrow" && visibleSlide < slides.length - 1){
 		sideBarActive("dis");
 		visibleSlide ++;
-		slideSwap("right");
-	}
+		slideSwap(visibleSlide);
+	}else if(el.hasAttribute("key")){
+		sideBarActive("dis");
+		visibleSlide = el.getAttribute("key");
+		slideSwap(visibleSlide);
+	};
 	sideBarActive("act");
-}
+};
 
 //add style to active slide on slidebar
 function sideBarActive(action){
@@ -366,18 +371,23 @@ function sideBarActive(action){
 }
 
 //swap the slides
-function slideSwap(direction){
+function slideSwap(slide){
 	let currentSlide = slidesContainer.childNodes[1];
-	if(direction === "left"){
-		currentSlide.style = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
+	let currentSlideNr = slidesContainer.childNodes[1].getAttribute("key");
+	console.log(currentSlideNr, visibleSlide);
+	let styleLeft = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
+	let styleRight = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
+	let styleCentered = "transform: translate(0px, 0); opacity: 1; transition: all .2s";
+	if(slide < currentSlideNr){
+		currentSlide.style = styleRight ;
 		setTimeout(() => {slidesContainer.removeChild(currentSlide)}, 200);
 		setTimeout(() => {
 			slidesContainer.insertBefore(slides[visibleSlide], slidesContainer.childNodes[1]);
 			currentSlide = slidesContainer.childNodes[1];
-			currentSlide.style = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
+			currentSlide.style = styleLeft;
 		}, 200);
-		setTimeout(() => {currentSlide.style = "transform: translate(0px, 0); opacity: 1; transition: all .2s";}, 220);
-	}else if(direction === "right"){
+		setTimeout(() => {currentSlide.style = styleCentered;}, 220);
+	}else if(slide > currentSlideNr){
 		currentSlide.style = "transform: translate(-200px, 0); opacity: 0; transition: all .2s";
 		setTimeout(() => {slidesContainer.removeChild(currentSlide)}, 200);
 		setTimeout(() => {

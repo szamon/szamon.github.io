@@ -704,7 +704,6 @@ a {
 .skills .slider .slidesContainer {
   position: relative;
   height: 50vh;
-  border: 1px solid white;
   overflow: hidden;
   vertical-align: middle;
 }
@@ -735,22 +734,22 @@ a {
 .skills .slidesBar {
   position: relative;
   bottom: 0;
-  height: 27px;
-  border: 1px solid white;
+  height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .skills .slidesBar img {
   margin: 0 2px;
-  width: 25px;
-  max-height: 25px;
+  width: 8%;
+  max-height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .skills .slidesBar .activeSlide {
-  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
 }
 
 .portfolio {
