@@ -688,29 +688,34 @@ a{
 		overflow: hidden;
 		.slidesContainer{
 			position: relative;
-			top: 7vh;
-			left: 0;
 			height: 50vh;
 			border: 1px solid white;
 			overflow: hidden;
-			img{
-				width: 40%;
+			vertical-align: middle;
+			.slide{
+				position: absolute;
+				top: calc(50% - 100px);
+				left: calc(50% - 100px);
+				width: 200px;
 				height: auto;
-				max-width: 300px;
 			}
-			.arrowContainer{
-				vertical-align: middle;
-				display: inline-block;
-				height: 100%;
-				.leftArrow, .rightArrow{
-					height: 20%;
-					width: auto;
-				}
+			.leftArrow, .rightArrow{
+				height: 50px;
+				width: auto;
+				position: absolute;
+				top: calc(50% - 25px);
 			}
-			
+			.leftArrow{
+				left: calc(50% - 140px);
+			}
+			.rightArrow{
+				right: calc(50% - 140px);
+			}
 		}
 	}
 	.slidesBar{
+		position: relative;
+		bottom: 0;
 		height: 27px;
 		border: 1px solid white;
 		transition: all 1s;

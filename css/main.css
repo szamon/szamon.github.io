@@ -703,31 +703,38 @@ a {
 
 .skills .slider .slidesContainer {
   position: relative;
-  top: 7vh;
-  left: 0;
   height: 50vh;
   border: 1px solid white;
   overflow: hidden;
-}
-
-.skills .slider .slidesContainer img {
-  width: 40%;
-  height: auto;
-  max-width: 300px;
-}
-
-.skills .slider .slidesContainer .arrowContainer {
   vertical-align: middle;
-  display: inline-block;
-  height: 100%;
 }
 
-.skills .slider .slidesContainer .arrowContainer .leftArrow, .skills .slider .slidesContainer .arrowContainer .rightArrow {
-  height: 20%;
+.skills .slider .slidesContainer .slide {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: auto;
+}
+
+.skills .slider .slidesContainer .leftArrow, .skills .slider .slidesContainer .rightArrow {
+  height: 50px;
   width: auto;
+  position: absolute;
+  top: calc(50% - 25px);
+}
+
+.skills .slider .slidesContainer .leftArrow {
+  left: calc(50% - 140px);
+}
+
+.skills .slider .slidesContainer .rightArrow {
+  right: calc(50% - 140px);
 }
 
 .skills .slidesBar {
+  position: relative;
+  bottom: 0;
   height: 27px;
   border: 1px solid white;
   -webkit-transition: all 1s;

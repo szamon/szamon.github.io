@@ -312,10 +312,7 @@ function createArrows(arrows){
 		arrow.className = x.name;
 		arrow.alt = x.alt;
 		arrow.style = x.style;
-		let arrowDiv = document.createElement("div");
-		arrowDiv.append(arrow);
-		arrowDiv.className = "arrowContainer";
-		return arrowDiv;
+		return arrow;
 	})
 };
 
