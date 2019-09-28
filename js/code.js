@@ -374,7 +374,6 @@ function sideBarActive(action){
 function slideSwap(slide){
 	let currentSlide = slidesContainer.childNodes[1];
 	let currentSlideNr = slidesContainer.childNodes[1].getAttribute("key");
-	console.log(currentSlideNr, visibleSlide);
 	let styleLeft = "transform: translate(-200px, 0); opacity: 0;  transition: all .2s";
 	let styleRight = "transform: translate(200px, 0); opacity: 0; transition: all .2s";
 	let styleCentered = "transform: translate(0px, 0); opacity: 1; transition: all .2s";
