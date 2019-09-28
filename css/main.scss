@@ -706,12 +706,22 @@ a{
 				width: auto;
 				position: absolute;
 				top: calc(50% - 25px);
+				cursor: pointer;
+				-webkit-transition: all .2s;
+				transition: all .2s; 
+				border-radius: 5px;
 			}
 			.leftArrow{
 				left: calc(50% - 150px);
+				&:hover{
+					background: rgba(255, 255, 255, .05);
+				}
 			}
 			.rightArrow{
 				right: calc(50% - 150px);
+				&:hover{
+					background: rgba(255, 255, 255, .05);
+				}
 			}
 		}
 	}
@@ -719,13 +729,20 @@ a{
 		padding: 4px 0;
 		height: 8%;
 		line-height: 8%;
+		-webkit-transition: all 1s;
 		transition: all 1s;
 		border-top: 2px solid rgba(255, 255, 255, .1);
 		img{
 			margin: 0 2px;
 			width: 5%;
 			max-height: 8%;
+			-webkit-transition: all 1s;
 			transition: all 1s;
+			cursor: pointer;
+			&:hover{
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 5%;
+			}
 		}
 		.activeSlide{
 			background: rgba(255, 255, 255, 0.3);

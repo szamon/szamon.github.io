@@ -724,14 +724,26 @@ a {
   width: auto;
   position: absolute;
   top: calc(50% - 25px);
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 5px;
 }
 
 .skills .slider .slidesContainer .leftArrow {
   left: calc(50% - 150px);
 }
 
+.skills .slider .slidesContainer .leftArrow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .skills .slider .slidesContainer .rightArrow {
   right: calc(50% - 150px);
+}
+
+.skills .slider .slidesContainer .rightArrow:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .skills .slidesBar {
@@ -749,6 +761,12 @@ a {
   max-height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
+  cursor: pointer;
+}
+
+.skills .slidesBar img:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
 }
 
 .skills .slidesBar .activeSlide {
