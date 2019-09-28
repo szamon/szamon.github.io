@@ -699,13 +699,15 @@ a {
 
 .skills .slider {
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skills .slider .slidesContainer {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   overflow: hidden;
-  vertical-align: middle;
 }
 
 .skills .slider .slidesContainer .slide {
@@ -732,16 +734,18 @@ a {
 }
 
 .skills .slidesBar {
-  position: relative;
-  bottom: 0;
+  margin-top: 30px;
+  padding: 2px 0;
   height: 8%;
+  line-height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skills .slidesBar img {
   margin: 0 2px;
-  width: 8%;
+  width: 5%;
   max-height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
