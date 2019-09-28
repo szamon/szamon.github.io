@@ -692,6 +692,7 @@ a{
 		.slidesContainer{
 			position: relative;
 			height: 40vh;
+			margin: 20px auto;
 			overflow: hidden;
 			.slide{
 				position: absolute;
@@ -715,12 +716,11 @@ a{
 		}
 	}
 	.slidesBar{
-		margin-top: 30px;
-		padding: 2px 0;
+		padding: 4px 0;
 		height: 8%;
 		line-height: 8%;
 		transition: all 1s;
-		border-top: 1px solid rgba(255, 255, 255, .1);
+		border-top: 2px solid rgba(255, 255, 255, .1);
 		img{
 			margin: 0 2px;
 			width: 5%;
