@@ -810,14 +810,20 @@ a {
   box-shadow: inset 0px -55px 70px -70px black;
 }
 
-.portfolio h2:nth-of-type(1) {
+.portfolio .portfolio_header {
   display: inline-block;
   width: 100%;
   margin-top: 10vh;
   font-weight: 100;
 }
 
-.portfolio .portfolioItem {
+.portfolio .portfolioItemsContainer {
+  border-top: 1px solid white;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.portfolio .portfolioItemsContainer .portfolioItem {
   -webkit-transition: 1s ease 0.4s;
   transition: 1s ease 0.4s;
   position: relative;
@@ -831,7 +837,7 @@ a {
   z-index: 2;
 }
 
-.portfolio .portfolioItem h3:nth-of-type(1) {
+.portfolio .portfolioItemsContainer .portfolioItem h3:nth-of-type(1) {
   font-weight: 100;
   margin: 15px 0 0 0;
   z-index: 2;
@@ -840,7 +846,7 @@ a {
   font-size: 1.3em;
 }
 
-.portfolio .portfolioItem p {
+.portfolio .portfolioItemsContainer .portfolioItem p {
   font-family: "Quicksand", sans-serif;
   font-size: 0.9em;
   font-style: italic;
@@ -848,7 +854,7 @@ a {
   margin-top: 15px;
 }
 
-.portfolio .portfolioItem div {
+.portfolio .portfolioItemsContainer .portfolioItem div {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -866,12 +872,12 @@ a {
   z-index: 2;
 }
 
-.portfolio .portfolioItem div:hover {
+.portfolio .portfolioItemsContainer .portfolioItem div:hover {
   background: white;
   color: #4c535e;
 }
 
-.portfolio .portfolioItem::after {
+.portfolio .portfolioItemsContainer .portfolioItem::after {
   content: "";
   opacity: 0.40;
   top: 0;
@@ -884,52 +890,52 @@ a {
   z-index: -1;
 }
 
-.portfolio .szymskiBeats::after {
+.portfolio .portfolioItemsContainer .szymskiBeats::after {
   background: url("../img/szymskiBeats.jpg") 0 no-repeat;
   color: black;
 }
 
-.portfolio .artofgraf::after {
+.portfolio .portfolioItemsContainer .artofgraf::after {
   background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
 }
 
-.portfolio .drumMachine::after {
+.portfolio .portfolioItemsContainer .drumMachine::after {
   background: url("../img/drumMachine.jpg") 50% no-repeat;
 }
 
-.portfolio .calculator::after {
+.portfolio .portfolioItemsContainer .calculator::after {
   background: url("../img/Calculator.jpg") 50% no-repeat;
 }
 
-.portfolio .sessionClock::after {
+.portfolio .portfolioItemsContainer .sessionClock::after {
   background: url("../img/sessionClock.jpg") 50% no-repeat;
 }
 
-.portfolio .toDoQuestList::after {
+.portfolio .portfolioItemsContainer .toDoQuestList::after {
   background: url("../img/toDoList.jpg") 50% no-repeat;
 }
 
-.portfolio .supremeQuiz::after {
+.portfolio .portfolioItemsContainer .supremeQuiz::after {
   background: url("../img/quiz.jpg") 50% no-repeat;
 }
 
-.portfolio .markdownPreviewer::after {
+.portfolio .portfolioItemsContainer .markdownPreviewer::after {
   background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItem {
+.portfolio .portfolioItemsContainer .portfolioItem {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   opacity: 0;
 }
 
-.portfolio .portfolioItemVisible {
+.portfolio .portfolioItemsContainer .portfolioItemVisible {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
 }
 
-.portfolio h2:nth-of-type(2), .portfolio h2:nth-of-type(3) {
+.portfolio .portfolioItemsContainer h2:nth-of-type(2), .portfolio .portfolioItemsContainer h2:nth-of-type(3) {
   margin-top: 40px;
   margin-bottom: 15px;
   font-weight: 100;
@@ -937,11 +943,16 @@ a {
 }
 
 .portfolio .githubProfile {
-  width: 200px;
-  margin: 25px auto;
+  width: 250px;
+  margin: 40px auto;
   overflow: hidden;
   font-size: 0.9em;
-  letter-spacing: .7px;
+  letter-spacing: 1px;
+}
+
+.portfolio .githubProfile h2 {
+  margin: 10px auto;
+  letter-spacing: 1.5px;
 }
 
 .portfolio .githubProfile a img {
@@ -1357,7 +1368,7 @@ Media Queries
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 25px auto;
     width: 90%;
   }
   .portfolio .portfolioItemsContainer .portfolioItem {
@@ -1574,7 +1585,7 @@ Media Queries
     display: block;
     float: none;
     width: 290px;
-    margin: 23vh auto 25px auto;
+    margin: calc(50vh - 150px) auto 25px auto;
   }
   .aboutMe .headingComeIn {
     -webkit-animation: textSlideIn 1s ease;
