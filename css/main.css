@@ -699,9 +699,9 @@ a {
 
 .skills .slider {
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .skills .slider .slidesContainer {
@@ -748,7 +748,7 @@ a {
   line-height: 8%;
   -webkit-transition: all 1s;
   transition: all 1s;
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skills .slidesBar img {
@@ -768,6 +768,34 @@ a {
 .skills .slidesBar .activeSlide {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5%;
+}
+
+.skills .scrollText {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  font-family: "Bangers", helvetica;
+  font-size: 1em;
+  letter-spacing: .6px;
+}
+
+.skills .scrollText p {
+  color: white;
+}
+
+.skills .scrollText img {
+  height: 40px;
+  width: 50px;
+  -webkit-animation-name: scrollText;
+  animation-name: scrollText;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
 }
 
 .portfolio {
