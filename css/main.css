@@ -730,20 +730,16 @@ a {
   border-radius: 5px;
 }
 
+.skills .slider .slidesContainer .leftArrow:hover, .skills .slider .slidesContainer .rightArrow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .skills .slider .slidesContainer .leftArrow {
   left: calc(50% - 150px);
 }
 
-.skills .slider .slidesContainer .leftArrow:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
 .skills .slider .slidesContainer .rightArrow {
   right: calc(50% - 150px);
-}
-
-.skills .slider .slidesContainer .rightArrow:hover {
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .skills .slidesBar {

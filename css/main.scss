@@ -710,18 +710,15 @@ a{
 				-webkit-transition: all .2s;
 				transition: all .2s; 
 				border-radius: 5px;
+				&:hover{
+					background: rgba(255, 255, 255, .05);
+				}
 			}
 			.leftArrow{
 				left: calc(50% - 150px);
-				&:hover{
-					background: rgba(255, 255, 255, .05);
-				}
 			}
 			.rightArrow{
 				right: calc(50% - 150px);
-				&:hover{
-					background: rgba(255, 255, 255, .05);
-				}
 			}
 		}
 	}
