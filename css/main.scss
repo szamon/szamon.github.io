@@ -1,11 +1,7 @@
+@import "animations";
 
-$font-logo: "Bangers", helvetica;
 $font-stack: "Bangers", helvetica;
 $font-stack2: "Quicksand", sans-serif;
-
-/*************************
-Mixins
-*************************/
 
 @mixin scrollText($bottom, $left, $right, $color, $animationName){
 	position: absolute;
@@ -36,7 +32,7 @@ Mixins
 }
 
 /*************************
-Styling
+GENERIC
 *************************/
 
 *{
@@ -44,10 +40,6 @@ Styling
 	        box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-
-a{
-	text-decoration: none;
 }
 
 .wrapper{
@@ -61,29 +53,43 @@ a{
 	z-index: 1;
 }
 
+a{
+	text-decoration: none;
+}
+
+/*******************
+LOGO
+*******************/
+
 .logo{
 	position: fixed;
 	top: 1rem;
 	left: 1rem;
 	height: 24px;
 	width: 40px;
-	font-family: $font-logo;
+	font-family: $font-stack;
 	font-size: 2em;
 	color: white;
 	z-index: 9999;
 
-	span:nth-of-type(1){
+	span:nth-of-type(1), span:nth-of-type(2){
 		position: absolute;
+	}
+
+	span:nth-of-type(1){
 		top: 0;
 		left: 0;
 	}
 
 	span:nth-of-type(2){
-		position: absolute;
 		top: 3px;
 		left: 10px;
 	}
 }
+
+/*****************
+NAV
+******************/
 
 .menu{
 	position: fixed;
@@ -195,265 +201,9 @@ a{
 	}
 }
 
-@-webkit-keyframes introBgLaunch{
-	from{
-		background-color: white;
-	}
-	to{
-		background-color: rgba(40, 58, 89, 0.9);
-	}
-}
-
-@keyframes introBgLaunch{
-	from{
-		background-color: white;
-	}
-	to{
-		background-color: rgba(40, 58, 89, 0.9);
-	}
-}
-
-@-webkit-keyframes introTextSlide{
-	from{
-		opacity: 0;
-		-webkit-transform: translate(50px);
-		        transform: translate(50px);
-	}
-	to{
-		opacity: 1;
-		-webkit-transform: translate(0px);
-		        transform: translate(0px);
-	}
-}
-
-@keyframes introTextSlide{
-	from{
-		opacity: 0;
-		-webkit-transform: translate(50px);
-		        transform: translate(50px);
-	}
-	to{
-		opacity: 1;
-		-webkit-transform: translate(0px);
-		        transform: translate(0px);
-	}
-}
-
-@-webkit-keyframes introUnderlineAppear{
-	from{
-		opacity: 0;
-		-webkit-transform: translate(0, 5px);
-		        transform: translate(0, 5px);
-	}
-	to{
-		opacity: 1;
-		-webkit-transform: translate(0, 0px);
-		        transform: translate(0, 0px);
-	}
-}
-
-@keyframes introUnderlineAppear{
-	from{
-		opacity: 0;
-		-webkit-transform: translate(0, 5px);
-		        transform: translate(0, 5px);
-	}
-	to{
-		opacity: 1;
-		-webkit-transform: translate(0, 0px);
-		        transform: translate(0, 0px);
-	}
-}
-
-@-webkit-keyframes introPicturePop{
-	0%{
-		-webkit-transform: translate(0px, -300px);
-		        transform: translate(0px, -300px);
-	}
-	15%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-		opacity: 1;
-	}
-	18%{
-		-webkit-transform: translate(0px, -50px) rotateY(0deg);
-		        transform: translate(0px, -50px) rotateY(0deg);
-	}
-	23%{
-		-webkit-transform: translate(0px, -80px) rotateY(180deg);
-		        transform: translate(0px, -80px) rotateY(180deg);
-	}
-	28%{
-		-webkit-transform: translate(0px, -50px) rotateY(0deg);
-		        transform: translate(0px, -50px) rotateY(0deg);
-	}
-	30%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-	}
-	33%{
-		-webkit-transform: translate(0px, -33px) rotateY(0deg);
-		        transform: translate(0px, -33px) rotateY(0deg);
-	}
-	38%{
-		-webkit-transform: translate(0px, -50px) rotateY(180deg);
-		        transform: translate(0px, -50px) rotateY(180deg);
-	}
-	42%{
-		-webkit-transform: translate(0px, -33px) rotateY(0deg);
-		        transform: translate(0px, -33px) rotateY(0deg);
-	}
-	45%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-	}
-	48%{
-		-webkit-transform: translate(0px, -15px) rotateY(0deg);
-		        transform: translate(0px, -15px) rotateY(0deg);
-	}
-	53%{
-		-webkit-transform: translate(0px, -20px) rotateY(180deg);
-		        transform: translate(0px, -20px) rotateY(180deg);
-	}
-	58%{
-		-webkit-transform: translate(0px, -15px) rotateY(0deg);
-		        transform: translate(0px, -15px) rotateY(0deg);
-	}
-	60%{
-		-webkit-transform: translate(0px, 0px) rotateY(0deg);
-		        transform: translate(0px, 0px) rotateY(0deg);
-	}
-	63%{
-		-webkit-transform: translate(0px, -3px) rotateY(180deg);
-		        transform: translate(0px, -3px) rotateY(180deg);
-	}
-	65%{
-		-webkit-transform: translate(0px, -5px) rotateY(180deg);
-		        transform: translate(0px, -5px) rotateY(180deg);
-	}
-	67%{
-		-webkit-transform: translate(0px, -3px) rotateY(0deg);
-		        transform: translate(0px, -3px) rotateY(0deg);
-	}
-	68%{
-		-webkit-transform: translate(0px, 0px) rotateY(0deg);
-		        transform: translate(0px, 0px) rotateY(0deg);
-	}
-	73%{
-		-webkit-transform: rotateY(180deg);
-		        transform: rotateY(180deg);
-	}
-	80%{
-		-webkit-transform: rotateY(120deg);
-		        transform: rotateY(120deg);
-	}
-	90%{
-		-webkit-transform: rotateY(30deg);
-		        transform: rotateY(30deg);
-	}
-	100%{
-		-webkit-transform: translate(0px, 0px);
-		        transform: translate(0px, 0px);
-		opacity: 1;
-		-webkit-transform: rotateY(0deg);
-		        transform: rotateY(0deg);
-	}
-}
-
-@keyframes introPicturePop{
-	0%{
-		-webkit-transform: translate(0px, -300px);
-		        transform: translate(0px, -300px);
-	}
-	15%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-		opacity: 1;
-	}
-	18%{
-		-webkit-transform: translate(0px, -50px) rotateY(0deg);
-		        transform: translate(0px, -50px) rotateY(0deg);
-	}
-	23%{
-		-webkit-transform: translate(0px, -80px) rotateY(180deg);
-		        transform: translate(0px, -80px) rotateY(180deg);
-	}
-	28%{
-		-webkit-transform: translate(0px, -50px) rotateY(0deg);
-		        transform: translate(0px, -50px) rotateY(0deg);
-	}
-	30%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-	}
-	33%{
-		-webkit-transform: translate(0px, -33px) rotateY(0deg);
-		        transform: translate(0px, -33px) rotateY(0deg);
-	}
-	38%{
-		-webkit-transform: translate(0px, -50px) rotateY(180deg);
-		        transform: translate(0px, -50px) rotateY(180deg);
-	}
-	42%{
-		-webkit-transform: translate(0px, -33px) rotateY(0deg);
-		        transform: translate(0px, -33px) rotateY(0deg);
-	}
-	45%{
-		-webkit-transform: translate(0px, 0px) rotateY(180deg);
-		        transform: translate(0px, 0px) rotateY(180deg);
-	}
-	48%{
-		-webkit-transform: translate(0px, -15px) rotateY(0deg);
-		        transform: translate(0px, -15px) rotateY(0deg);
-	}
-	53%{
-		-webkit-transform: translate(0px, -20px) rotateY(180deg);
-		        transform: translate(0px, -20px) rotateY(180deg);
-	}
-	58%{
-		-webkit-transform: translate(0px, -15px) rotateY(0deg);
-		        transform: translate(0px, -15px) rotateY(0deg);
-	}
-	60%{
-		-webkit-transform: translate(0px, 0px) rotateY(0deg);
-		        transform: translate(0px, 0px) rotateY(0deg);
-	}
-	63%{
-		-webkit-transform: translate(0px, -3px) rotateY(180deg);
-		        transform: translate(0px, -3px) rotateY(180deg);
-	}
-	65%{
-		-webkit-transform: translate(0px, -5px) rotateY(180deg);
-		        transform: translate(0px, -5px) rotateY(180deg);
-	}
-	67%{
-		-webkit-transform: translate(0px, -3px) rotateY(0deg);
-		        transform: translate(0px, -3px) rotateY(0deg);
-	}
-	68%{
-		-webkit-transform: translate(0px, 0px) rotateY(0deg);
-		        transform: translate(0px, 0px) rotateY(0deg);
-	}
-	73%{
-		-webkit-transform: rotateY(180deg);
-		        transform: rotateY(180deg);
-	}
-	80%{
-		-webkit-transform: rotateY(120deg);
-		        transform: rotateY(120deg);
-	}
-	90%{
-		-webkit-transform: rotateY(30deg);
-		        transform: rotateY(30deg);
-	}
-	100%{
-		-webkit-transform: translate(0px, 0px);
-		        transform: translate(0px, 0px);
-		opacity: 1;
-		-webkit-transform: rotateY(0deg);
-		        transform: rotateY(0deg);
-	}
-}
+/***************
+INTRO SECTION
+***************/
 
 .intro{
 	position: relative;
@@ -461,60 +211,59 @@ a{
 	width: 100%;
 	padding-top: 30vh;
 	padding-bottom: 1px;
-	//background-color: rgba(40, 58, 89, 0.9);
-	-webkit-animation: introBgLaunch 2.5s ease-in-out 0s forwards;
-	        animation: introBgLaunch 2.5s ease-in-out 0s forwards;
 	color: white;
 	text-align: center;
+	-webkit-animation: introBgLaunch 2.5s ease-in-out 0s forwards;
+	        animation: introBgLaunch 2.5s ease-in-out 0s forwards;
 	-webkit-box-shadow: inset 0px -40px 70px -70px white;
 	        box-shadow: inset 0px -40px 70px -70px white;
+}
 
-	.myPhoto{
-		margin: 0 auto 5px;
-		height: 100px;
-		width: 100px;
-		background: url("../img/fotka_1.jpg") no-repeat 50% 30%/cover;
-		border-radius: 50%;
-		z-index: 9999;
+.myPhoto{
+	margin: 0 auto 5px;
+	height: 100px;
+	width: 100px;
+	background: url("../img/fotka_1.jpg") no-repeat 50% 30%/cover;
+	border-radius: 50%;
+	z-index: 9999;
+	opacity: 0;
+	-webkit-animation: introPicturePop 3s linear 2s forwards;
+			animation: introPicturePop 3s linear 2s forwards;
+}
+
+.myNameTitle{
+	letter-spacing: 1px;
+	text-align: center;
+	width: 250px;
+	margin: 0 auto;
+	overflow: visible;
+	> p:nth-of-type(1){
+		font-size: 2em;
 		opacity: 0;
-		-webkit-animation: introPicturePop 3s linear 2s forwards;
-		        animation: introPicturePop 3s linear 2s forwards;
+		-webkit-animation: introTextSlide .6s ease-out 1s forwards;
+				animation: introTextSlide .6s ease-out 1s forwards;
 	}
 
-	.myNameTitle{
-		letter-spacing: 1px;
-		text-align: center;
-		width: 250px;
-		margin: 0 auto;
-		overflow: visible;
-		> p:nth-of-type(1){
-			font-size: 2em;
-			opacity: 0;
-			-webkit-animation: introTextSlide .6s ease-out 1s forwards;
-			        animation: introTextSlide .6s ease-out 1s forwards;
-		}
-
-		> p:nth-of-type(2){
-			font-size: 1em;
-			opacity: 0;
-			-webkit-animation: introTextSlide .6s ease-out 1.4s forwards;
-			        animation: introTextSlide .6s ease-out 1.4s forwards;
-		}
-
-		> p:nth-of-type(3){
-			margin: 3px auto 0;
-			height: 1px;
-			width: 180px;
-			background: white;
-			opacity: 0;
-			-webkit-animation: introUnderlineAppear 1s ease-out 5s forwards;
-			        animation: introUnderlineAppear 1s ease-out 5s forwards;
-		}
+	> p:nth-of-type(2){
+		font-size: 1em;
+		opacity: 0;
+		-webkit-animation: introTextSlide .6s ease-out 1.4s forwards;
+				animation: introTextSlide .6s ease-out 1.4s forwards;
 	}
 
-	.scrollText{
-		@include scrollText(5px, 0, 0, white, scrollText);
+	> p:nth-of-type(3){
+		margin: 3px auto 0;
+		height: 1px;
+		width: 180px;
+		background: white;
+		opacity: 0;
+		-webkit-animation: introUnderlineAppear 1s ease-out 5s forwards;
+				animation: introUnderlineAppear 1s ease-out 5s forwards;
 	}
+}
+
+.scrollText{
+	@include scrollText(5px, 0, 0, white, scrollText);
 }
 
 .aboutMe{
