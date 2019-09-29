@@ -300,3 +300,29 @@
         opacity: 0.15;
     }
 }
+//animation for text of about me section
+@-webkit-keyframes textSlideIn{
+    from{
+        opacity: 0;
+        -webkit-transform: translate(-200%,-50px);
+                transform: translate(-200%,-50px);
+    }
+    to{	
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+
+@keyframes textSlideIn{
+    from{
+        opacity: 0;
+        -webkit-transform: translate(-200%,-50px);
+                transform: translate(-200%,-50px);
+    }
+    to{	
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}

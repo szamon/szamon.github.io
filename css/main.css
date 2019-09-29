@@ -300,6 +300,32 @@
   }
 }
 
+@-webkit-keyframes textSlideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-200%, -50px);
+    transform: translate(-200%, -50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes textSlideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-200%, -50px);
+    transform: translate(-200%, -50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
 /*************************
 GENERIC
 *************************/
@@ -582,15 +608,8 @@ ABOUT ME
   opacity: 1;
 }
 
-.aboutMe > img:nth-of-type(2), .aboutMe img:nth-of-type(3) {
+.aboutMe > img:nth-of-type(2) {
   display: none;
-}
-
-.aboutMe .questionMarkComeIn {
-  -webkit-animation: questionSlideIn 2s ease;
-  animation: questionSlideIn 2s ease;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
 }
 
 .aboutMe > h2:nth-of-type(1) {
@@ -620,47 +639,28 @@ ABOUT ME
   text-align: justify;
 }
 
-.aboutMe .headingComeIn {
+.headingComeIn {
   -webkit-animation: textSlideIn 2s ease 0.5s;
   animation: textSlideIn 2s ease 0.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes textSlideIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate(-200%, -50px);
-    transform: translate(-200%, -50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
+.questionMarkComeIn {
+  -webkit-animation: questionSlideIn 2s ease;
+  animation: questionSlideIn 2s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-@keyframes textSlideIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate(-200%, -50px);
-    transform: translate(-200%, -50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-
-.aboutMe .paragraphComeIn {
+.paragraphComeIn {
   -webkit-animation: textSlideIn 1s ease 0.5s;
   animation: textSlideIn 1s ease 0.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-.aboutMe .scrollText {
+.scrollText {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -671,11 +671,11 @@ ABOUT ME
   letter-spacing: .6px;
 }
 
-.aboutMe .scrollText p {
+.scrollText p {
   color: white;
 }
 
-.aboutMe .scrollText img {
+.scrollText img {
   height: 40px;
   width: 50px;
   -webkit-animation-name: scrollText;
@@ -688,70 +688,26 @@ ABOUT ME
   animation-direction: normal;
 }
 
+/*****************
+ABOUT ME
+******************/
 .skills {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 1px 0;
   background: rgba(76, 83, 94, 0.9);
   font-family: "Bangers", helvetica;
   color: white;
   text-align: center;
+  overflow: hidden;
   -webkit-box-shadow: inset 0px -50px 70px -70px white;
   box-shadow: inset 0px -50px 70px -70px white;
-  overflow: hidden;
 }
 
 .skills h2 {
-  margin-top: 14vh;
-  margin-bottom: 60px;
+  margin: 14vh 0 25px 0;
   letter-spacing: 2px;
-}
-
-.skills .slider {
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.skills .slider .slidesContainer {
-  position: relative;
-  height: 40vh;
-  margin: 20px auto;
-  overflow: hidden;
-}
-
-.skills .slider .slidesContainer .slide {
-  position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
-  width: 200px;
-  height: auto;
-}
-
-.skills .slider .slidesContainer .leftArrow, .skills .slider .slidesContainer .rightArrow {
-  height: 50px;
-  width: auto;
-  position: absolute;
-  top: calc(50% - 25px);
-  cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  border-radius: 5px;
-}
-
-.skills .slider .slidesContainer .leftArrow:hover, .skills .slider .slidesContainer .rightArrow:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.skills .slider .slidesContainer .leftArrow {
-  left: calc(50% - 150px);
-}
-
-.skills .slider .slidesContainer .rightArrow {
-  right: calc(50% - 150px);
 }
 
 .skills .slidesBar {
@@ -808,6 +764,51 @@ ABOUT ME
   animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
   animation-direction: normal;
+}
+
+.slider {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.slidesContainer {
+  position: relative;
+  height: 40vh;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: auto;
+}
+
+.leftArrow, .rightArrow {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  top: calc(50% - 25px);
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 5px;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.leftArrow {
+  left: calc(50% - 150px);
+}
+
+.rightArrow {
+  right: calc(50% - 150px);
 }
 
 .portfolio {
