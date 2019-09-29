@@ -237,21 +237,22 @@ INTRO SECTION
 	width: 250px;
 	margin: 0 auto;
 	overflow: visible;
-	> p:nth-of-type(1){
+	p:nth-of-type(1){
 		font-size: 2em;
 		opacity: 0;
 		-webkit-animation: introTextSlide .6s ease-out 1s forwards;
 				animation: introTextSlide .6s ease-out 1s forwards;
 	}
 
-	> p:nth-of-type(2){
+	p:nth-of-type(2){
 		font-size: 1em;
 		opacity: 0;
 		-webkit-animation: introTextSlide .6s ease-out 1.4s forwards;
 				animation: introTextSlide .6s ease-out 1.4s forwards;
 	}
 
-	> p:nth-of-type(3){
+	span{
+		display: block;
 		margin: 3px auto 0;
 		height: 1px;
 		width: 180px;
@@ -265,6 +266,10 @@ INTRO SECTION
 .scrollText{
 	@include scrollText(5px, 0, 0, white, scrollText);
 }
+
+/*****************
+ABOUT ME
+******************/
 
 .aboutMe{
 	position: relative;
@@ -299,48 +304,6 @@ INTRO SECTION
 		        animation: questionSlideIn 2s ease;
 		-webkit-animation-fill-mode:forwards;
 		        animation-fill-mode:forwards;
-	}
-
-	@-webkit-keyframes questionSlideIn{
-		50%{
-			height: 300px;
-			width: 300px;
-			top: calc(50vh - 150px);
-			left: calc(50% - 150px);
-			-webkit-transform: rotate(0);
-			        transform: rotate(0);
-			opacity: 1;
-		}
-		to{
-			height: 300px;
-			width: 300px;
-			top: calc(50vh - 150px);
-			left: calc(50% - 150px);
-			-webkit-transform: rotate(0);
-			        transform: rotate(0);
-			opacity: 0.15;
-		}
-	}
-
-	@keyframes questionSlideIn{
-		50%{
-			height: 300px;
-			width: 300px;
-			top: calc(50vh - 150px);
-			left: calc(50% - 150px);
-			-webkit-transform: rotate(0);
-			        transform: rotate(0);
-			opacity: 1;
-		}
-		to{
-			height: 300px;
-			width: 300px;
-			top: calc(50vh - 150px);
-			left: calc(50% - 150px);
-			-webkit-transform: rotate(0);
-			        transform: rotate(0);
-			opacity: 0.15;
-		}
 	}
 	
 	> h2:nth-of-type(1){

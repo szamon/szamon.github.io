@@ -258,6 +258,48 @@
   }
 }
 
+@-webkit-keyframes questionSlideIn {
+  50% {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  to {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes questionSlideIn {
+  50% {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  to {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 0.15;
+  }
+}
+
 /*************************
 GENERIC
 *************************/
@@ -459,21 +501,22 @@ INTRO SECTION
   overflow: visible;
 }
 
-.myNameTitle > p:nth-of-type(1) {
+.myNameTitle p:nth-of-type(1) {
   font-size: 2em;
   opacity: 0;
   -webkit-animation: introTextSlide .6s ease-out 1s forwards;
   animation: introTextSlide .6s ease-out 1s forwards;
 }
 
-.myNameTitle > p:nth-of-type(2) {
+.myNameTitle p:nth-of-type(2) {
   font-size: 1em;
   opacity: 0;
   -webkit-animation: introTextSlide .6s ease-out 1.4s forwards;
   animation: introTextSlide .6s ease-out 1.4s forwards;
 }
 
-.myNameTitle > p:nth-of-type(3) {
+.myNameTitle span {
+  display: block;
   margin: 3px auto 0;
   height: 1px;
   width: 180px;
@@ -511,6 +554,9 @@ INTRO SECTION
   animation-direction: normal;
 }
 
+/*****************
+ABOUT ME
+******************/
 .aboutMe {
   position: relative;
   min-height: 100vh;
@@ -545,48 +591,6 @@ INTRO SECTION
   animation: questionSlideIn 2s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes questionSlideIn {
-  50% {
-    height: 300px;
-    width: 300px;
-    top: calc(50vh - 150px);
-    left: calc(50% - 150px);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-  to {
-    height: 300px;
-    width: 300px;
-    top: calc(50vh - 150px);
-    left: calc(50% - 150px);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 0.15;
-  }
-}
-
-@keyframes questionSlideIn {
-  50% {
-    height: 300px;
-    width: 300px;
-    top: calc(50vh - 150px);
-    left: calc(50% - 150px);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-  to {
-    height: 300px;
-    width: 300px;
-    top: calc(50vh - 150px);
-    left: calc(50% - 150px);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 0.15;
-  }
 }
 
 .aboutMe > h2:nth-of-type(1) {

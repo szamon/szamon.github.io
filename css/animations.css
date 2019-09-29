@@ -257,4 +257,46 @@
     transform: rotateY(0deg);
   }
 }
+
+@-webkit-keyframes questionSlideIn {
+  50% {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  to {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes questionSlideIn {
+  50% {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  to {
+    height: 300px;
+    width: 300px;
+    top: calc(50vh - 150px);
+    left: calc(50% - 150px);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 0.15;
+  }
+}
 /*# sourceMappingURL=animations.css.map */
