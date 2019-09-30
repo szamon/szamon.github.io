@@ -3,6 +3,8 @@ Animations
 *************************/
 
 //animation for page scrolling arrow
+
+//GENERIC
 @-webkit-keyframes scrollText {
 	from {
 		-webkit-transform: translateY(0px);
@@ -71,6 +73,9 @@ Animations
 	}
 }
 
+/************
+INTRO
+************/
 
 @-webkit-keyframes introBgLaunch{
 	from{
@@ -332,6 +337,9 @@ Animations
 	}
 }
 
+/************
+INTRO
+************/
 
 @-webkit-keyframes questionSlideIn{
     50%{
@@ -399,4 +407,90 @@ Animations
         -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
     }
+}
+
+@media screen and (min-width:768px){
+	@-webkit-keyframes questionSlideIn{
+		20%{
+			height: 350px;
+			width: 350px;
+			top: calc(50vh - 140px);
+			left: 100px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+		50%{
+			height: 350px;
+			width: 350px;
+			top: calc(50vh - 140px);
+			left: 100px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+		to{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 120px);
+			left: 125px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+	}
+
+	@keyframes questionSlideIn{
+		20%{
+			height: 350px;
+			width: 350px;
+			top: calc(50vh - 140px);
+			left: 100px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+		50%{
+			height: 350px;
+			width: 350px;
+			top: calc(50vh - 140px);
+			left: 100px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+		
+		to{
+			height: 300px;
+			width: 300px;
+			top: calc(50vh - 120px);
+			left: 125px;
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+	}
+	
+	@-webkit-keyframes lampBlink{
+		0%{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
+
+	@keyframes lampBlink{
+		0%{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
 }
