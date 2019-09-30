@@ -2,9 +2,9 @@
 Animations
 *************************/
 
-//animation for page scrolling arrow
-
 //GENERIC
+
+//animation for page scrolling arrow
 @-webkit-keyframes scrollText {
 	from {
 		-webkit-transform: translateY(0px);
@@ -382,6 +382,7 @@ ABOUT ME
         opacity: 0.15;
     }
 }
+
 //animation for text of about me section
 @-webkit-keyframes textSlideIn{
     from{

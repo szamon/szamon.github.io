@@ -232,7 +232,7 @@ INTRO SECTION
 	margin: 0 auto 5px;
 	height: 100px;
 	width: 100px;
-	background: url("../img/fotka_1.jpg") no-repeat 50% 30%/cover;
+	background: url("../img/sa.jpg") no-repeat 50% 70%/cover;
 	border-radius: 50%;
 	z-index: 9999;
 	opacity: 0;
@@ -309,9 +309,6 @@ INTRO SECTION
 	}
 }
 
-@media screen and (min-width:992px){
-}
-
 /*****************
 ABOUT ME
 ******************/
@@ -370,6 +367,7 @@ ABOUT ME
 		}
 	}
 }
+
 //classes for animations
 .headingComeIn{
 	-webkit-animation: textSlideIn 2s ease 0.5s;
@@ -727,6 +725,7 @@ PORTFOLIO
 		color: rgb(76, 83, 94);
 	}
 }
+
 //item backgrounds
 .portfolioItem::after {
 	content: "";
