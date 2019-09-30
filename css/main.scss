@@ -364,6 +364,7 @@ ABOUT ME
 	font-family: $font-stack;
 	color: white;
 	text-align: center;
+	overflow: hidden;
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
 	        box-shadow: inset 0px -50px 70px -70px white;
 	
@@ -373,7 +374,10 @@ ABOUT ME
 	}
 }
 
+//slider styling
+
 .slider{
+	overflow: hidden;
 	background: rgba(255, 255, 255, .03);
 	border-top: 1px solid rgba(255, 255, 255, .03);
 	border-bottom: 1px solid rgba(255, 255, 255, .03); 
@@ -387,11 +391,11 @@ ABOUT ME
 }
 
 .slide{
+	height: auto;
+	width: 200px;
 	position: absolute;
 	top: calc(50% - 100px);
 	left: calc(50% - 100px);
-	width: 200px;
-	height: auto;
 }
 
 .leftArrow, .rightArrow{
@@ -417,8 +421,8 @@ ABOUT ME
 }
 
 .slidesBar{
-	padding: 4px 0;
 	height: 8%;
+	padding: 4px 0;
 	line-height: 8%;
 	-webkit-transition: all 1s;
 	transition: all 1s;
@@ -431,12 +435,14 @@ ABOUT ME
 		-webkit-transition: all 1s;
 		transition: all 1s;
 		cursor: pointer;
-
 		&:hover{
 			background: rgba(255, 255, 255, 0.3);
 			border-radius: 5%;
 		}
 	}
+}
+
+//styling of active slidesBar item
 
 .activeSlide{
 	background: rgba(255, 255, 255, 0.3);
@@ -451,6 +457,7 @@ ABOUT ME
 PORTFOLIO
 ******************/
 
+//portfolio wrapper
 .portfolio{
 	position: relative;
 	height: 2175px;
@@ -461,169 +468,166 @@ PORTFOLIO
 	text-align: center;
 	-webkit-box-shadow: inset 0px -55px 70px -70px black;
 	        box-shadow: inset 0px -55px 70px -70px black;
+}
 
-	.portfolio_header{
-		display: inline-block;
-		width: 100%;
-		margin-top: 10vh;
+.portfolio_header{
+	display: inline-block;
+	width: 100%;
+	margin-top: 10vh;
+	font-weight: 100;
+}
+
+.portfolioItemsContainer{
+	border-top: 1px solid white;
+	margin-bottom: 25px;
+	background: rgba(255, 255, 255, .03);
+}
+
+.portfolioItem{
+	-webkit-transition: 1s ease 0.4s;
+	transition: 1s ease 0.4s;
+	position: relative;
+	height: 185px;
+	width: 260px;
+	margin: 20px auto 20px auto;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
+			box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
+	z-index: 2;
+
+	h3:nth-of-type(1){
 		font-weight: 100;
+		margin: 15px 0 0 0;
+		z-index: 2;
+		letter-spacing: 1.3px;
+		text-shadow: 1px 1px rgba(0,0,0,0.65);
+		font-size: 1.3em;
 	}
 
-	.portfolioItemsContainer{
-		border-top: 1px solid white;
-		margin-bottom: 25px;
-		background: rgba(255, 255, 255, .03);
-			.portfolioItem{
-			-webkit-transition: 1s ease 0.4s;
-			transition: 1s ease 0.4s;
-			position: relative;
-			height: 185px;
-			width: 260px;
-			margin: 20px auto 20px auto;
-			border-top: 1px solid white;
-			border-bottom: 1px solid white;
-			-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
-					box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
-			z-index: 2;
-
-			h3:nth-of-type(1){
-				font-weight: 100;
-				margin: 15px 0 0 0;
-				z-index: 2;
-				letter-spacing: 1.3px;
-				text-shadow: 1px 1px rgba(0,0,0,0.65);
-				font-size: 1.3em;
-			}
-
-			p{	
-				font-family: $font-stack2;
-				font-size:0.9em;
-				font-style: italic;
-				z-index: 2;
-				margin-top: 15px;
-			}
-
-			div{
-				position: absolute;
-				bottom: 5px;
-				left: 0;
-				right: 0;
-				height: 30px;
-				width: 50px;
-				margin: 15px auto;
-				color: white;
-				text-align: center;
-				line-height: 30px;
-				border: 1px solid white;
-				border-radius: 15%;
-				-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.60);
-						box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.60);
-				z-index: 2;
-			}
-
-			div:hover{
-				background: white;
-				color: rgb(76, 83, 94);
-			}
-		}
-		
-		.portfolioItem::after {
-			content: "";
-			opacity: 0.40;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			z-index: -1;   
-		}
-
-		.szymskiBeats::after{
-			background: url("../img/szymskiBeats.jpg") 0 no-repeat;
-			color: black;
-		}
-
-		.artofgraf::after{
-			background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
-		}
-
-		.drumMachine::after{
-			background: url("../img/drumMachine.jpg") 50% no-repeat;
-		}
-
-		.calculator::after{
-			background: url("../img/Calculator.jpg") 50% no-repeat;
-		}
-
-		.sessionClock::after{
-			background: url("../img/sessionClock.jpg") 50% no-repeat;
-		}
-
-		.toDoQuestList::after{
-			background: url("../img/toDoList.jpg") 50% no-repeat;
-		}
-
-		.supremeQuiz::after{
-			background: url("../img/quiz.jpg") 50% no-repeat;
-		}
-
-		.markdownPreviewer::after{
-			background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
-		}
-		
-		.portfolioItem{
-			-webkit-transform: translateY(-10px);
-					transform: translateY(-10px);
-			opacity: 0;
-		}
-
-		.portfolioItemVisible{
-			-webkit-transform: translateY(0);
-					transform: translateY(0);
-			opacity: 1;
-		}
-		
-		h2:nth-of-type(2), h2:nth-of-type(3) {
-			margin-top: 40px;
-			margin-bottom: 15px;
-			font-weight: 100;
-			letter-spacing: .7px;
-		}
-	}
-	
-	.githubProfile{
-		width: 250px;
-		margin: 40px auto;
-		overflow: hidden;
+	p{	
+		font-family: $font-stack2;
 		font-size: 0.9em;
-		letter-spacing: 1px;
-		h2{
-			margin: 10px auto;
-			letter-spacing: 1.5px;
-		}
-
-		a{
-			img{
-				display: inline-block;
-				vertical-align: middle;
-				max-width: 30%;
-			}
-
-			p{
-				display: inline-block;
-				vertical-align: middle;
-				color: white;
-				font-weight: 100;
-			}
-		}
+		font-style: italic;
+		margin-top: 15px;
+		z-index: 2;
 	}
 
-	.scrollText{
-		@include scrollText(5px, 0, 0, white, scrollText);
+	div{
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		right: 0;
+		height: 30px;
+		width: 50px;
+		margin: 15px auto;
+		color: white;
+		text-align: center;
+		line-height: 30px;
+		border: 1px solid white;
+		border-radius: 15%;
+		-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.60);
+				box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.60);
+		z-index: 2;
+	}
+
+	div:hover{
+		background: white;
+		color: rgb(76, 83, 94);
 	}
 }
+
+.portfolioItem::after {
+	content: "";
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;   
+}
+
+.szymskiBeats::after{
+	background: url("../img/szymskiBeats.jpg") 0 no-repeat;
+}
+
+.artofgraf::after{
+	background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
+}
+
+.drumMachine::after{
+	background: url("../img/drumMachine.jpg") 50% no-repeat;
+}
+
+.calculator::after{
+	background: url("../img/Calculator.jpg") 50% no-repeat;
+}
+
+.sessionClock::after{
+	background: url("../img/sessionClock.jpg") 50% no-repeat;
+}
+
+.toDoQuestList::after{
+	background: url("../img/toDoList.jpg") 50% no-repeat;
+}
+
+.supremeQuiz::after{
+	background: url("../img/quiz.jpg") 50% no-repeat;
+}
+
+.markdownPreviewer::after{
+	background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
+}
+
+.portfolioItem{
+	-webkit-transform: translateY(-10px);
+			transform: translateY(-10px);
+	opacity: 0;
+}
+
+.portfolioItemVisible{
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+	opacity: 1;
+}
+
+.githubProfile{
+	width: 250px;
+	margin: 40px auto;
+	overflow: hidden;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	h2{
+		margin: 10px auto;
+		letter-spacing: 1.5px;
+	}
+
+	a{
+		img{
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 30%;
+		}
+
+		p{
+			display: inline-block;
+			vertical-align: middle;
+			color: white;
+			font-weight: 100;
+		}
+	}
+}
+
+.scrollText{
+	@include scrollText(5px, 0, 0, white, scrollText);
+}
+
+/*****************
+PORTFOLIO
+******************/
 
 .contact{
 	position: relative;

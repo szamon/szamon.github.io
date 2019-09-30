@@ -295,13 +295,13 @@ slidesBar.className = "slidesBar";
 sliderContainer.appendChild(slidesBar);
 
 //creating imgs from slidesData
-function createSlides(list){
+function createSlides(list, clName){
 	return list.map((x, i) => {
 		let slide = document.createElement("img");
 		slide.src = x.src;
 		slide.alt = x.alt;
 		slide.setAttribute("key", i);
-		slide.className = "slide";
+		slide.className = clName;
 		return slide;
 	})
 };
@@ -317,8 +317,8 @@ function createArrows(arrows){
 	})
 };
 
-let slides = createSlides(slidesData);
-let slides2 = createSlides(slidesData2);
+let slides = createSlides(slidesData, "slide");
+let slides2 = createSlides(slidesData2, "slide2");
 let arrows = createArrows(arrowsData);
 
 //appending images for slidesBar

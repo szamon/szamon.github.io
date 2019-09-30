@@ -710,62 +710,6 @@ ABOUT ME
   letter-spacing: 2px;
 }
 
-.skills .slidesBar {
-  padding: 4px 0;
-  height: 8%;
-  line-height: 8%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.skills .slidesBar img {
-  margin: 0 2px;
-  width: 5%;
-  max-height: 8%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  cursor: pointer;
-}
-
-.skills .slidesBar img:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5%;
-}
-
-.skills .slidesBar .activeSlide {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5%;
-}
-
-.skills .scrollText {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  height: 60px;
-  font-family: "Bangers", helvetica;
-  font-size: 1em;
-  letter-spacing: .6px;
-}
-
-.skills .scrollText p {
-  color: white;
-}
-
-.skills .scrollText img {
-  height: 40px;
-  width: 50px;
-  -webkit-animation-name: scrollText;
-  animation-name: scrollText;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
-
 .slider {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.03);
@@ -781,11 +725,11 @@ ABOUT ME
 }
 
 .slide {
+  height: auto;
+  width: 200px;
   position: absolute;
   top: calc(50% - 100px);
   left: calc(50% - 100px);
-  width: 200px;
-  height: auto;
 }
 
 .leftArrow, .rightArrow {
@@ -811,6 +755,65 @@ ABOUT ME
   right: calc(50% - 150px);
 }
 
+.slidesBar {
+  height: 8%;
+  padding: 4px 0;
+  line-height: 8%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slidesBar img {
+  margin: 0 2px;
+  width: 5%;
+  max-height: 8%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.slidesBar img:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
+}
+
+.activeSlide {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
+}
+
+.scrollText {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  font-family: "Bangers", helvetica;
+  font-size: 1em;
+  letter-spacing: .6px;
+}
+
+.scrollText p {
+  color: white;
+}
+
+.scrollText img {
+  height: 40px;
+  width: 50px;
+  -webkit-animation-name: scrollText;
+  animation-name: scrollText;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+
+/*****************
+PORTFOLIO
+******************/
 .portfolio {
   position: relative;
   height: 2175px;
@@ -823,20 +826,20 @@ ABOUT ME
   box-shadow: inset 0px -55px 70px -70px black;
 }
 
-.portfolio .portfolio_header {
+.portfolio_header {
   display: inline-block;
   width: 100%;
   margin-top: 10vh;
   font-weight: 100;
 }
 
-.portfolio .portfolioItemsContainer {
+.portfolioItemsContainer {
   border-top: 1px solid white;
   margin-bottom: 25px;
   background: rgba(255, 255, 255, 0.03);
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem {
+.portfolioItem {
   -webkit-transition: 1s ease 0.4s;
   transition: 1s ease 0.4s;
   position: relative;
@@ -850,7 +853,7 @@ ABOUT ME
   z-index: 2;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem h3:nth-of-type(1) {
+.portfolioItem h3:nth-of-type(1) {
   font-weight: 100;
   margin: 15px 0 0 0;
   z-index: 2;
@@ -859,15 +862,15 @@ ABOUT ME
   font-size: 1.3em;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem p {
+.portfolioItem p {
   font-family: "Quicksand", sans-serif;
   font-size: 0.9em;
   font-style: italic;
-  z-index: 2;
   margin-top: 15px;
+  z-index: 2;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem div {
+.portfolioItem div {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -885,14 +888,14 @@ ABOUT ME
   z-index: 2;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem div:hover {
+.portfolioItem div:hover {
   background: white;
   color: #4c535e;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem::after {
+.portfolioItem::after {
   content: "";
-  opacity: 0.40;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
@@ -903,59 +906,51 @@ ABOUT ME
   z-index: -1;
 }
 
-.portfolio .portfolioItemsContainer .szymskiBeats::after {
+.szymskiBeats::after {
   background: url("../img/szymskiBeats.jpg") 0 no-repeat;
-  color: black;
 }
 
-.portfolio .portfolioItemsContainer .artofgraf::after {
+.artofgraf::after {
   background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .drumMachine::after {
+.drumMachine::after {
   background: url("../img/drumMachine.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .calculator::after {
+.calculator::after {
   background: url("../img/Calculator.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .sessionClock::after {
+.sessionClock::after {
   background: url("../img/sessionClock.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .toDoQuestList::after {
+.toDoQuestList::after {
   background: url("../img/toDoList.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .supremeQuiz::after {
+.supremeQuiz::after {
   background: url("../img/quiz.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .markdownPreviewer::after {
+.markdownPreviewer::after {
   background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItem {
+.portfolioItem {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   opacity: 0;
 }
 
-.portfolio .portfolioItemsContainer .portfolioItemVisible {
+.portfolioItemVisible {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
 }
 
-.portfolio .portfolioItemsContainer h2:nth-of-type(2), .portfolio .portfolioItemsContainer h2:nth-of-type(3) {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-weight: 100;
-  letter-spacing: .7px;
-}
-
-.portfolio .githubProfile {
+.githubProfile {
   width: 250px;
   margin: 40px auto;
   overflow: hidden;
@@ -963,25 +958,25 @@ ABOUT ME
   letter-spacing: 1px;
 }
 
-.portfolio .githubProfile h2 {
+.githubProfile h2 {
   margin: 10px auto;
   letter-spacing: 1.5px;
 }
 
-.portfolio .githubProfile a img {
+.githubProfile a img {
   display: inline-block;
   vertical-align: middle;
   max-width: 30%;
 }
 
-.portfolio .githubProfile a p {
+.githubProfile a p {
   display: inline-block;
   vertical-align: middle;
   color: white;
   font-weight: 100;
 }
 
-.portfolio .scrollText {
+.scrollText {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -992,11 +987,11 @@ ABOUT ME
   letter-spacing: .6px;
 }
 
-.portfolio .scrollText p {
+.scrollText p {
   color: white;
 }
 
-.portfolio .scrollText img {
+.scrollText img {
   height: 40px;
   width: 50px;
   -webkit-animation-name: scrollText;
@@ -1009,6 +1004,9 @@ ABOUT ME
   animation-direction: normal;
 }
 
+/*****************
+PORTFOLIO
+******************/
 .contact {
   position: relative;
   min-height: 100vh;
