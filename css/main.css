@@ -935,15 +935,16 @@ PORTFOLIO
   letter-spacing: 1.5px;
 }
 
-.githubProfile a img {
+.githubProfile a img, .githubProfile a p {
   display: inline-block;
   vertical-align: middle;
+}
+
+.githubProfile a img {
   max-width: 30%;
 }
 
 .githubProfile a p {
-  display: inline-block;
-  vertical-align: middle;
   color: white;
   font-weight: 100;
 }
