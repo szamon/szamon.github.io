@@ -327,7 +327,7 @@ INTRO
 }
 
 /************
-INTRO
+ABOUT ME
 ************/
 @-webkit-keyframes questionSlideIn {
   50% {
@@ -474,6 +474,101 @@ INTRO
   }
 }
 
+@media screen and (min-width: 992px) {
+  @-webkit-keyframes questionSlideIn {
+    20% {
+      height: 300px;
+      width: 300px;
+      top: 34vh;
+      left: calc(50vw - 150px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+    35% {
+      height: 300px;
+      width: 300px;
+      top: 34vh;
+      left: calc(50vw - 150px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+    70% {
+      height: 250px;
+      width: 250px;
+      top: calc(50vh);
+      left: calc(50vw - 380px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 0.2;
+    }
+    to {
+      height: 250px;
+      width: 250px;
+      top: calc(50vh);
+      left: calc(50vw - 380px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 0.2;
+    }
+  }
+  @keyframes questionSlideIn {
+    20% {
+      height: 300px;
+      width: 300px;
+      top: 34vh;
+      left: calc(50vw - 150px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+    35% {
+      height: 300px;
+      width: 300px;
+      top: 34vh;
+      left: calc(50vw - 150px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+    70% {
+      height: 250px;
+      width: 250px;
+      top: calc(50vh);
+      left: calc(50vw - 380px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 0.2;
+    }
+    to {
+      height: 250px;
+      width: 250px;
+      top: calc(50vh);
+      left: calc(50vw - 380px);
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 0.2;
+    }
+  }
+  @-webkit-keyframes lampBlink {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes lampBlink {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 /*************************
 GENERIC
 *************************/
@@ -497,6 +592,12 @@ GENERIC
 
 a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    font-size: 1.1em;
+  }
 }
 
 /*******************
@@ -915,6 +1016,59 @@ ABOUT ME
   }
 }
 
+@media screen and (min-width: 992px) {
+  .aboutMe > img:nth-of-type(2) {
+    top: 12vh;
+    right: calc(50vw - 350px);
+    height: 120px;
+    width: 120px;
+  }
+  .aboutMe > h2:nth-of-type(1) {
+    display: block;
+    float: none;
+    width: 290px;
+    margin: calc(50vh - 150px) auto 25px auto;
+  }
+  .aboutMe div:nth-of-type(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    margin: 0 auto;
+    width: 800px;
+  }
+  .aboutMe div:nth-of-type(1) p {
+    margin: 6px 10px;
+    font-size: 1.1em;
+  }
+  .questionMarkComeIn {
+    -webkit-animation: questionSlideIn 6s ease 0.5s;
+    animation: questionSlideIn 6s ease 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .paragraphComeIn {
+    -webkit-animation: textSlideIn 2s ease 1s;
+    animation: textSlideIn 2s ease 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .headingComeIn {
+    -webkit-animation: textSlideIn 1s ease;
+    animation: textSlideIn 1s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .lampBlinkStart {
+    -webkit-animation: lampBlink 1.5s 4s;
+    animation: lampBlink 1.5s 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 4;
+    animation-iteration-count: 4;
+  }
+}
+
 /*****************
 SKILLS
 ******************/
@@ -1014,6 +1168,15 @@ SKILLS
   .skills h2 {
     margin-top: 12vh;
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .skills {
+    min-height: 100vh;
+  }
+  .skills h2 {
+    margin-bottom: 25px;
   }
 }
 
@@ -1207,6 +1370,15 @@ PORTFOLIO
   }
 }
 
+@media screen and (min-width: 992px) {
+  .portfolioItemsContainer {
+    max-width: 1000px;
+  }
+  .portfolioItem {
+    width: 400px;
+  }
+}
+
 /*****************
 CONTACT
 ******************/
@@ -1390,175 +1562,12 @@ CONTACT
 }
 
 /*******************
-LOGO
+FOOTER
 *******************/
 footer {
   text-align: center;
   line-height: 22px;
   background: white;
-}
-
-/*************************
-Media Queries
-*************************/
-@media screen and (min-width: 992px) {
-  .wrapper {
-    font-size: 1.1em;
-  }
-  .aboutMe .questionMarkComeIn {
-    -webkit-animation: questionSlideIn 6s ease 0.5s;
-    animation: questionSlideIn 6s ease 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes questionSlideIn {
-    20% {
-      height: 300px;
-      width: 300px;
-      top: 34vh;
-      left: calc(50vw - 150px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 1;
-    }
-    35% {
-      height: 300px;
-      width: 300px;
-      top: 34vh;
-      left: calc(50vw - 150px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 1;
-    }
-    70% {
-      height: 250px;
-      width: 250px;
-      top: calc(50vh);
-      left: calc(50vw - 380px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 0.2;
-    }
-    to {
-      height: 250px;
-      width: 250px;
-      top: calc(50vh);
-      left: calc(50vw - 380px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 0.2;
-    }
-  }
-  @keyframes questionSlideIn {
-    20% {
-      height: 300px;
-      width: 300px;
-      top: 34vh;
-      left: calc(50vw - 150px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 1;
-    }
-    35% {
-      height: 300px;
-      width: 300px;
-      top: 34vh;
-      left: calc(50vw - 150px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 1;
-    }
-    70% {
-      height: 250px;
-      width: 250px;
-      top: calc(50vh);
-      left: calc(50vw - 380px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 0.2;
-    }
-    to {
-      height: 250px;
-      width: 250px;
-      top: calc(50vh);
-      left: calc(50vw - 380px);
-      -webkit-transform: rotate(0);
-      transform: rotate(0);
-      opacity: 0.2;
-    }
-  }
-  .aboutMe > img:nth-of-type(2) {
-    top: 12vh;
-    right: calc(50vw - 350px);
-    height: 120px;
-    width: 120px;
-  }
-  .aboutMe .lampBlinkStart {
-    -webkit-animation: lampBlink 1.5s 4s;
-    animation: lampBlink 1.5s 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 4;
-    animation-iteration-count: 4;
-  }
-  @-webkit-keyframes lampBlink {
-    0% {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes lampBlink {
-    0% {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .aboutMe > h2:nth-of-type(1) {
-    display: block;
-    float: none;
-    width: 290px;
-    margin: calc(50vh - 150px) auto 25px auto;
-  }
-  .aboutMe .headingComeIn {
-    -webkit-animation: textSlideIn 1s ease;
-    animation: textSlideIn 1s ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .aboutMe div:nth-of-type(1) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    float: none;
-    margin: 0 auto;
-    width: 800px;
-  }
-  .aboutMe div:nth-of-type(1) p {
-    margin: 6px 10px;
-    font-size: 1.1em;
-  }
-  .aboutMe .paragraphComeIn {
-    -webkit-animation: textSlideIn 2s ease 1s;
-    animation: textSlideIn 2s ease 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .skills {
-    min-height: 100vh;
-  }
-  .skills h2 {
-    margin-bottom: 25px;
-  }
-  .portfolio .portfolioItemsContainer {
-    max-width: 1000px;
-  }
-  .portfolio .portfolioItemsContainer .portfolioItem {
-    width: 400px;
-  }
 }
 
 /*************************

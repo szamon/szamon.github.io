@@ -338,7 +338,7 @@ INTRO
 }
 
 /************
-INTRO
+ABOUT ME
 ************/
 
 @-webkit-keyframes questionSlideIn{
@@ -410,6 +410,7 @@ INTRO
 }
 
 @media screen and (min-width:768px){
+
 	@-webkit-keyframes questionSlideIn{
 		20%{
 			height: 350px;
@@ -473,7 +474,115 @@ INTRO
 			opacity: 0.2;
 		}
 	}
-	
+
+	@-webkit-keyframes lampBlink{
+		0%{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
+
+	@keyframes lampBlink{
+		0%{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (min-width: 992px){
+
+	@-webkit-keyframes questionSlideIn{
+		20%{
+			height: 300px;
+			width: 300px;
+			top: 34vh;
+			left: calc(50vw - 150px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+		
+		35%{
+			height: 300px;
+			width: 300px;
+			top: 34vh;
+			left: calc(50vw - 150px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+		70%{
+			height: 250px;
+			width: 250px;
+			top: calc(50vh);
+			left: calc(50vw - 380px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+		
+		to{
+			height: 250px;
+			width: 250px;
+			top: calc(50vh);
+			left: calc(50vw - 380px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+	}
+
+	@keyframes questionSlideIn{
+		20%{
+			height: 300px;
+			width: 300px;
+			top: 34vh;
+			left: calc(50vw - 150px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+
+		35%{
+			height: 300px;
+			width: 300px;
+			top: 34vh;
+			left: calc(50vw - 150px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 1;
+		}
+
+		70%{
+			height: 250px;
+			width: 250px;
+			top: calc(50vh);
+			left: calc(50vw - 380px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+
+		to{
+			height: 250px;
+			width: 250px;
+			top: calc(50vh);
+			left: calc(50vw - 380px);
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+			opacity: 0.2;
+		}
+	}
+
 	@-webkit-keyframes lampBlink{
 		0%{
 			opacity: 0;

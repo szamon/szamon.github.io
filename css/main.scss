@@ -57,6 +57,12 @@ a{
 	text-decoration: none;
 }
 
+@media screen and (min-width: 992px){
+	.wrapper{
+		font-size: 1.1em;
+	}
+}
+
 /*******************
 LOGO
 *******************/
@@ -125,13 +131,16 @@ NAV
 }
 
 .menuOpen{
+
 	span:nth-of-type(1){
 		-webkit-transform: translateY(10px) translateX(0) rotate(45deg);
 		        transform: translateY(10px) translateX(0) rotate(45deg);
 	}
+
 	span:nth-of-type(2){
 		opacity: 0;
 	}
+
 	span:nth-of-type(3){
 		-webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
 		        transform: translateY(-10px) translateX(0) rotate(-45deg);
@@ -284,7 +293,7 @@ INTRO SECTION
 
 	.myNameTitle{
 		margin: 0;
-		
+
 		> p:nth-of-type(1){
 			margin: 20px 0 0 5px;
 		}
@@ -298,6 +307,9 @@ INTRO SECTION
 			width: auto;
 		}
 	}
+}
+
+@media screen and (min-width:992px){
 }
 
 /*****************
@@ -444,6 +456,71 @@ ABOUT ME
 	}
 }
 
+@media screen and (min-width:992px){
+
+	.aboutMe{
+
+		>img:nth-of-type(2){
+			top: 12vh;
+			right: calc(50vw - 350px);
+			height: 120px;
+			width: 120px;
+		}
+		
+		> h2:nth-of-type(1){
+			display: block;
+			float: none;
+			width: 290px;
+			margin: calc(50vh - 150px) auto 25px auto;
+		}
+
+		div:nth-of-type(1){
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			float: none;
+			margin: 0 auto;
+			width: 800px;
+
+			p{
+				margin: 6px 10px;
+				font-size: 1.1em;
+			}
+		}
+	}
+
+	.questionMarkComeIn{
+		-webkit-animation: questionSlideIn 6s ease 0.5s;
+				animation: questionSlideIn 6s ease 0.5s;
+		-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+	}
+
+	.paragraphComeIn{
+		-webkit-animation: textSlideIn 2s ease 1s;
+				animation: textSlideIn 2s ease 1s;
+		-webkit-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+	}
+
+	.headingComeIn{
+		-webkit-animation: textSlideIn 1s ease;
+				animation: textSlideIn 1s ease;
+		-webkit-animation-fill-mode:forwards;
+				animation-fill-mode:forwards;
+	}
+
+	.lampBlinkStart{
+		-webkit-animation: lampBlink 1.5s 4s;
+				animation: lampBlink 1.5s 4s;
+		-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+		-webkit-animation-iteration-count: 4;
+				animation-iteration-count: 4;
+	}
+
+}
+
 /*****************
 SKILLS
 ******************/
@@ -554,6 +631,17 @@ SKILLS
  	}
 }
 
+@media screen and (min-width: 992px){
+
+	.skills{
+		min-height: 100vh;
+	
+			h2{
+				margin-bottom: 25px;
+			}
+		}
+}
+
 /*****************
 PORTFOLIO
 ******************/
@@ -596,6 +684,7 @@ PORTFOLIO
 	-webkit-box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
 			box-shadow: -4px 4px 17px -2px rgba(0,0,0,0.65);
 	z-index: 2;
+
 //title of item
 	h3:nth-of-type(1){
 		font-weight: 100;
@@ -605,6 +694,7 @@ PORTFOLIO
 		text-shadow: 1px 1px rgba(0,0,0,0.65);
 		font-size: 1.3em;
 	}
+
 //text of item
 	p{	
 		font-family: $font-stack2;
@@ -682,6 +772,7 @@ PORTFOLIO
 .markdownPreviewer::after{
 	background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 }
+
 //classes for animations
 .portfolioItem{
 	-webkit-transform: translateY(-10px);
@@ -749,8 +840,17 @@ PORTFOLIO
 			margin-top: 15px;
 		}
 	}
+}
 
+@media screen and (min-width:992px){
 
+	.portfolioItemsContainer{
+		max-width: 1000px;
+	}
+
+	.portfolioItem{
+		width: 400px;
+	}
 }
 
 /*****************
@@ -969,210 +1069,13 @@ CONTACT
 }
 
 /*******************
-LOGO
+FOOTER
 *******************/
 
 footer{
 	text-align: center;
 	line-height: 22px;
 	background: white;
-}
-
-
-
-/*************************
-Media Queries
-*************************/
-
-@media screen and (min-width:992px){
-
-	.wrapper{
-		font-size: 1.1em;
-	}
-
-	.aboutMe{
-
-		.questionMarkComeIn{
-			-webkit-animation: questionSlideIn 6s ease 0.5s;
-			        animation: questionSlideIn 6s ease 0.5s;
-			-webkit-animation-fill-mode: forwards;
-			        animation-fill-mode: forwards;
-		}
-
-		@-webkit-keyframes questionSlideIn{
-			20%{
-				height: 300px;
-				width: 300px;
-				top: 34vh;
-				left: calc(50vw - 150px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 1;
-			}
-			
-			35%{
-				height: 300px;
-				width: 300px;
-				top: 34vh;
-				left: calc(50vw - 150px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 1;
-			}
-
-			70%{
-				height: 250px;
-				width: 250px;
-				top: calc(50vh);
-				left: calc(50vw - 380px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 0.2;
-			}
-			
-			to{
-				height: 250px;
-				width: 250px;
-				top: calc(50vh);
-				left: calc(50vw - 380px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 0.2;
-			}
-		}
-
-		@keyframes questionSlideIn{
-			20%{
-				height: 300px;
-				width: 300px;
-				top: 34vh;
-				left: calc(50vw - 150px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 1;
-			}
-
-
-			35%{
-				height: 300px;
-				width: 300px;
-				top: 34vh;
-				left: calc(50vw - 150px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 1;
-			}
-
-			70%{
-				height: 250px;
-				width: 250px;
-				top: calc(50vh);
-				left: calc(50vw - 380px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 0.2;
-			}
-
-			to{
-				height: 250px;
-				width: 250px;
-				top: calc(50vh);
-				left: calc(50vw - 380px);
-				-webkit-transform: rotate(0);
-				        transform: rotate(0);
-				opacity: 0.2;
-			}
-		}
-
-		>img:nth-of-type(2){
-			top: 12vh;
-			right: calc(50vw - 350px);
-			height: 120px;
-			width: 120px;
-		}
-
-		.lampBlinkStart{
-			-webkit-animation: lampBlink 1.5s 4s;
-			        animation: lampBlink 1.5s 4s;
-			-webkit-animation-fill-mode: forwards;
-			        animation-fill-mode: forwards;
-			-webkit-animation-iteration-count: 4;
-			        animation-iteration-count: 4;
-		}
-
-		@-webkit-keyframes lampBlink{
-			0%{
-				opacity: 0;
-			}
-
-			to{
-				opacity: 1;
-			}
-		}
-
-		@keyframes lampBlink{
-			0%{
-				opacity: 0;
-			}
-
-			to{
-				opacity: 1;
-			}
-		}
-		
-		> h2:nth-of-type(1){
-			display: block;
-			float: none;
-			width: 290px;
-			margin: calc(50vh - 150px) auto 25px auto;
-		}
-
-		.headingComeIn{
-			-webkit-animation: textSlideIn 1s ease;
-			        animation: textSlideIn 1s ease;
-			-webkit-animation-fill-mode:forwards;
-			        animation-fill-mode:forwards;
-		}
-
-		div:nth-of-type(1){
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			float: none;
-			margin: 0 auto;
-			width: 800px;
-
-			p{
-				margin: 6px 10px;
-				font-size: 1.1em;
-			}
-		}
-
-		.paragraphComeIn{
-			-webkit-animation: textSlideIn 2s ease 1s;
-			        animation: textSlideIn 2s ease 1s;
-			-webkit-animation-fill-mode:forwards;
-			        animation-fill-mode:forwards;
-		}
-	}
-
-	.skills{
-
-	min-height: 100vh;
-
-		h2{
-			margin-bottom: 25px;
-		}
-	}
-
-	.portfolio{
-		.portfolioItemsContainer{
-			max-width: 1000px;
-			.portfolioItem{
-				width: 400px;
-			}
-		}
-	}
 }
 
 /*************************
