@@ -449,10 +449,6 @@ ABOUT ME
 	border-radius: 5%;
 }
 
-.scrollText{
-	@include scrollText(5px, 0, 0, white, scrollText);
-}
-
 /*****************
 PORTFOLIO
 ******************/
@@ -621,14 +617,11 @@ PORTFOLIO
 	}
 }
 
-.scrollText{
-	@include scrollText(5px, 0, 0, white, scrollText);
-}
-
 /*****************
-PORTFOLIO
+CONTACT
 ******************/
 
+//contact wrapper
 .contact{
 	position: relative;
 	min-height: 100vh;
@@ -646,102 +639,99 @@ PORTFOLIO
 		font-weight: 100;
 	}
 
-	form{
-		margin-top: 15px;
+	// form{
+	// 	margin-top: 15px;
 
-		label, input, textarea{
-			display: block;
-			margin: 0 auto;
-		}
+	// 	label, input, textarea{
+	// 		display: block;
+	// 		margin: 0 auto;
+	// 	}
 
-		label{
-			margin-top: 10px;
-		}
+	// 	label{
+	// 		margin-top: 10px;
+	// 	}
 
-		input{
-			margin-top: 5px;
-			border-radius: 5%;
-			font-family: $font-stack2;
-			color: rgb(40, 58, 89);
-		}
+	// 	input{
+	// 		margin-top: 5px;
+	// 		border-radius: 5%;
+	// 		font-family: $font-stack2;
+	// 		color: rgb(40, 58, 89);
+	// 	}
 
-		textarea{
-			height: 80px;
-			margin-top: 5px;
-			border-radius: 2%;
-			font-family: $font-stack2;
-			color: rgb(40, 58, 89);
-		}
+	// 	textarea{
+	// 		height: 80px;
+	// 		margin-top: 5px;
+	// 		border-radius: 2%;
+	// 		font-family: $font-stack2;
+	// 		color: rgb(40, 58, 89);
+	// 	}
 
-		input[type="submit"]{
-			height: 28px;
-			width: 50px;
-			margin-top: 15px;
-			border-radius: 20%;
-			font-family: $font-stack;
-			letter-spacing: .6px;
-			color: rgb(40, 58, 89);
-			background: white;
-			cursor: pointer;
-		}
-	}
-	
-	.phoneEmail{
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-		margin-top: 40px;
-		font-family: $font-stack;
-		letter-spacing: .6px;
-		font-size: 0.8em;
-		
-		.phone, .email{
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			    -ms-flex-align: center;
-			        align-items: center;
-			margin: 0 10px;
-			color: white;
-
-			img{
-				float: none;
-				max-width: 30px;
-			}
-
-			p{
-				float: none;
-				margin: 0 0 0 5px;
-			}
-		}
-
-		.phone{
-			width: auto;
-		}
-
-		.email{
-			width: auto;
-			background: rgba(255, 255, 255, 0.05);
-			border-radius: 4px;
-			border: 1px solid rgba(255, 255, 255, .1);
-			padding: 2px 10px;
-			p{
-				font-family: $font-stack2;
-				font-size: .9em;
-				font-style: italic;
-			}
-		}
-	}
-
+	// 	input[type="submit"]{
+	// 		height: 28px;
+	// 		width: 50px;
+	// 		margin-top: 15px;
+	// 		border-radius: 20%;
+	// 		font-family: $font-stack;
+	// 		letter-spacing: .6px;
+	// 		color: rgb(40, 58, 89);
+	// 		background: white;
+	// 		cursor: pointer;
+	// 	}
+	// }
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollTextRev);
+	}
+}
+
+//phone and email wrapper
+.phoneEmail{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	margin-top: 40px;
+	font-family: $font-stack;
+	letter-spacing: .6px;
+	font-size: 0.8em;
+}
+
+
+.phone, .email{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: auto;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	margin: 0 10px;
+	color: white;
+
+	img{
+		float: none;
+		max-width: 30px;
+	}
+
+	p{
+		float: none;
+		margin: 0 0 0 5px;
+	}
+}
+
+.email{
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, .1);
+	padding: 2px 10px;
+	p{
+		font-family: $font-stack2;
+		font-size: .9em;
+		font-style: italic;
 	}
 }
 

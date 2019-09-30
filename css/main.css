@@ -783,34 +783,6 @@ ABOUT ME
   border-radius: 5%;
 }
 
-.scrollText {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  height: 60px;
-  font-family: "Bangers", helvetica;
-  font-size: 1em;
-  letter-spacing: .6px;
-}
-
-.scrollText p {
-  color: white;
-}
-
-.scrollText img {
-  height: 40px;
-  width: 50px;
-  -webkit-animation-name: scrollText;
-  animation-name: scrollText;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
-
 /*****************
 PORTFOLIO
 ******************/
@@ -976,36 +948,8 @@ PORTFOLIO
   font-weight: 100;
 }
 
-.scrollText {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  height: 60px;
-  font-family: "Bangers", helvetica;
-  font-size: 1em;
-  letter-spacing: .6px;
-}
-
-.scrollText p {
-  color: white;
-}
-
-.scrollText img {
-  height: 40px;
-  width: 50px;
-  -webkit-animation-name: scrollText;
-  animation-name: scrollText;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
-
 /*****************
-PORTFOLIO
+CONTACT
 ******************/
 .contact {
   position: relative;
@@ -1023,101 +967,6 @@ PORTFOLIO
 
 .contact h2 {
   font-weight: 100;
-}
-
-.contact form {
-  margin-top: 15px;
-}
-
-.contact form label, .contact form input, .contact form textarea {
-  display: block;
-  margin: 0 auto;
-}
-
-.contact form label {
-  margin-top: 10px;
-}
-
-.contact form input {
-  margin-top: 5px;
-  border-radius: 5%;
-  font-family: "Quicksand", sans-serif;
-  color: #283a59;
-}
-
-.contact form textarea {
-  height: 80px;
-  margin-top: 5px;
-  border-radius: 2%;
-  font-family: "Quicksand", sans-serif;
-  color: #283a59;
-}
-
-.contact form input[type="submit"] {
-  height: 28px;
-  width: 50px;
-  margin-top: 15px;
-  border-radius: 20%;
-  font-family: "Bangers", helvetica;
-  letter-spacing: .6px;
-  color: #283a59;
-  background: white;
-  cursor: pointer;
-}
-
-.contact .phoneEmail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 40px;
-  font-family: "Bangers", helvetica;
-  letter-spacing: .6px;
-  font-size: 0.8em;
-}
-
-.contact .phoneEmail .phone, .contact .phoneEmail .email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0 10px;
-  color: white;
-}
-
-.contact .phoneEmail .phone img, .contact .phoneEmail .email img {
-  float: none;
-  max-width: 30px;
-}
-
-.contact .phoneEmail .phone p, .contact .phoneEmail .email p {
-  float: none;
-  margin: 0 0 0 5px;
-}
-
-.contact .phoneEmail .phone {
-  width: auto;
-}
-
-.contact .phoneEmail .email {
-  width: auto;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2px 10px;
-}
-
-.contact .phoneEmail .email p {
-  font-family: "Quicksand", sans-serif;
-  font-size: .9em;
-  font-style: italic;
 }
 
 .contact .scrollText {
@@ -1146,6 +995,57 @@ PORTFOLIO
   animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
   animation-direction: normal;
+}
+
+.phoneEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
+  font-size: 0.8em;
+}
+
+.phone, .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px;
+  color: white;
+}
+
+.phone img, .email img {
+  float: none;
+  max-width: 30px;
+}
+
+.phone p, .email p {
+  float: none;
+  margin: 0 0 0 5px;
+}
+
+.email {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 10px;
+}
+
+.email p {
+  font-family: "Quicksand", sans-serif;
+  font-size: .9em;
+  font-style: italic;
 }
 
 footer {
