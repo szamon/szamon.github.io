@@ -50,49 +50,55 @@ $(document).ready(function(){
 	navigation.scroller();
 
 	//ABOUT ME SLIDE IN
-	(function($) {
-		$.fn.visible = function(partial) {
-		    
-		      var $t            = $(this),
-		          $w            = $(window),
-		          viewTop       = $w.scrollTop(),
-		          viewBottom    = viewTop + $w.height(),
-		          _top          = $t.offset().top,
-		          _bottom       = _top + $t.height(),
-		          compareTop    = partial === true ? _bottom : _top,
-		          compareBottom = partial === true ? _top : _bottom;
-		    
-		    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-		 };
-		    
-	})(jQuery);
-
-	var module = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
-	var aboutMe = $(".aboutMe");
-	var portfolio = $(".portfolio");
-	var portfolioItems = $(".portfolioItem");
-
-	$(window).scroll(function(event) {
-		if(aboutMe.visible(true)){
-			module.each(function(i, el) {
-			    var el = $(el);
-		    	if(i===0){
-		    		el.addClass("questionMarkComeIn");
-		    	}else if(i===1){
-		    		el.addClass("lampBlinkStart");
-		    	}else if(i===2){
-		    		el.addClass("headingComeIn");
-		    	}else if(i===3){
-		    		el.addClass("paragraphComeIn");
-		    	}
-			});
-		}
-		if(portfolio.visible(true)){
-			portfolioItems.addClass("portfolioItemVisible");
-		};
-	});
+	var showMe = new function MakeItAppear() {
+		//checks if item is visible
+		this.visibilityCheck = (function($) {
+			$.fn.visible = function(partial) {
+				
+				  var $t            = $(this),
+					  $w            = $(window),
+					  viewTop       = $w.scrollTop(),
+					  viewBottom    = viewTop + $w.height(),
+					  _top          = $t.offset().top,
+					  _bottom       = _top + $t.height(),
+					  compareTop    = partial === true ? _bottom : _top,
+					  compareBottom = partial === true ? _top : _bottom;
+				
+				return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+	
+			 };
+				
+		})(jQuery);
+		
+		//if item is visible - apply class
+		this.showMeItems = $(window).scroll(function(event) {
+			this.modules = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
+			this.aboutMe = $(".aboutMe");
+			this.portfolio = $(".portfolio");
+			this.portfolioItems = $(".portfolioItem");
+			if(aboutMe.visible(true)){
+				modules.each(function(i, el) {
+					var el = $(el);
+					if(i===0){
+						el.addClass("questionMarkComeIn");
+					}else if(i===1){
+						el.addClass("lampBlinkStart");
+					}else if(i===2){
+						el.addClass("headingComeIn");
+					}else if(i===3){
+						el.addClass("paragraphComeIn");
+					}
+				});
+			}
+			if(portfolio.visible(true)){
+				portfolioItems.addClass("portfolioItemVisible");
+			};
+		});
+	};
 });
+
+	
 
 //SKILLS SLIDER
 
