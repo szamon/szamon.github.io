@@ -451,16 +451,16 @@ LOGO
   z-index: 9999;
 }
 
-.logo span:nth-of-type(1), .logo span:nth-of-type(2) {
+.logo__first-letter, .logo__second-letter {
   position: absolute;
 }
 
-.logo span:nth-of-type(1) {
+.logo__first-letter {
   top: 0;
   left: 0;
 }
 
-.logo span:nth-of-type(2) {
+.logo__second-letter {
   top: 3px;
   left: 10px;
 }
@@ -468,7 +468,7 @@ LOGO
 /*****************
 NAV
 ******************/
-.menu {
+.menuBars {
   position: fixed;
   top: 1.15rem;
   right: 1rem;
@@ -480,7 +480,7 @@ NAV
   transition: 1s;
 }
 
-.menu span {
+.menuBars__bar1, .menuBars__bar2, .menuBars__bar3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -493,24 +493,24 @@ NAV
   transition: 0.3s ease;
 }
 
-.menu span:nth-of-type(2) {
-  top: 10px;
-}
-
-.menu span:nth-of-type(3) {
-  top: 20px;
-}
-
-.menuOpen span:nth-of-type(1) {
+.menuBars__bar1--open {
   -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
   transform: translateY(10px) translateX(0) rotate(45deg);
 }
 
-.menuOpen span:nth-of-type(2) {
+.menuBars__bar2 {
+  top: 10px;
+}
+
+.menuBars__bar2--open {
   opacity: 0;
 }
 
-.menuOpen span:nth-of-type(3) {
+.menuBars__bar3 {
+  top: 20px;
+}
+
+.menuBars__bar3--open {
   -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
   transform: translateY(-10px) translateX(0) rotate(-45deg);
 }
@@ -529,49 +529,53 @@ NAV
   transition: 0.3s ease;
 }
 
-.overlay nav ul {
+.navList {
   margin-top: 30vh;
 }
 
-.overlay nav ul li {
+.navList__item {
   margin: 15px auto;
   height: 30px;
-  font-size: 2em;
   text-align: center;
   list-style-type: none;
-  color: white;
   cursor: pointer;
   opacity: 0;
   -webkit-transition: 0.3s ease 0.3s;
   transition: 0.3s ease 0.3s;
 }
 
-.overlay nav ul li:nth-of-type(2) {
+.navList__item__anchor {
+  display: block;
+  color: white;
+  font-size: 2em;
+}
+
+.navList__item--visible {
+  opacity: 1;
+}
+
+.navList__item--tdelay2 {
   -webkit-transition-delay: 0.35s;
   transition-delay: 0.35s;
 }
 
-.overlay nav ul li:nth-of-type(3) {
+.navList__item--tdelay3 {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-.overlay nav ul li:nth-of-type(4) {
+.navList__item--tdelay4 {
   -webkit-transition-delay: 0.45s;
   transition-delay: 0.45s;
 }
 
-.overlay nav ul li:nth-of-type(5) {
+.navList__item--tdelay5 {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
 
-.overlayOpen {
+.overlay--open {
   top: 0;
-  opacity: 1;
-}
-
-.overlayOpen nav ul li {
   opacity: 1;
 }
 

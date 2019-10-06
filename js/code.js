@@ -15,33 +15,53 @@ $(document).ready(function(){
 //ONCLICK NAV
 
 	var navigation = new function Navi() {
-		this.menu = $(".menu");
+		this.menu = $(".menuBars");
 		//JQuery show menu on click - adds class to show ovelay, or deletes it to hide overlay
 		this.showMenu = () => {
 			this.menu.click(function(){
-				this.menu = $(".menu");
+				this.menu = $(".menuBars");
 				this.overlay = $(".overlay");
-				if(this.overlay.hasClass("overlayOpen")){
-					this.menu.removeClass("menuOpen");
-					this.overlay.removeClass("overlayOpen");
+				this.nav = $(".navList");
+				this.bars = this.menu[0].children;
+				this.liItems = this.nav[0].children;
+				console.log(this.bars);
+				if(this.overlay.hasClass("overlay--open")){
+					this.menu.removeClass("menuBars--open");
+					this.overlay.removeClass("overlay--open");
+					for(let i=0; i<this.bars.length; i++){
+						this.bars[i].classList.remove("menuBars__bar"+(i+1)+"--open");
+					};
+					for(let i=0; i<this.liItems.length; i++){
+						this.liItems[i].classList.remove("navList__item--visible");
+					};
 				}else{
-					this.menu.addClass("menuOpen");
-					this.overlay.addClass("overlayOpen");
+					this.menu.addClass("menuBars--open");
+					this.overlay.addClass("overlay--open");
+					for(let i=0; i<this.bars.length; i++){
+						this.bars[i].classList.add("menuBars__bar"+(i+1)+"--open");
+					};
+					for(let i=0; i<this.liItems.length; i++){
+						this.liItems[i].classList.add("navList__item--visible");
+					};
 				};
 			});
 		};
 		//scrolls site when arrows on the bottom of each section are clicked or when item in menu is clicked
 		this.scroller = () => {
-			$('.scrollText a, .overlay li').click(
+			$('.scrollText__anchor, .navList__item__anchor').click(
 				function(evt){
-					this.menu = $(".menu");
+					this.menu = $(".menuBars");
 					this.overlay = $(".overlay");
+					this.bars = this.menu[0].children;
 					evt.preventDefault();
 					$("html, body").animate({"scrollTop": $($.attr(this, "href")).offset().top}, 500);
 					//if overlay is visible - hide it
-					if(this.overlay.hasClass("overlayOpen")){
-					this.menu.removeClass("menuOpen");
-					this.overlay.removeClass("overlayOpen");}
+					if(this.overlay.hasClass("overlay--open")){
+					this.menu.removeClass("menuBars--open");
+					this.overlay.removeClass("overlay--open");}
+					for(let i=0; i<this.bars.length; i++){
+						this.bars[i].classList.remove("menuBars__bar"+(i+1)+"--open");
+					};
 			});
 		};
 	};
