@@ -13,11 +13,11 @@ $font-stack2: "Quicksand", sans-serif;
 	font-size: 1em;
 	letter-spacing: .6px;
 
-	p{
+	&__anchor{
 		color: $color;
 	}
 
-	img{
+	&__image{
 		height: 40px;
 		width: 50px;
 		-webkit-animation-name: $animationName;

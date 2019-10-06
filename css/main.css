@@ -648,11 +648,11 @@ INTRO SECTION
   letter-spacing: .6px;
 }
 
-.scrollText p {
+.scrollText__anchor {
   color: white;
 }
 
-.scrollText img {
+.scrollText__image {
   height: 40px;
   width: 50px;
   -webkit-animation-name: scrollText;
@@ -783,11 +783,11 @@ ABOUT ME
   letter-spacing: .6px;
 }
 
-.scrollText p {
+.scrollText__anchor {
   color: white;
 }
 
-.scrollText img {
+.scrollText__image {
   height: 40px;
   width: 50px;
   -webkit-animation-name: scrollText;
@@ -1247,11 +1247,11 @@ CONTACT
   letter-spacing: .6px;
 }
 
-.contact .scrollText p {
+.contact .scrollText__anchor {
   color: white;
 }
 
-.contact .scrollText img {
+.contact .scrollText__image {
   height: 40px;
   width: 50px;
   -webkit-animation-name: scrollTextRev;
