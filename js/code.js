@@ -117,7 +117,6 @@ $(document).ready(function(){
 		});
 	};
 
-
 	//SKILLS SLIDER
 	const slidesData = [
 		{
