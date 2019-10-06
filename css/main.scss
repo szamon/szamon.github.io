@@ -317,7 +317,7 @@ INTRO SECTION
 ABOUT ME
 ******************/
 
-.aboutMe{
+.aboutSection{
 	position: relative;
 	min-height: 100vh;
 	padding-top: 1px;
@@ -329,8 +329,8 @@ ABOUT ME
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
 	        box-shadow: inset 0px -50px 70px -70px white;
 	z-index: 99;
-
-	>img:nth-of-type(1){
+//question mark image
+	&__qImg{
 		position: absolute;
 		height: 0;
 		width: 0;
@@ -339,13 +339,20 @@ ABOUT ME
 		-webkit-transform: rotate(-225deg);
 		        transform: rotate(-225deg);
 		opacity: 1;
-	}
 
-	>img:nth-of-type(2){
+		&--questionMarkComeIn{
+			-webkit-animation: questionSlideIn 2s ease;
+					animation: questionSlideIn 2s ease;
+			-webkit-animation-fill-mode:forwards;
+					animation-fill-mode:forwards;
+		}
+	}
+//lamp img
+	&__lImg{
 		display: none;
 	}
 
-	>h2:nth-of-type(1){
+	&__heading{
 		width: 290px;
 		margin: 9vh auto 15px auto;
 		font-size: 1.4em;
@@ -355,9 +362,16 @@ ABOUT ME
 		border-bottom-left-radius: 15%;
 		border-bottom-right-radius: 15%;
 		opacity: 0;
+
+		&--headingComeIn{
+			-webkit-animation: textSlideIn 2s ease 0.5s;
+					animation: textSlideIn 2s ease 0.5s;
+			-webkit-animation-fill-mode:forwards;
+					animation-fill-mode:forwards;
+		}
 	}
 
-	div:nth-of-type(1){
+	&__article{
 		margin-top: 0;
 		opacity: 0;
 		font-size: .9em;
@@ -365,33 +379,19 @@ ABOUT ME
 		background: rgba(255, 255, 255, 0.05);
 		border-radius: 2px;
 		border: 1px solid rgba(255, 255, 255, .1);
-		p{
+
+		&__paragraph{
 			margin: 6px 6px;
 			text-align: justify;
 		}
+
+		&--paragraphComeIn{
+			-webkit-animation: textSlideIn 1s ease 0.5s;
+					animation: textSlideIn 1s ease 0.5s;
+			-webkit-animation-fill-mode:forwards;
+					animation-fill-mode:forwards;
+		}
 	}
-}
-
-//classes for animations
-.headingComeIn{
-	-webkit-animation: textSlideIn 2s ease 0.5s;
-			animation: textSlideIn 2s ease 0.5s;
-	-webkit-animation-fill-mode:forwards;
-			animation-fill-mode:forwards;
-}
-
-.questionMarkComeIn{
-	-webkit-animation: questionSlideIn 2s ease;
-			animation: questionSlideIn 2s ease;
-	-webkit-animation-fill-mode:forwards;
-			animation-fill-mode:forwards;
-}
-
-.paragraphComeIn{
-	-webkit-animation: textSlideIn 1s ease 0.5s;
-			animation: textSlideIn 1s ease 0.5s;
-	-webkit-animation-fill-mode:forwards;
-			animation-fill-mode:forwards;
 }
 
 .scrollText{
@@ -400,10 +400,20 @@ ABOUT ME
 
 @media screen and (min-width:768px){
 
-	.aboutMe{
+	.aboutSection{
 		min-height: 100vh;
 
-		>img:nth-of-type(2){
+		&__qImg{
+
+			&--questionMarkComeIn{
+				-webkit-animation: questionSlideIn 6s ease 0.5s;
+						animation: questionSlideIn 6s ease 0.5s;
+				-webkit-animation-fill-mode: forwards;
+						animation-fill-mode: forwards;
+			}
+		}
+//lamp img
+		&__lImg{
 			position: absolute;
 			display: block;
 			height: 200px;
@@ -411,72 +421,91 @@ ABOUT ME
 			top: calc(50vh - 100px);
 			right: 90px;
 			opacity: 0;
+
+			&--lampBlinkStart{
+				-webkit-animation: lampBlink 1.5s 2s;
+						animation: lampBlink 1.5s 2s;
+				-webkit-animation-fill-mode: forwards;
+						animation-fill-mode: forwards;
+				-webkit-animation-iteration-count: 4;
+						animation-iteration-count: 4;
+			}
 		}
 		
-		> h2:nth-of-type(1){
+		&__heading{
 			float: left;
 			width: 290px;
 			margin: 10vh auto 25px 130px;
+
+			&--headingComeIn{
+				-webkit-animation: textSlideIn 1s ease;
+						animation: textSlideIn 1s ease;
+				-webkit-animation-fill-mode:forwards;
+						animation-fill-mode:forwards;
+			}
 		}
 
-		div:nth-of-type(1){
+		&__article{
 			float: left;
 			clear: left;
 			width: 350px;
 			margin-left: 100px;
+
+			&--paragraphComeIn{
+				-webkit-animation: textSlideIn 2s ease 4s;
+						animation: textSlideIn 2s ease 4s;
+				-webkit-animation-fill-mode:forwards;
+						animation-fill-mode:forwards;
+			}
 		}
-	}
-
-	.questionMarkComeIn{
-		-webkit-animation: questionSlideIn 6s ease 0.5s;
-				animation: questionSlideIn 6s ease 0.5s;
-		-webkit-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-	}
-
-	.lampBlinkStart{
-		-webkit-animation: lampBlink 1.5s 2s;
-				animation: lampBlink 1.5s 2s;
-		-webkit-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-		-webkit-animation-iteration-count: 4;
-				animation-iteration-count: 4;
-	}
-
-	.headingComeIn{
-		-webkit-animation: textSlideIn 1s ease;
-				animation: textSlideIn 1s ease;
-		-webkit-animation-fill-mode:forwards;
-				animation-fill-mode:forwards;
-	}
-
-	.paragraphComeIn{
-		-webkit-animation: textSlideIn 2s ease 4s;
-				animation: textSlideIn 2s ease 4s;
-		-webkit-animation-fill-mode:forwards;
-				animation-fill-mode:forwards;
 	}
 }
 
 @media screen and (min-width:992px){
 
-	.aboutMe{
+	.aboutSection{
 
-		>img:nth-of-type(2){
+		&__qImg{
+
+			&--questionMarkComeIn{
+				-webkit-animation: questionSlideIn 6s ease 0.5s;
+						animation: questionSlideIn 6s ease 0.5s;
+				-webkit-animation-fill-mode: forwards;
+						animation-fill-mode: forwards;
+			}
+		}
+//lamp img
+		&__lImg{
 			top: 12vh;
 			right: calc(50vw - 350px);
 			height: 120px;
 			width: 120px;
+
+			&--lampBlinkStart{
+				-webkit-animation: lampBlink 1.5s 4s;
+						animation: lampBlink 1.5s 4s;
+				-webkit-animation-fill-mode: forwards;
+						animation-fill-mode: forwards;
+				-webkit-animation-iteration-count: 4;
+						animation-iteration-count: 4;
+			}
 		}
 		
-		> h2:nth-of-type(1){
+		&__heading{
 			display: block;
 			float: none;
 			width: 290px;
 			margin: calc(50vh - 150px) auto 25px auto;
+
+			&--headingComeIn{
+				-webkit-animation: textSlideIn 1s ease;
+						animation: textSlideIn 1s ease;
+				-webkit-animation-fill-mode:forwards;
+						animation-fill-mode:forwards;
+			}
 		}
 
-		div:nth-of-type(1){
+		&__article{
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -484,43 +513,19 @@ ABOUT ME
 			margin: 0 auto;
 			width: 800px;
 
-			p{
+			&__paragraph{
 				margin: 6px 10px;
 				font-size: 1.1em;
 			}
+
+			&--paragraphComeIn{
+				-webkit-animation: textSlideIn 2s ease 1s;
+						animation: textSlideIn 2s ease 1s;
+				-webkit-animation-fill-mode:forwards;
+						animation-fill-mode:forwards;
+			}
 		}
 	}
-
-	.questionMarkComeIn{
-		-webkit-animation: questionSlideIn 6s ease 0.5s;
-				animation: questionSlideIn 6s ease 0.5s;
-		-webkit-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-	}
-
-	.paragraphComeIn{
-		-webkit-animation: textSlideIn 2s ease 1s;
-				animation: textSlideIn 2s ease 1s;
-		-webkit-animation-fill-mode:forwards;
-				animation-fill-mode:forwards;
-	}
-
-	.headingComeIn{
-		-webkit-animation: textSlideIn 1s ease;
-				animation: textSlideIn 1s ease;
-		-webkit-animation-fill-mode:forwards;
-				animation-fill-mode:forwards;
-	}
-
-	.lampBlinkStart{
-		-webkit-animation: lampBlink 1.5s 4s;
-				animation: lampBlink 1.5s 4s;
-		-webkit-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-		-webkit-animation-iteration-count: 4;
-				animation-iteration-count: 4;
-	}
-
 }
 
 /*****************

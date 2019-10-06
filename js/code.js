@@ -93,21 +93,21 @@ $(document).ready(function(){
 		
 		//if item is visible - apply class
 		this.showMeItems = $(window).scroll(function(event) {
-			this.modules = $(".aboutMe >img:nth-of-type(1), .aboutMe >img:nth-of-type(2), .aboutMe h2, .aboutMe div:nth-of-type(1)");
-			this.aboutMe = $(".aboutMe");
+			this.modules = $(".aboutSection__qImg, .aboutSection__lImg, .aboutSection__heading, .aboutSection__article");
+			this.aboutSection = $(".aboutSection");
 			this.portfolio = $(".portfolio");
 			this.portfolioItems = $(".portfolioItem");
-			if(aboutMe.visible(true)){
+			if(aboutSection.visible(true)){
 				modules.each(function(i, el) {
 					var el = $(el);
 					if(i===0){
-						el.addClass("questionMarkComeIn");
+						el.addClass("aboutSection__qImg--questionMarkComeIn");
 					}else if(i===1){
-						el.addClass("lampBlinkStart");
+						el.addClass("aboutSection__lImg--lampBlinkStart");
 					}else if(i===2){
-						el.addClass("headingComeIn");
+						el.addClass("aboutSection__heading--headingComeIn");
 					}else if(i===3){
-						el.addClass("paragraphComeIn");
+						el.addClass("aboutSection__article--paragraphComeIn");
 					}
 				});
 			}

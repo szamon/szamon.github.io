@@ -699,7 +699,7 @@ INTRO SECTION
 /*****************
 ABOUT ME
 ******************/
-.aboutMe {
+.aboutSection {
   position: relative;
   min-height: 100vh;
   padding-top: 1px;
@@ -713,7 +713,7 @@ ABOUT ME
   z-index: 99;
 }
 
-.aboutMe > img:nth-of-type(1) {
+.aboutSection__qImg {
   position: absolute;
   height: 0;
   width: 0;
@@ -724,11 +724,18 @@ ABOUT ME
   opacity: 1;
 }
 
-.aboutMe > img:nth-of-type(2) {
+.aboutSection__qImg--questionMarkComeIn {
+  -webkit-animation: questionSlideIn 2s ease;
+  animation: questionSlideIn 2s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.aboutSection__lImg {
   display: none;
 }
 
-.aboutMe > h2:nth-of-type(1) {
+.aboutSection__heading {
   width: 290px;
   margin: 9vh auto 15px auto;
   font-size: 1.4em;
@@ -740,7 +747,14 @@ ABOUT ME
   opacity: 0;
 }
 
-.aboutMe div:nth-of-type(1) {
+.aboutSection__heading--headingComeIn {
+  -webkit-animation: textSlideIn 2s ease 0.5s;
+  animation: textSlideIn 2s ease 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.aboutSection__article {
   margin-top: 0;
   opacity: 0;
   font-size: .9em;
@@ -750,26 +764,12 @@ ABOUT ME
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.aboutMe div:nth-of-type(1) p {
+.aboutSection__article__paragraph {
   margin: 6px 6px;
   text-align: justify;
 }
 
-.headingComeIn {
-  -webkit-animation: textSlideIn 2s ease 0.5s;
-  animation: textSlideIn 2s ease 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.questionMarkComeIn {
-  -webkit-animation: questionSlideIn 2s ease;
-  animation: questionSlideIn 2s ease;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.paragraphComeIn {
+.aboutSection__article--paragraphComeIn {
   -webkit-animation: textSlideIn 1s ease 0.5s;
   animation: textSlideIn 1s ease 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -805,10 +805,16 @@ ABOUT ME
 }
 
 @media screen and (min-width: 768px) {
-  .aboutMe {
+  .aboutSection {
     min-height: 100vh;
   }
-  .aboutMe > img:nth-of-type(2) {
+  .aboutSection__qImg--questionMarkComeIn {
+    -webkit-animation: questionSlideIn 6s ease 0.5s;
+    animation: questionSlideIn 6s ease 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .aboutSection__lImg {
     position: absolute;
     display: block;
     height: 200px;
@@ -817,24 +823,7 @@ ABOUT ME
     right: 90px;
     opacity: 0;
   }
-  .aboutMe > h2:nth-of-type(1) {
-    float: left;
-    width: 290px;
-    margin: 10vh auto 25px 130px;
-  }
-  .aboutMe div:nth-of-type(1) {
-    float: left;
-    clear: left;
-    width: 350px;
-    margin-left: 100px;
-  }
-  .questionMarkComeIn {
-    -webkit-animation: questionSlideIn 6s ease 0.5s;
-    animation: questionSlideIn 6s ease 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .lampBlinkStart {
+  .aboutSection__lImg--lampBlinkStart {
     -webkit-animation: lampBlink 1.5s 2s;
     animation: lampBlink 1.5s 2s;
     -webkit-animation-fill-mode: forwards;
@@ -842,13 +831,24 @@ ABOUT ME
     -webkit-animation-iteration-count: 4;
     animation-iteration-count: 4;
   }
-  .headingComeIn {
+  .aboutSection__heading {
+    float: left;
+    width: 290px;
+    margin: 10vh auto 25px 130px;
+  }
+  .aboutSection__heading--headingComeIn {
     -webkit-animation: textSlideIn 1s ease;
     animation: textSlideIn 1s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  .paragraphComeIn {
+  .aboutSection__article {
+    float: left;
+    clear: left;
+    width: 350px;
+    margin-left: 100px;
+  }
+  .aboutSection__article--paragraphComeIn {
     -webkit-animation: textSlideIn 2s ease 4s;
     animation: textSlideIn 2s ease 4s;
     -webkit-animation-fill-mode: forwards;
@@ -857,19 +857,39 @@ ABOUT ME
 }
 
 @media screen and (min-width: 992px) {
-  .aboutMe > img:nth-of-type(2) {
+  .aboutSection__qImg--questionMarkComeIn {
+    -webkit-animation: questionSlideIn 6s ease 0.5s;
+    animation: questionSlideIn 6s ease 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .aboutSection__lImg {
     top: 12vh;
     right: calc(50vw - 350px);
     height: 120px;
     width: 120px;
   }
-  .aboutMe > h2:nth-of-type(1) {
+  .aboutSection__lImg--lampBlinkStart {
+    -webkit-animation: lampBlink 1.5s 4s;
+    animation: lampBlink 1.5s 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 4;
+    animation-iteration-count: 4;
+  }
+  .aboutSection__heading {
     display: block;
     float: none;
     width: 290px;
     margin: calc(50vh - 150px) auto 25px auto;
   }
-  .aboutMe div:nth-of-type(1) {
+  .aboutSection__heading--headingComeIn {
+    -webkit-animation: textSlideIn 1s ease;
+    animation: textSlideIn 1s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .aboutSection__article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -877,35 +897,15 @@ ABOUT ME
     margin: 0 auto;
     width: 800px;
   }
-  .aboutMe div:nth-of-type(1) p {
+  .aboutSection__article__paragraph {
     margin: 6px 10px;
     font-size: 1.1em;
   }
-  .questionMarkComeIn {
-    -webkit-animation: questionSlideIn 6s ease 0.5s;
-    animation: questionSlideIn 6s ease 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .paragraphComeIn {
+  .aboutSection__article--paragraphComeIn {
     -webkit-animation: textSlideIn 2s ease 1s;
     animation: textSlideIn 2s ease 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  .headingComeIn {
-    -webkit-animation: textSlideIn 1s ease;
-    animation: textSlideIn 1s ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .lampBlinkStart {
-    -webkit-animation: lampBlink 1.5s 4s;
-    animation: lampBlink 1.5s 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: 4;
-    animation-iteration-count: 4;
   }
 }
 
