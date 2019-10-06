@@ -582,7 +582,7 @@ NAV
 /***************
 INTRO SECTION
 ***************/
-.intro {
+.introSection {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -616,21 +616,21 @@ INTRO SECTION
   overflow: visible;
 }
 
-.myNameTitle p:nth-of-type(1) {
+.myNameTitle__name {
   font-size: 2em;
   opacity: 0;
   -webkit-animation: introTextSlide .6s ease-out 1s forwards;
   animation: introTextSlide .6s ease-out 1s forwards;
 }
 
-.myNameTitle p:nth-of-type(2) {
+.myNameTitle__title {
   font-size: 1em;
   opacity: 0;
   -webkit-animation: introTextSlide .6s ease-out 1.4s forwards;
   animation: introTextSlide .6s ease-out 1.4s forwards;
 }
 
-.myNameTitle span {
+.myNameTitle__underline {
   display: block;
   margin: 3px auto 0;
   height: 1px;
@@ -670,7 +670,7 @@ INTRO SECTION
 }
 
 @media screen and (min-width: 768px) {
-  .intro {
+  .introSection {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -684,15 +684,15 @@ INTRO SECTION
   .myNameTitle {
     margin: 0;
   }
-  .myNameTitle > p:nth-of-type(1) {
+  .myNameTitle__name {
     margin: 20px 0 0 5px;
   }
-  .myNameTitle > p:nth-of-type(2) {
+  .myNameTitle__title {
     margin-left: 5px;
   }
-  .myNameTitle > p:nth-of-type(3) {
-    margin-left: 5px;
-    width: auto;
+  .myNameTitle__underline {
+    margin-left: 0 auto;
+    width: 180px;
   }
 }
 
