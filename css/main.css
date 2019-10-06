@@ -600,8 +600,8 @@ INTRO SECTION
   border-radius: 50%;
   z-index: 9999;
   opacity: 0;
-  -webkit-animation: introPicturePop 5s linear 0s forwards;
-  animation: introPicturePop 5s linear 0s forwards;
+  -webkit-animation: introPicturePop 1.5s linear 1.5s forwards;
+  animation: introPicturePop 1.5s linear 1.5s forwards;
 }
 
 .myNameTitle {
@@ -633,8 +633,8 @@ INTRO SECTION
   width: 180px;
   background: white;
   opacity: 0;
-  -webkit-animation: introUnderlineAppear 1s ease-out 5s forwards;
-  animation: introUnderlineAppear 1s ease-out 5s forwards;
+  -webkit-animation: introUnderlineAppear 1s ease-out 2s forwards;
+  animation: introUnderlineAppear 1s ease-out 2s forwards;
 }
 
 .scrollText {
