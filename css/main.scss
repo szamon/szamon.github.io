@@ -379,12 +379,7 @@ ABOUT ME
 		background: rgba(255, 255, 255, 0.05);
 		border-radius: 2px;
 		border: 1px solid rgba(255, 255, 255, .1);
-
-		&__paragraph{
-			margin: 6px 6px;
-			text-align: justify;
-		}
-
+		//text slide in
 		&--paragraphComeIn{
 			-webkit-animation: textSlideIn 1s ease 0.5s;
 					animation: textSlideIn 1s ease 0.5s;
@@ -392,6 +387,11 @@ ABOUT ME
 					animation-fill-mode:forwards;
 		}
 	}
+
+	&__paragraph{
+		margin: 10px 6px;
+		text-align: justify;
+	}	
 }
 
 .scrollText{
@@ -402,7 +402,7 @@ ABOUT ME
 
 	.aboutSection{
 		min-height: 100vh;
-
+//question img
 		&__qImg{
 
 			&--questionMarkComeIn{
@@ -513,17 +513,17 @@ ABOUT ME
 			margin: 0 auto;
 			width: 800px;
 
-			&__paragraph{
-				margin: 6px 10px;
-				font-size: 1.1em;
-			}
-
 			&--paragraphComeIn{
 				-webkit-animation: textSlideIn 2s ease 1s;
 						animation: textSlideIn 2s ease 1s;
 				-webkit-animation-fill-mode:forwards;
 						animation-fill-mode:forwards;
 			}
+		}
+
+		&__paragraph{
+			margin: 6px 10px;
+			font-size: 1.1em;
 		}
 	}
 }
@@ -532,7 +532,7 @@ ABOUT ME
 SKILLS
 ******************/
 	
-.skills{
+.skillsSection{
 	position: relative;
 	min-height: 100vh;
 	width: 100%;
@@ -545,7 +545,7 @@ SKILLS
 	-webkit-box-shadow: inset 0px -50px 70px -70px white;
 	        box-shadow: inset 0px -50px 70px -70px white;
 	
-	h2{
+	&__heading{
 		margin: 14vh 0 25px 0;
 		letter-spacing: 2px;
 	}
@@ -558,79 +558,78 @@ SKILLS
 	background: rgba(255, 255, 255, .03);
 	border-top: 1px solid rgba(255, 255, 255, .03);
 	border-bottom: 1px solid rgba(255, 255, 255, .03); 
-}
 
-.slidesContainer{
-	position: relative;
-	height: 40vh;
-	margin: 20px auto;
-	overflow: hidden;
-}
-
-.slide{
-	height: auto;
-	width: 200px;
-	position: absolute;
-	top: calc(50% - 100px);
-	left: calc(50% - 100px);
-}
-
-.leftArrow, .rightArrow{
-	height: 50px;
-	width: auto;
-	position: absolute;
-	top: calc(50% - 25px);
-	cursor: pointer;
-	-webkit-transition: all .2s;
-	transition: all .2s; 
-	border-radius: 5px;
-	&:hover{
-		background: rgba(255, 255, 255, .05);
+	&__container{
+		position: relative;
+		height: 40vh;
+		margin: 20px auto;
+		overflow: hidden;
 	}
-}
 
-.leftArrow{
-	left: calc(50% - 150px);
-}
+	&__slide{
+		height: auto;
+		width: 200px;
+		position: absolute;
+		top: calc(50% - 100px);
+		left: calc(50% - 100px);
+	}
 
-.rightArrow{
-	right: calc(50% - 150px);
-}
+	&__leftArrow, &__rightArrow{
+		height: 50px;
+		width: auto;
+		position: absolute;
+		top: calc(50% - 25px);
+		cursor: pointer;
+		-webkit-transition: all .2s;
+		transition: all .2s; 
+		border-radius: 5px;
+		&:hover{
+			background: rgba(255, 255, 255, .05);
+		}
+	}
+	
+	&__leftArrow{
+		left: calc(50% - 150px);
+	}
+	
+	&__rightArrow{
+		right: calc(50% - 150px);
+	}
 
-.slidesBar{
-	height: 8%;
-	padding: 4px 0;
-	line-height: 8%;
-	-webkit-transition: all 1s;
-	transition: all 1s;
-	border-top: 1px solid rgba(255, 255, 255, .1);
-
-	img{
-		margin: 0 2px;
-		width: 5%;
-		max-height: 8%;
+	&__bar{
+		height: 8%;
+		padding: 4px 0;
+		line-height: 8%;
 		-webkit-transition: all 1s;
 		transition: all 1s;
-		cursor: pointer;
-		&:hover{
-			background: rgba(255, 255, 255, 0.3);
-			border-radius: 5%;
+		border-top: 1px solid rgba(255, 255, 255, .1);
+	
+		&__img{
+			margin: 0 2px;
+			width: 5%;
+			max-height: 8%;
+			-webkit-transition: all 1s;
+			transition: all 1s;
+			cursor: pointer;
+
+			&:hover{
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 5%;
+			}
+
+			&--active{
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 5%;
+			}
 		}
 	}
 }
-
 //styling of active slidesBar item
 
-.activeSlide{
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 5%;
-}
-
-
 @media screen and (min-width:768px){
-	.skills{
+	.skillsSection{
 
-		h2{
+		&__heading{
 			margin-top: 12vh;
 			margin-bottom: 50px;
 		}
@@ -640,10 +639,10 @@ SKILLS
 
 @media screen and (min-width: 992px){
 
-	.skills{
+	.skillsSection{
 		min-height: 100vh;
 	
-			h2{
+			&__heading{
 				margin-bottom: 25px;
 			}
 		}

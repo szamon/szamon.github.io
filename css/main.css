@@ -764,16 +764,16 @@ ABOUT ME
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.aboutSection__article__paragraph {
-  margin: 6px 6px;
-  text-align: justify;
-}
-
 .aboutSection__article--paragraphComeIn {
   -webkit-animation: textSlideIn 1s ease 0.5s;
   animation: textSlideIn 1s ease 0.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+.aboutSection__paragraph {
+  margin: 10px 6px;
+  text-align: justify;
 }
 
 .scrollText {
@@ -897,22 +897,22 @@ ABOUT ME
     margin: 0 auto;
     width: 800px;
   }
-  .aboutSection__article__paragraph {
-    margin: 6px 10px;
-    font-size: 1.1em;
-  }
   .aboutSection__article--paragraphComeIn {
     -webkit-animation: textSlideIn 2s ease 1s;
     animation: textSlideIn 2s ease 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
+  .aboutSection__paragraph {
+    margin: 6px 10px;
+    font-size: 1.1em;
+  }
 }
 
 /*****************
 SKILLS
 ******************/
-.skills {
+.skillsSection {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -926,7 +926,7 @@ SKILLS
   box-shadow: inset 0px -50px 70px -70px white;
 }
 
-.skills h2 {
+.skillsSection__heading {
   margin: 14vh 0 25px 0;
   letter-spacing: 2px;
 }
@@ -938,14 +938,14 @@ SKILLS
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.slidesContainer {
+.slider__container {
   position: relative;
   height: 40vh;
   margin: 20px auto;
   overflow: hidden;
 }
 
-.slide {
+.slider__slide {
   height: auto;
   width: 200px;
   position: absolute;
@@ -953,7 +953,7 @@ SKILLS
   left: calc(50% - 100px);
 }
 
-.leftArrow, .rightArrow {
+.slider__leftArrow, .slider__rightArrow {
   height: 50px;
   width: auto;
   position: absolute;
@@ -964,19 +964,19 @@ SKILLS
   border-radius: 5px;
 }
 
-.leftArrow:hover, .rightArrow:hover {
+.slider__leftArrow:hover, .slider__rightArrow:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.leftArrow {
+.slider__leftArrow {
   left: calc(50% - 150px);
 }
 
-.rightArrow {
+.slider__rightArrow {
   right: calc(50% - 150px);
 }
 
-.slidesBar {
+.slider__bar {
   height: 8%;
   padding: 4px 0;
   line-height: 8%;
@@ -985,7 +985,7 @@ SKILLS
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.slidesBar img {
+.slider__bar__img {
   margin: 0 2px;
   width: 5%;
   max-height: 8%;
@@ -994,28 +994,28 @@ SKILLS
   cursor: pointer;
 }
 
-.slidesBar img:hover {
+.slider__bar__img:hover {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5%;
 }
 
-.activeSlide {
+.slider__bar__img--active {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5%;
 }
 
 @media screen and (min-width: 768px) {
-  .skills h2 {
+  .skillsSection__heading {
     margin-top: 12vh;
     margin-bottom: 50px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .skills {
+  .skillsSection {
     min-height: 100vh;
   }
-  .skills h2 {
+  .skillsSection__heading {
     margin-bottom: 25px;
   }
 }

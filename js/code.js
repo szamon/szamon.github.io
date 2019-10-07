@@ -168,13 +168,13 @@ $(document).ready(function(){
 	
 	const arrowsData = [
 		{
-			name: "leftArrow",
+			name: "slider__leftArrow",
 			src: "img/arrowDownWhite.png",
 			alt: "leftArrow",
 			style: "transform: rotate(90deg)"
 		},
 		{
-			name: "rightArrow",
+			name: "slider__rightArrow",
 			src: "img/arrowDownWhite.png",
 			alt: "rightArrow",
 			style: "transform: rotate(-90deg)"
@@ -191,18 +191,18 @@ $(document).ready(function(){
 		//getting parent element
 		this.skills = document.getElementsByClassName(parrentClass)[0];
 		//creating slider container
-		this.sliderContainer = document.createElement("div");
-		this.sliderContainer.className = "slider";
+		this.slider = document.createElement("div");
+		this.slider.className = "slider";
 		//appending slider container to the site
-		this.skills.appendChild(this.sliderContainer);
+		this.skills.appendChild(this.slider);
 		//creating container for slides
 		this.slidesContainer = document.createElement("div");
-		this.slidesContainer.className = "slidesContainer";
+		this.slidesContainer.className = "slider__container";
 		//appending slides container to the place on the page
-		this.sliderContainer.appendChild(this.slidesContainer);
+		this.slider.appendChild(this.slidesContainer);
 		//creating SlidesList
 		this.slidesBar = document.createElement("div");
-		this.slidesBar.className = "slidesBar";
+		this.slidesBar.className = "slider__bar";
 		//function creating slides
 		this.createSlides = (list, clName) => {
 			return list.map((x, i) => {
@@ -229,19 +229,19 @@ $(document).ready(function(){
 		this.sideBarActive = (action) => {
 			let el = this.slidesBar.childNodes[this.visibleSlide];
 			if(action === "act"){
-				el.classList.add("activeSlide");
+				el.classList.add("slider__bar__img--active");
 			}else if(action === "dis"){
-				el.classList.remove("activeSlide");
+				el.classList.remove("slider__bar__img--active");
 			}
 		};
 		//slidechange onclick
 		this.slideChange = (e) => {
 			let el = e.target;
-			if(el.className === "leftArrow" && this.visibleSlide > 0){
+			if(el.className === "slider__leftArrow" && this.visibleSlide > 0){
 				this.sideBarActive("dis");
 				this.visibleSlide --;
 				this.slideSwap(this.visibleSlide);
-			}else if(el.className === "rightArrow" && this.visibleSlide < this.slides.length - 1){
+			}else if(el.className === "slider__rightArrow" && this.visibleSlide < this.slides.length - 1){
 				this.sideBarActive("dis");
 				this.visibleSlide ++;
 				this.slideSwap(this.visibleSlide);
@@ -280,8 +280,8 @@ $(document).ready(function(){
 			}
 		}
 		//creating actual slides
-		this.slides = this.createSlides(this.slidesData, "slide");
-		this.slides2 = this.createSlides(this.slidesData2, "slide2");
+		this.slides = this.createSlides(this.slidesData, "slider__slide");
+		this.slides2 = this.createSlides(this.slidesData2, "slider__bar__img");
 		//the same as above with arrows
 		this.arrows = this.createArrows(this.arrowsData);
 		//appending items to SlideBar
@@ -293,9 +293,9 @@ $(document).ready(function(){
 		this.slidesContainer.appendChild(this.slides[0]);
 		this.slidesContainer.appendChild(this.arrows[1]);
 		//appending item to sliderContainer
-		this.sliderContainer.appendChild(this.slidesBar);
+		this.slider.appendChild(this.slidesBar);
 	
-		this.arrowsDOM = document.querySelectorAll(".leftArrow, .rightArrow");
+		this.arrowsDOM = document.querySelectorAll(".slider__leftArrow, .slider__rightArrow");
 		this.visibleSlide = 0;
 	
 		this.arrowsDOM.forEach((x) => addEventListener("click", this.slideChange));
@@ -306,7 +306,7 @@ $(document).ready(function(){
 		this.slidesContainer.childNodes[1].style = "transform: translate(0, 0); opacity: 1; transition: all .2s";
 	};
 	
-	var slider = new Carousel(slidesData, arrowsData, "skills");
+	var sliderApp = new Carousel(slidesData, arrowsData, "skillsSection");
 });
 
 
