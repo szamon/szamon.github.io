@@ -95,7 +95,7 @@ $(document).ready(function(){
 		this.showMeItems = $(window).scroll(function(event) {
 			this.modules = $(".aboutSection__qImg, .aboutSection__lImg, .aboutSection__heading, .aboutSection__article");
 			this.aboutSection = $(".aboutSection");
-			this.portfolio = $(".portfolio");
+			this.portfolio = $(".portfolioSection");
 			this.portfolioItems = $(".portfolioItem");
 			if(aboutSection.visible(true)){
 				modules.each(function(i, el) {
@@ -112,7 +112,7 @@ $(document).ready(function(){
 				});
 			}
 			if(portfolio.visible(true)){
-				portfolioItems.addClass("portfolioItemVisible");
+				portfolioItems.addClass("portfolioItem--visible");
 			};
 		});
 	};

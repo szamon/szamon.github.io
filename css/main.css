@@ -1023,7 +1023,7 @@ SKILLS
 /*****************
 PORTFOLIO
 ******************/
-.portfolio {
+.portfolioSection {
   position: relative;
   height: 2175px;
   padding-top: 1px;
@@ -1035,14 +1035,14 @@ PORTFOLIO
   box-shadow: inset 0px -55px 70px -70px black;
 }
 
-.portfolio_header {
+.portfolioSection__header {
   display: inline-block;
   width: 100%;
   margin-top: 10vh;
   font-weight: 100;
 }
 
-.portfolioItemsContainer {
+.portfolioSection__itemsContainer {
   border-top: 1px solid white;
   margin-bottom: 25px;
   background: rgba(255, 255, 255, 0.03);
@@ -1060,9 +1060,12 @@ PORTFOLIO
   -webkit-box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
   box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
   z-index: 2;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  opacity: 0;
 }
 
-.portfolioItem h3:nth-of-type(1) {
+.portfolioItem__heading {
   font-weight: 100;
   margin: 15px 0 0 0;
   z-index: 2;
@@ -1071,7 +1074,7 @@ PORTFOLIO
   font-size: 1.3em;
 }
 
-.portfolioItem p {
+.portfolioItem__p {
   font-family: "Quicksand", sans-serif;
   font-size: 0.9em;
   font-style: italic;
@@ -1079,7 +1082,7 @@ PORTFOLIO
   z-index: 2;
 }
 
-.portfolioItem div {
+.portfolioItem__button {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -1087,6 +1090,8 @@ PORTFOLIO
   height: 30px;
   width: 50px;
   margin: 15px auto;
+  font-family: inherit;
+  background: none;
   color: white;
   text-align: center;
   line-height: 30px;
@@ -1097,7 +1102,7 @@ PORTFOLIO
   z-index: 2;
 }
 
-.portfolioItem div:hover {
+.portfolioItem__button:hover {
   background: white;
   color: #4c535e;
 }
@@ -1115,45 +1120,39 @@ PORTFOLIO
   z-index: -1;
 }
 
-.szymskiBeats::after {
+.portfolioItem--szymskiBeats::after {
   background: url("../img/szymskiBeats.jpg") 0 no-repeat;
 }
 
-.artofgraf::after {
+.portfolioItem--artofgraf::after {
   background: url("../img/absoluteFreedom.jpg") 50% no-repeat;
 }
 
-.drumMachine::after {
+.portfolioItem--drumMachine::after {
   background: url("../img/drumMachine.jpg") 50% no-repeat;
 }
 
-.calculator::after {
+.portfolioItem--calculator::after {
   background: url("../img/Calculator.jpg") 50% no-repeat;
 }
 
-.sessionClock::after {
+.portfolioItem--sessionClock::after {
   background: url("../img/sessionClock.jpg") 50% no-repeat;
 }
 
-.toDoQuestList::after {
+.portfolioItem--toDoQuestList::after {
   background: url("../img/toDoList.jpg") 50% no-repeat;
 }
 
-.supremeQuiz::after {
+.portfolioItem--supremeQuiz::after {
   background: url("../img/quiz.jpg") 50% no-repeat;
 }
 
-.markdownPreviewer::after {
+.portfolioItem--markdownPreviewer::after {
   background: url("../img/markdownPreviewer.jpg") 50% no-repeat;
 }
 
-.portfolioItem {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
-  opacity: 0;
-}
-
-.portfolioItemVisible {
+.portfolioItem--visible {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
@@ -1167,30 +1166,30 @@ PORTFOLIO
   letter-spacing: 1px;
 }
 
-.githubProfile h2 {
+.githubProfile__heading {
   margin: 10px auto;
   letter-spacing: 1.5px;
 }
 
-.githubProfile a img, .githubProfile a p {
+.githubProfile__anchor__img, .githubProfile__anchor__p {
   display: inline-block;
   vertical-align: middle;
 }
 
-.githubProfile a img {
+.githubProfile__anchor__img {
   max-width: 30%;
 }
 
-.githubProfile a p {
+.githubProfile__anchor__p {
   color: white;
   font-weight: 100;
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio {
+  .portfolioSection {
     height: 1500px;
   }
-  .portfolioItemsContainer {
+  .portfolioSection__itemsContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1202,16 +1201,16 @@ PORTFOLIO
   .portfolioItem {
     width: 300px;
   }
-  .portfolioItem div {
+  .portfolioItem__button {
     margin: 18px auto;
   }
-  .portfolioItem p {
+  .portfolioItem__p {
     margin-top: 15px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .portfolioItemsContainer {
+  .portfolioSection__itemsContainer {
     max-width: 1000px;
   }
   .portfolioItem {
