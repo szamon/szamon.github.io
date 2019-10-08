@@ -1025,7 +1025,7 @@ PORTFOLIO
 ******************/
 .portfolioSection {
   position: relative;
-  height: 2175px;
+  height: 2100px;
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.97);
@@ -1044,8 +1044,14 @@ PORTFOLIO
 
 .portfolioSection__itemsContainer {
   border-top: 1px solid white;
-  margin-bottom: 25px;
+  margin: 25px auto 25px auto;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.03);
+  width: 99%;
+  display: -ms-grid;
+  display: grid;
+  grid: auto-flow / 1fr;
+  grid-gap: 5px;
 }
 
 .portfolioItem {
@@ -1054,7 +1060,7 @@ PORTFOLIO
   position: relative;
   height: 185px;
   width: 260px;
-  margin: 20px auto 20px auto;
+  margin: auto;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   -webkit-box-shadow: -4px 4px 17px -2px rgba(0, 0, 0, 0.65);
@@ -1063,6 +1069,10 @@ PORTFOLIO
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   opacity: 0;
+}
+
+.portfolioItem:hover::after {
+  opacity: .6;
 }
 
 .portfolioItem__heading {
@@ -1187,7 +1197,7 @@ PORTFOLIO
 
 @media screen and (min-width: 768px) {
   .portfolioSection {
-    height: 1500px;
+    height: 1350px;
   }
   .portfolioSection__itemsContainer {
     display: -webkit-box;
@@ -1195,11 +1205,18 @@ PORTFOLIO
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 20px auto 25px auto;
-    width: 90%;
+    margin: auto;
+    width: 650px;
+    display: -ms-grid;
+    display: grid;
+    grid: auto-flow / 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .portfolioItem {
     width: 300px;
+    margin: auto;
   }
   .portfolioItem__button {
     margin: 18px auto;
@@ -1212,9 +1229,10 @@ PORTFOLIO
 @media screen and (min-width: 992px) {
   .portfolioSection__itemsContainer {
     max-width: 1000px;
+    grid-gap: 10px;
   }
   .portfolioItem {
-    width: 400px;
+    width: 300px;
   }
 }
 
