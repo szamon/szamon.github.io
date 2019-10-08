@@ -698,6 +698,9 @@ PORTFOLIO
 	-webkit-transform: translateY(-10px);
 	transform: translateY(-10px);
 	opacity: 0;
+	display: grid;
+	grid: 50px 1fr 50px / 1fr;
+	align-items: center;
 
 	&:hover::after{
 		opacity: .6;
@@ -706,7 +709,7 @@ PORTFOLIO
 //title of item
 	&__heading{
 		font-weight: 100;
-		margin: 15px 0 0 0;
+		//margin: 15px 0 0 0;
 		z-index: 2;
 		letter-spacing: 1.3px;
 		text-shadow: 1px 1px rgba(0,0,0,0.65);
@@ -718,18 +721,18 @@ PORTFOLIO
 		font-family: $font-stack2;
 		font-size: 0.9em;
 		font-style: italic;
-		margin-top: 15px;
+		//margin-top: 15px;
 		z-index: 2;
 	}
 //button
 	&__button{
-		position: absolute;
-		bottom: 5px;
-		left: 0;
-		right: 0;
+		// position: absolute;
+		// bottom: 5px;
+		// left: 0;
+		// right: 0;
 		height: 30px;
 		width: 50px;
-		margin: 15px auto;
+		//margin: 15px auto;
 		font-family: inherit;
 		background: none;
 		color: white;
@@ -856,13 +859,13 @@ PORTFOLIO
 		width: 300px;
 		margin: auto;
 
-		&__button{
-			margin: 18px auto;
-		}	
+		// &__button{
+		// 	margin: 18px auto;
+		// }	
 		
-		&__p{
-			margin-top: 15px;
-		}
+		// &__p{
+		// 	margin-top: 15px;
+		// }
 	}
 }
 
