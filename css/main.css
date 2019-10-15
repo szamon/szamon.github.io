@@ -1145,6 +1145,10 @@ PORTFOLIO
   background: url("../img/Calculator.jpg") 50% no-repeat;
 }
 
+.portfolioItem--weatherApp::after {
+  background: url("../img/weatherApp.jpg") 50% no-repeat;
+}
+
 .portfolioItem--sessionClock::after {
   background: url("../img/sessionClock.jpg") 50% no-repeat;
 }
