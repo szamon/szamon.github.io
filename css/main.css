@@ -1149,6 +1149,10 @@ PORTFOLIO
   background: url("../img/weatherApp.jpg") 50% no-repeat;
 }
 
+.portfolioItem--pankodzinski::after {
+  background: url("../img/pankodzinski.jpg") 50% no-repeat;
+}
+
 .portfolioItem--sessionClock::after {
   background: url("../img/sessionClock.jpg") 50% no-repeat;
 }
