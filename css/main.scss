@@ -929,6 +929,18 @@ CONTACT
 		margin: 0 auto;
 	}
 
+	&__label::-webkit-input-placeholder, &__input::-webkit-input-placeholder, &__textarea::-webkit-input-placeholder{
+		font-style: italic;
+	}
+
+	&__label:-ms-input-placeholder, &__input:-ms-input-placeholder, &__textarea:-ms-input-placeholder{
+		font-style: italic;
+	}
+
+	&__label::-ms-input-placeholder, &__input::-ms-input-placeholder, &__textarea::-ms-input-placeholder{
+		font-style: italic;
+	}
+
 	&__label::placeholder, &__input::placeholder, &__textarea::placeholder{
 		font-style: italic;
 	}
@@ -950,6 +962,10 @@ CONTACT
 		border-radius: 2%;
 		font-family: $font-stack2;
 		color: rgb(40, 58, 89);
+	}
+
+	&__input, &__textarea{
+		font-size: .8em;
 	}
 
 	&__inputSubmit{
@@ -1025,9 +1041,11 @@ CONTACT
 
 	.form{
 		display: grid;
+		grid-gap: 5px;
+		justify-items: center;
 		height: 260px;
 		width: 600px;
-		margin: 30px auto 0 auto;
+		margin: 15px auto 0 auto;
 		
 		&__label{
 			width: 50%;
@@ -1036,19 +1054,26 @@ CONTACT
 
 		&__input{
 			height: 25px;;
-			width: calc(50% - 20px);
+			width: 60%;
 			margin: 0 10px;
 			line-height: 25px;
 		}
 
 		&__textarea{
 			height: 150px;
+			width: 60%;
 			margin: 0 10px;
 			line-height: 25px;
 		}
 
 		&__inputSubmit{
-			align-self: center;
+			-ms-flex-item-align: center;
+			    align-self: center;
+
+			&:hover{
+				background: rgb(76, 83, 94);
+				color: white;
+			}
 		}
 		// label:nth-of-type(3), textarea{
 		// 	width: 100%;

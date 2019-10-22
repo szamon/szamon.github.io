@@ -1331,6 +1331,10 @@ CONTACT
   color: #283a59;
 }
 
+.form__input, .form__textarea {
+  font-size: .8em;
+}
+
 .form__inputSubmit {
   height: 28px;
   width: 50px;
@@ -1401,9 +1405,11 @@ CONTACT
   .form {
     display: -ms-grid;
     display: grid;
+    grid-gap: 5px;
+    justify-items: center;
     height: 260px;
     width: 600px;
-    margin: 30px auto 0 auto;
+    margin: 15px auto 0 auto;
   }
   .form__label {
     width: 50%;
@@ -1411,19 +1417,24 @@ CONTACT
   }
   .form__input {
     height: 25px;
-    width: calc(50% - 20px);
+    width: 60%;
     margin: 0 10px;
     line-height: 25px;
   }
   .form__textarea {
     height: 150px;
+    width: 60%;
     margin: 0 10px;
     line-height: 25px;
   }
   .form__inputSubmit {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
+    -ms-grid-row-align: center;
         align-self: center;
+  }
+  .form__inputSubmit:hover {
+    background: #4c535e;
+    color: white;
   }
 }
 
