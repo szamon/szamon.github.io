@@ -1244,7 +1244,7 @@ CONTACT
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding-top: 25vh;
+  padding-top: 20vh;
   background-color: rgba(40, 58, 89, 0.99);
   font-family: "Bangers", helvetica;
   letter-spacing: .6px;
@@ -1256,63 +1256,6 @@ CONTACT
 
 .contactSection__heading {
   font-weight: 100;
-}
-
-.contactSection .form {
-  margin-top: 15px;
-}
-
-.contactSection .form__label, .contactSection .form__input, .contactSection .form__textarea {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
-.contactSection .form__label::-webkit-input-placeholder, .contactSection .form__input::-webkit-input-placeholder, .contactSection .form__textarea::-webkit-input-placeholder {
-  font-style: italic;
-}
-
-.contactSection .form__label:-ms-input-placeholder, .contactSection .form__input:-ms-input-placeholder, .contactSection .form__textarea:-ms-input-placeholder {
-  font-style: italic;
-}
-
-.contactSection .form__label::-ms-input-placeholder, .contactSection .form__input::-ms-input-placeholder, .contactSection .form__textarea::-ms-input-placeholder {
-  font-style: italic;
-}
-
-.contactSection .form__label::placeholder, .contactSection .form__input::placeholder, .contactSection .form__textarea::placeholder {
-  font-style: italic;
-}
-
-.contactSection .form__label {
-  margin-top: 10px;
-}
-
-.contactSection .form__input {
-  margin-top: 5px;
-  border-radius: 5%;
-  font-family: "Quicksand", sans-serif;
-  color: #283a59;
-}
-
-.contactSection .form__textarea {
-  height: 80px;
-  margin-top: 5px;
-  border-radius: 2%;
-  font-family: "Quicksand", sans-serif;
-  color: #283a59;
-}
-
-.contactSection .form__inputSubmit {
-  height: 28px;
-  width: 50px;
-  margin-top: 15px;
-  border-radius: 20%;
-  font-family: "Bangers", helvetica;
-  letter-spacing: .6px;
-  color: #283a59;
-  background: white;
-  cursor: pointer;
 }
 
 .contactSection .scrollText {
@@ -1341,6 +1284,63 @@ CONTACT
   animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
   animation-direction: normal;
+}
+
+.form {
+  margin-top: 15px;
+}
+
+.form__label, .form__input, .form__textarea {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.form__label::-webkit-input-placeholder, .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.form__label:-ms-input-placeholder, .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.form__label::-ms-input-placeholder, .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+  font-style: italic;
+}
+
+.form__label::placeholder, .form__input::placeholder, .form__textarea::placeholder {
+  font-style: italic;
+}
+
+.form__label {
+  margin-top: 10px;
+}
+
+.form__input {
+  margin-top: 5px;
+  border-radius: 5%;
+  font-family: "Quicksand", sans-serif;
+  color: #283a59;
+}
+
+.form__textarea {
+  height: 80px;
+  margin-top: 5px;
+  border-radius: 2%;
+  font-family: "Quicksand", sans-serif;
+  color: #283a59;
+}
+
+.form__inputSubmit {
+  height: 28px;
+  width: 50px;
+  margin-top: 15px;
+  border-radius: 20%;
+  font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
+  color: #283a59;
+  background: white;
+  cursor: pointer;
 }
 
 .phoneEmail {
@@ -1396,17 +1396,34 @@ CONTACT
 
 @media screen and (min-width: 768px) {
   .contactSection {
-    padding-top: 35vh;
+    padding-top: 10vh;
   }
-  .phoneEmail {
-    font-size: 1em;
+  .form {
+    display: -ms-grid;
+    display: grid;
+    height: 260px;
+    width: 600px;
+    margin: 30px auto 0 auto;
   }
-  .phoneEmail__phone, .phoneEmail__email {
-    margin: 0 60px;
-    letter-spacing: 1px;
+  .form__label {
+    width: 50%;
+    margin: 0;
   }
-  .phoneEmail__phone__img, .phoneEmail__email__img {
-    max-width: 45px;
+  .form__input {
+    height: 25px;
+    width: calc(50% - 20px);
+    margin: 0 10px;
+    line-height: 25px;
+  }
+  .form__textarea {
+    height: 150px;
+    margin: 0 10px;
+    line-height: 25px;
+  }
+  .form__inputSubmit {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 

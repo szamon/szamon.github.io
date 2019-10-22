@@ -902,7 +902,7 @@ CONTACT
 	position: relative;
 	min-height: 100vh;
 	width: 100%;
-	padding-top: 25vh;
+	padding-top: 20vh;
 	background-color: rgba(40, 58, 89, 0.99);
 	font-family: $font-stack;
 	letter-spacing: .6px;
@@ -915,53 +915,53 @@ CONTACT
 		font-weight: 100;
 	}
 
-	.form{
-		margin-top: 15px;
-
-		&__label, &__input, &__textarea{
-			width: 80%;
-			display: block;
-			margin: 0 auto;
-		}
-
-		&__label::placeholder, &__input::placeholder, &__textarea::placeholder{
-			font-style: italic;
-		}
-
-		&__label{
-			margin-top: 10px;
-		}
-
-		&__input{
-			margin-top: 5px;
-			border-radius: 5%;
-			font-family: $font-stack2;
-			color: rgb(40, 58, 89);
-		}
-
-		&__textarea{
-			height: 80px;
-			margin-top: 5px;
-			border-radius: 2%;
-			font-family: $font-stack2;
-			color: rgb(40, 58, 89);
-		}
-
-		&__inputSubmit{
-			height: 28px;
-			width: 50px;
-			margin-top: 15px;
-			border-radius: 20%;
-			font-family: $font-stack;
-			letter-spacing: .6px;
-			color: rgb(40, 58, 89);
-			background: white;
-			cursor: pointer;
-		}
-	}
-
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollTextRev);
+	}
+}
+
+.form{
+	margin-top: 15px;
+
+	&__label, &__input, &__textarea{
+		width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	&__label::placeholder, &__input::placeholder, &__textarea::placeholder{
+		font-style: italic;
+	}
+
+	&__label{
+		margin-top: 10px;
+	}
+
+	&__input{
+		margin-top: 5px;
+		border-radius: 5%;
+		font-family: $font-stack2;
+		color: rgb(40, 58, 89);
+	}
+
+	&__textarea{
+		height: 80px;
+		margin-top: 5px;
+		border-radius: 2%;
+		font-family: $font-stack2;
+		color: rgb(40, 58, 89);
+	}
+
+	&__inputSubmit{
+		height: 28px;
+		width: 50px;
+		margin-top: 15px;
+		border-radius: 20%;
+		font-family: $font-stack;
+		letter-spacing: .6px;
+		color: rgb(40, 58, 89);
+		background: white;
+		cursor: pointer;
 	}
 }
 
@@ -1020,98 +1020,53 @@ CONTACT
 @media screen and (min-width:768px){
 
 	.contactSection{
-		padding-top: 35vh;
+		padding-top: 10vh;
 	}
 
-	// .form{
-	// 	display: -webkit-box;
-	// 	display: -ms-flexbox;
-	// 	display: flex;
-	// 	-ms-flex-wrap: wrap;
-	// 		flex-wrap: wrap;
-	// 	-webkit-box-orient: horizontal;
-	// 	-webkit-box-direction: normal;
-	// 		-ms-flex-direction: row;
-	// 			flex-direction: row;
-	// 	-webkit-box-pack: start;
-	// 		-ms-flex-pack: start;
-	// 			justify-content: flex-start;
-	// 	height: 260px;
-	// 	width: 600px;
-	// 	margin: 30px auto 0 auto;
+	.form{
+		display: grid;
+		height: 260px;
+		width: 600px;
+		margin: 30px auto 0 auto;
 		
-	// 	label:nth-of-type(1), label:nth-of-type(2){
-	// 		width: 50%;
-	// 		margin: 0;
-	// 	}
+		&__label{
+			width: 50%;
+			margin: 0;
+		}
 
-	// 	input{
-	// 		height: 25px;
-	// 		width: calc(50% - 20px);
-	// 		margin: 0 10px;
-	// 		line-height: 25px;
-	// 	}
+		&__input{
+			height: 25px;;
+			width: calc(50% - 20px);
+			margin: 0 10px;
+			line-height: 25px;
+		}
 
-	// 	textarea{
-	// 		height: 150px;
-	// 		margin: 0 10px;
-	// 		line-height: 25px;
-	// 	}
+		&__textarea{
+			height: 150px;
+			margin: 0 10px;
+			line-height: 25px;
+		}
 
-	// 	label:nth-of-type(3), textarea{
-	// 		width: 100%;
-	// 	}
+		&__inputSubmit{
+			align-self: center;
+		}
+		// label:nth-of-type(3), textarea{
+		// 	width: 100%;
+		// }
+	}
 
-	// 	label:nth-of-type(1){
-	// 		-webkit-box-ordinal-group: 2;
-	// 			-ms-flex-order: 1;
-	// 				order: 1;
-	// 	}
+	// .phoneEmail{
+	// 	font-size: 1em;
 
-	// 	label:nth-of-type(2){
-	// 		-webkit-box-ordinal-group: 3;
-	// 			-ms-flex-order: 2;
-	// 				order: 2;
-	// 	}
-
-	// 	input:nth-of-type(1){
-	// 		-webkit-box-ordinal-group: 4;
-	// 			-ms-flex-order: 3;
-	// 				order: 3;
-	// 	}
-
-	// 	input:nth-of-type(2){
-	// 		-webkit-box-ordinal-group: 5;
-	// 			-ms-flex-order: 4;
-	// 				order: 4;
-	// 	}
-
-	// 	label:nth-of-type(3){
-	// 		margin-top: 35px;
-	// 		-webkit-box-ordinal-group: 6;
-	// 			-ms-flex-order: 5;
-	// 				order: 5;
-	// 	}
-
-	// 	textarea{
-	// 		-webkit-box-ordinal-group: 7;
-	// 			-ms-flex-order: 6;
-	// 				order: 6;
+	// 	&__phone, &__email{
+	// 		margin: 0 60px;
+	// 		letter-spacing: 1px;
+	
+	// 		&__img{
+	// 			max-width: 45px;
+	// 		}
 	// 	}
 	// }
-
-	.phoneEmail{
-		font-size: 1em;
-
-		&__phone, &__email{
-			margin: 0 60px;
-			letter-spacing: 1px;
-	
-			&__img{
-				max-width: 45px;
-			}
-		}
-	}
 	}
 
 /*******************
