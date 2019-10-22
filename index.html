@@ -177,17 +177,14 @@
       </section>
       <section id="contact" class="contactSection">
         <h2 class="contactSection__heading">Contact me:</h2>
-        <!-- <form action="php/contact.php" method="post">
-          <div class="form">
-            <label for="name">Imię:</label>
-            <input type="text" id="name" name="user_name">
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email">
-            <label for="message">Wiadomość:</label>
-            <textarea id="message" name="user_message"></textarea>
-          </div>
-          <input type="submit" value="Wyślij">
-        </form> -->
+        <form action="https://formspree.io/maywndev" method="POST">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="yourEmail@example.com" name="_replyto">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" name="subject" placeholder="Front End Developer - Job offer">
+          <textarea name="text"></textarea>
+          <input type="submit" value="Send">
+        </form>
         <div class="phoneEmail">
           <a href="mailto:szy.majewski@gmail.com">
             <div class="phoneEmail__email">

@@ -1025,7 +1025,7 @@ PORTFOLIO
 ******************/
 .portfolioSection {
   position: relative;
-  height: 2100px;
+  height: 2450px;
   padding-top: 1px;
   padding-bottom: 1px;
   background: rgba(168, 37, 37, 0.97);
@@ -1256,6 +1256,46 @@ CONTACT
 
 .contactSection__heading {
   font-weight: 100;
+}
+
+.contactSection form {
+  margin-top: 15px;
+}
+
+.contactSection form label, .contactSection form input, .contactSection form textarea {
+  display: block;
+  margin: 0 auto;
+}
+
+.contactSection form label {
+  margin-top: 10px;
+}
+
+.contactSection form input {
+  margin-top: 5px;
+  border-radius: 5%;
+  font-family: "Quicksand", sans-serif;
+  color: #283a59;
+}
+
+.contactSection form textarea {
+  height: 80px;
+  margin-top: 5px;
+  border-radius: 2%;
+  font-family: "Quicksand", sans-serif;
+  color: #283a59;
+}
+
+.contactSection form input[type="submit"] {
+  height: 28px;
+  width: 50px;
+  margin-top: 15px;
+  border-radius: 20%;
+  font-family: "Bangers", helvetica;
+  letter-spacing: .6px;
+  color: #283a59;
+  background: white;
+  cursor: pointer;
 }
 
 .contactSection .scrollText {

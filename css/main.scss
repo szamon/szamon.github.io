@@ -655,7 +655,7 @@ PORTFOLIO
 //portfolio wrapper
 .portfolioSection{
 	position: relative;
-	height: 2100px;
+	height: 2450px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 	background: rgba(168, 37, 37, 0.97);
@@ -915,45 +915,45 @@ CONTACT
 		font-weight: 100;
 	}
 
-	// form{
-	// 	margin-top: 15px;
+	form{
+		margin-top: 15px;
 
-	// 	label, input, textarea{
-	// 		display: block;
-	// 		margin: 0 auto;
-	// 	}
+		label, input, textarea{
+			display: block;
+			margin: 0 auto;
+		}
 
-	// 	label{
-	// 		margin-top: 10px;
-	// 	}
+		label{
+			margin-top: 10px;
+		}
 
-	// 	input{
-	// 		margin-top: 5px;
-	// 		border-radius: 5%;
-	// 		font-family: $font-stack2;
-	// 		color: rgb(40, 58, 89);
-	// 	}
+		input{
+			margin-top: 5px;
+			border-radius: 5%;
+			font-family: $font-stack2;
+			color: rgb(40, 58, 89);
+		}
 
-	// 	textarea{
-	// 		height: 80px;
-	// 		margin-top: 5px;
-	// 		border-radius: 2%;
-	// 		font-family: $font-stack2;
-	// 		color: rgb(40, 58, 89);
-	// 	}
+		textarea{
+			height: 80px;
+			margin-top: 5px;
+			border-radius: 2%;
+			font-family: $font-stack2;
+			color: rgb(40, 58, 89);
+		}
 
-	// 	input[type="submit"]{
-	// 		height: 28px;
-	// 		width: 50px;
-	// 		margin-top: 15px;
-	// 		border-radius: 20%;
-	// 		font-family: $font-stack;
-	// 		letter-spacing: .6px;
-	// 		color: rgb(40, 58, 89);
-	// 		background: white;
-	// 		cursor: pointer;
-	// 	}
-	// }
+		input[type="submit"]{
+			height: 28px;
+			width: 50px;
+			margin-top: 15px;
+			border-radius: 20%;
+			font-family: $font-stack;
+			letter-spacing: .6px;
+			color: rgb(40, 58, 89);
+			background: white;
+			cursor: pointer;
+		}
+	}
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollTextRev);
 	}
