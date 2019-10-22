@@ -24,7 +24,6 @@ $(document).ready(function(){
 				this.nav = $(".navList");
 				this.bars = this.menu[0].children;
 				this.liItems = this.nav[0].children;
-				console.log(this.bars);
 				if(this.overlay.hasClass("overlay--open")){
 					this.menu.removeClass("menuBars--open");
 					this.overlay.removeClass("overlay--open");
