@@ -902,7 +902,7 @@ CONTACT
 	position: relative;
 	min-height: 100vh;
 	width: 100%;
-	padding-top: 35vh;
+	padding-top: 25vh;
 	background-color: rgba(40, 58, 89, 0.99);
 	font-family: $font-stack;
 	letter-spacing: .6px;
@@ -915,26 +915,31 @@ CONTACT
 		font-weight: 100;
 	}
 
-	form{
+	.form{
 		margin-top: 15px;
 
-		label, input, textarea{
+		&__label, &__input, &__textarea{
+			width: 80%;
 			display: block;
 			margin: 0 auto;
 		}
 
-		label{
+		&__label::placeholder, &__input::placeholder, &__textarea::placeholder{
+			font-style: italic;
+		}
+
+		&__label{
 			margin-top: 10px;
 		}
 
-		input{
+		&__input{
 			margin-top: 5px;
 			border-radius: 5%;
 			font-family: $font-stack2;
 			color: rgb(40, 58, 89);
 		}
 
-		textarea{
+		&__textarea{
 			height: 80px;
 			margin-top: 5px;
 			border-radius: 2%;
@@ -942,7 +947,7 @@ CONTACT
 			color: rgb(40, 58, 89);
 		}
 
-		input[type="submit"]{
+		&__inputSubmit{
 			height: 28px;
 			width: 50px;
 			margin-top: 15px;
@@ -954,6 +959,7 @@ CONTACT
 			cursor: pointer;
 		}
 	}
+
 	.scrollText{
 		@include scrollText(5px, 0, 0, white, scrollTextRev);
 	}

@@ -1244,7 +1244,7 @@ CONTACT
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding-top: 35vh;
+  padding-top: 25vh;
   background-color: rgba(40, 58, 89, 0.99);
   font-family: "Bangers", helvetica;
   letter-spacing: .6px;
@@ -1258,27 +1258,44 @@ CONTACT
   font-weight: 100;
 }
 
-.contactSection form {
+.contactSection .form {
   margin-top: 15px;
 }
 
-.contactSection form label, .contactSection form input, .contactSection form textarea {
+.contactSection .form__label, .contactSection .form__input, .contactSection .form__textarea {
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
 
-.contactSection form label {
+.contactSection .form__label::-webkit-input-placeholder, .contactSection .form__input::-webkit-input-placeholder, .contactSection .form__textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.contactSection .form__label:-ms-input-placeholder, .contactSection .form__input:-ms-input-placeholder, .contactSection .form__textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.contactSection .form__label::-ms-input-placeholder, .contactSection .form__input::-ms-input-placeholder, .contactSection .form__textarea::-ms-input-placeholder {
+  font-style: italic;
+}
+
+.contactSection .form__label::placeholder, .contactSection .form__input::placeholder, .contactSection .form__textarea::placeholder {
+  font-style: italic;
+}
+
+.contactSection .form__label {
   margin-top: 10px;
 }
 
-.contactSection form input {
+.contactSection .form__input {
   margin-top: 5px;
   border-radius: 5%;
   font-family: "Quicksand", sans-serif;
   color: #283a59;
 }
 
-.contactSection form textarea {
+.contactSection .form__textarea {
   height: 80px;
   margin-top: 5px;
   border-radius: 2%;
@@ -1286,7 +1303,7 @@ CONTACT
   color: #283a59;
 }
 
-.contactSection form input[type="submit"] {
+.contactSection .form__inputSubmit {
   height: 28px;
   width: 50px;
   margin-top: 15px;
