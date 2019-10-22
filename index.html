@@ -177,22 +177,23 @@
       </section>
       <section id="contact" class="contactSection">
         <h2 class="contactSection__heading">Contact me:</h2>
-        <form action="https://formspree.io/maywndev" method="POST">
-          <label for="email">E-mail</label>
-          <input id="email" type="email" placeholder="yourEmail@example.com" name="_replyto">
-          <label for="subject">Subject</label>
-          <input id="subject" type="text" name="subject" placeholder="Front End Developer - Job offer">
-          <textarea name="text"></textarea>
+        <form class="form" action="https://formspree.io/maywndev" method="POST">
+          <label class="form__emailLabel" for="email">E-mail</label>
+          <input class="form__emailInput" id="email" type="email" placeholder="yourEmail@example.com" name="_replyto">
+          <label class="form__subjectLabel" for="subject">Subject</label>
+          <input class="form__subject input" id="subject" type="text" name="subject" placeholder="Front End Developer - Job offer">
+          <label class="form__textareaLabel" for="text">Message</label>
+          <textarea class="form__textarea" id="text" name="text"></textarea>
           <input type="submit" value="Send">
         </form>
-        <div class="phoneEmail">
+        <!-- <div class="phoneEmail">
           <a href="mailto:szy.majewski@gmail.com">
             <div class="phoneEmail__email">
               <img class="phoneEmail__email__img" src="img/email.png">
               <p class="phoneEmail__email__p">szy.majewski@gmail.com</p>
             </div>
           </a>
-        </div>
+        </div> -->
         <div class="scrollText">
           <a href="#intro" class="scrollText__anchor">
             <p>scroll to the top</p>
