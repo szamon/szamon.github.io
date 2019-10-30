@@ -755,7 +755,7 @@ ABOUT ME
 }
 
 .aboutSection__article {
-  margin-top: 0;
+  margin-top: 30px;
   opacity: 0;
   font-size: .9em;
   font-style: italic;
@@ -773,7 +773,7 @@ ABOUT ME
 
 .aboutSection__paragraph {
   margin: 10px 6px;
-  text-align: justify;
+  text-align: center;
 }
 
 .scrollText {
@@ -846,6 +846,7 @@ ABOUT ME
     float: left;
     clear: left;
     width: 350px;
+    margin-top: 0;
     margin-left: 100px;
   }
   .aboutSection__article--paragraphComeIn {
@@ -892,7 +893,10 @@ ABOUT ME
   .aboutSection__article {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     float: none;
     margin: 0 auto;
     width: 800px;

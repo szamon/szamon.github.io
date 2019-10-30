@@ -372,7 +372,7 @@ ABOUT ME
 	}
 
 	&__article{
-		margin-top: 0;
+		margin-top: 30px;
 		opacity: 0;
 		font-size: .9em;
 		font-style: italic;
@@ -390,7 +390,7 @@ ABOUT ME
 
 	&__paragraph{
 		margin: 10px 6px;
-		text-align: justify;
+		text-align: center;
 	}	
 }
 
@@ -449,6 +449,7 @@ ABOUT ME
 			float: left;
 			clear: left;
 			width: 350px;
+			margin-top: 0;
 			margin-left: 100px;
 
 			&--paragraphComeIn{
@@ -508,7 +509,8 @@ ABOUT ME
 		&__article{
 			display: -webkit-box;
 			display: -ms-flexbox;
-			display: flex;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
 			float: none;
 			margin: 0 auto;
 			width: 800px;

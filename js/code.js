@@ -307,5 +307,3 @@ $(document).ready(function(){
 	
 	var sliderApp = new Carousel(slidesData, arrowsData, "skillsSection");
 });
-
-
