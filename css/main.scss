@@ -931,20 +931,24 @@ CONTACT
 		margin: 0 auto;
 	}
 
-	&__label::-webkit-input-placeholder, &__input::-webkit-input-placeholder, &__textarea::-webkit-input-placeholder{
+	&__input::-webkit-input-placeholder, &__textarea::-webkit-input-placeholder{
 		font-style: italic;
+		text-align: center;
 	}
 
-	&__label:-ms-input-placeholder, &__input:-ms-input-placeholder, &__textarea:-ms-input-placeholder{
+	&__input:-ms-input-placeholder, &__textarea:-ms-input-placeholder{
 		font-style: italic;
+		text-align: center;
 	}
 
-	&__label::-ms-input-placeholder, &__input::-ms-input-placeholder, &__textarea::-ms-input-placeholder{
+	&__input::-ms-input-placeholder, &__textarea::-ms-input-placeholder{
 		font-style: italic;
+		text-align: center;
 	}
 
-	&__label::placeholder, &__input::placeholder, &__textarea::placeholder{
+	&__input::placeholder, &__textarea::placeholder{
 		font-style: italic;
+		text-align: center;
 	}
 
 	&__label{

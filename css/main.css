@@ -1300,20 +1300,24 @@ CONTACT
   margin: 0 auto;
 }
 
-.form__label::-webkit-input-placeholder, .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
   font-style: italic;
+  text-align: center;
 }
 
-.form__label:-ms-input-placeholder, .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
   font-style: italic;
+  text-align: center;
 }
 
-.form__label::-ms-input-placeholder, .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+.form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
   font-style: italic;
+  text-align: center;
 }
 
-.form__label::placeholder, .form__input::placeholder, .form__textarea::placeholder {
+.form__input::placeholder, .form__textarea::placeholder {
   font-style: italic;
+  text-align: center;
 }
 
 .form__label {
