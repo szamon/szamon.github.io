@@ -392,6 +392,14 @@ ABOUT ME
 		margin: 10px 6px;
 		text-align: center;
 	}	
+
+	&__list{
+		list-style-type: none;
+
+		&__li{
+			margin: 5px;
+		}
+	}
 }
 
 .scrollText{

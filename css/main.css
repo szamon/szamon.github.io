@@ -776,6 +776,14 @@ ABOUT ME
   text-align: center;
 }
 
+.aboutSection__list {
+  list-style-type: none;
+}
+
+.aboutSection__list__li {
+  margin: 5px;
+}
+
 .scrollText {
   position: absolute;
   bottom: 5px;
